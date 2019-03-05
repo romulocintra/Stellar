@@ -1,0 +1,42 @@
+{
+  "name": "@stellar-design/core",
+  "version": "0.1.0",
+  "description": "A Beautiful, Complete Design System",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "unpkg": "dist/ionic.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
+    "await-delay": "^1.0.0",
+    "css-custom-properties": "^0.1.0",
+    "easing": "^1.2.1",
+    "eq.js": "^1.9.0",
+    "ez-clipboard": "^1.0.0",
+    "focus-within": "^3.0.2",
+    "hex-to-hsl": "^1.0.2",
+    "highcharts": "^7.0.3",
+    "round-to": "^3.0.0",
+    "validator": "^10.11.0",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "@stencil/core": "~0.16.2",
+    "@types/jest": "23.3.14",
+    "@types/puppeteer": "1.12.1",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "puppeteer": "1.8.0"
+  },
+  "license": "MIT"
+}
