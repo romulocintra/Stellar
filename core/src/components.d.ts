@@ -7,67 +7,26 @@
 
 import '@stencil/core';
 
-
+import 'ionicons';
 
 
 export namespace Components {
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface StellarAsset {
+    'align': string;
+    'ariaLabel': string;
+    'block': boolean;
+    'language': string;
+    'name': string;
+    'src': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface StellarAssetAttributes extends StencilHTMLAttributes {
+    'align'?: string;
+    'ariaLabel'?: string;
+    'block'?: boolean;
+    'language'?: string;
+    'name'?: string;
+    'src'?: string;
   }
 
   interface StellarAvatar {
@@ -91,1798 +50,302 @@ export namespace Components {
     'src'?: string;
   }
 
-  interface MyComponent {
+  interface StellarButton {
     /**
-    * The first name
+    * Sets the button or link as an active state.
     */
-    'first': string;
+    'active': boolean;
     /**
-    * The last name
+    * Sets the button or link to render at full width to the parent.
     */
-    'last': string;
+    'block': boolean;
     /**
-    * The middle name
+    * Sets the button or link to provide the affordance of a dangerous action.
     */
-    'middle': string;
+    'danger': boolean;
+    /**
+    * Sets the button or link as disabled and not-interactable.
+    */
+    'disabled': boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for': string;
+    'ghost': boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'href': string;
+    /**
+    * Sets the button or link as a button with only an icon.
+    */
+    'icon': boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'invert': boolean;
+    /**
+    * Sets accessibility options on the buttons
+    */
+    'label': string;
+    /**
+    * Sets the name on the button if the button is an input. Allows the button to act as an item in a form.
+    */
+    'name': string;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'outline': boolean;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding': string|"small"|"medium"|"large";
+    /**
+    * Sets the button or link to render as a pill.
+    */
+    'pill': boolean;
+    /**
+    * Sets the button or link as processing when clicked.
+    */
+    'processable': boolean;
+    /**
+    * Sets the size of the button. Can be tiny, small, medium, or large.
+    */
+    'size': string|"tiny"|"small"|"medium"|"large";
+    /**
+    * Allows the button to render for different tags.
+    */
+    'tag': "button"|"submit"|"link"|"span";
+    /**
+    * Sets the target on the anchor tag if the button is a link.
+    */
+    'target': string;
+    /**
+    * Sets the value on the button if the button is an input.
+    */
+    'value': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+  interface StellarButtonAttributes extends StencilHTMLAttributes {
     /**
-    * The first name
+    * Sets the button or link as an active state.
     */
-    'first'?: string;
+    'active'?: boolean;
     /**
-    * The last name
+    * Sets the button or link to render at full width to the parent.
     */
-    'last'?: string;
+    'block'?: boolean;
     /**
-    * The middle name
+    * Sets the button or link to provide the affordance of a dangerous action.
     */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
+    'danger'?: boolean;
     /**
-    * The first name
+    * Sets the button or link as disabled and not-interactable.
     */
-    'first': string;
+    'disabled'?: boolean;
     /**
-    * The last name
+    * Sets the href on the anchor tag if the button is a link.
     */
-    'last': string;
+    'for'?: string;
+    'ghost'?: boolean;
     /**
-    * The middle name
+    * Sets the href on the anchor tag if the button is a link.
     */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+    'href'?: string;
     /**
-    * The first name
+    * Sets the button or link as a button with only an icon.
     */
-    'first'?: string;
+    'icon'?: boolean;
     /**
-    * The last name
+    * Sets the button or link as an outlined button.
     */
-    'last'?: string;
+    'invert'?: boolean;
     /**
-    * The middle name
+    * Sets accessibility options on the buttons
     */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
+    'label'?: string;
     /**
-    * The first name
+    * Sets the name on the button if the button is an input. Allows the button to act as an item in a form.
     */
-    'first': string;
+    'name'?: string;
     /**
-    * The last name
+    * Sets the button or link as an outlined button.
     */
-    'last': string;
+    'outline'?: boolean;
     /**
-    * The middle name
+    * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+    'padding'?: string|"small"|"medium"|"large";
     /**
-    * The first name
+    * Sets the button or link to render as a pill.
     */
-    'first'?: string;
+    'pill'?: boolean;
     /**
-    * The last name
+    * Sets the button or link as processing when clicked.
     */
-    'last'?: string;
+    'processable'?: boolean;
     /**
-    * The middle name
+    * Sets the size of the button. Can be tiny, small, medium, or large.
     */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
+    'size'?: string|"tiny"|"small"|"medium"|"large";
     /**
-    * The first name
+    * Allows the button to render for different tags.
     */
-    'first': string;
+    'tag'?: "button"|"submit"|"link"|"span";
     /**
-    * The last name
+    * Sets the target on the anchor tag if the button is a link.
     */
-    'last': string;
+    'target'?: string;
     /**
-    * The middle name
+    * Sets the value on the button if the button is an input.
     */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'value'?: string;
   }
 
-  interface MyComponent {
+  interface StellarCard {
+    'flip_card': () => Promise<void>;
     /**
-    * The first name
+    * Sets the href on the anchor tag if the button is a link.
     */
-    'first': string;
+    'flip_icon': string;
     /**
-    * The last name
+    * Let's a card be flippable
     */
-    'last': string;
+    'flippable': boolean;
     /**
-    * The middle name
+    * Renders a flipped card
     */
-    'middle': string;
+    'flipped': boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for': string;
+    /**
+    * Sets the href if the card is a link.
+    */
+    'href': string;
+    /**
+    * Sets the name if the card is a button.
+    */
+    'name': string;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding': string|"small"|"medium"|"large";
+    /**
+    * Renders a shadow on the card
+    */
+    'shadow': string|"light"|"medium"|"heavy";
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'tag': "stencil-route-link"|"a"|"button"|"div";
+    'transition': boolean;
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'type': string;
+    /**
+    * Sets the value if the card is a button.
+    */
+    'value': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+  interface StellarCardAttributes extends StencilHTMLAttributes {
     /**
-    * The first name
+    * Sets the href on the anchor tag if the button is a link.
     */
-    'first'?: string;
+    'flip_icon'?: string;
     /**
-    * The last name
+    * Let's a card be flippable
     */
-    'last'?: string;
+    'flippable'?: boolean;
     /**
-    * The middle name
+    * Renders a flipped card
     */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
+    'flipped'?: boolean;
     /**
-    * The first name
+    * Sets the href on the anchor tag if the button is a link.
     */
-    'first': string;
+    'for'?: string;
     /**
-    * The last name
+    * Sets the href if the card is a link.
     */
-    'last': string;
+    'href'?: string;
     /**
-    * The middle name
+    * Sets the name if the card is a button.
     */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+    'name'?: string;
+    'onFlip'?: (event: CustomEvent) => void;
     /**
-    * The first name
+    * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'first'?: string;
+    'padding'?: string|"small"|"medium"|"large";
     /**
-    * The last name
+    * Renders a shadow on the card
     */
-    'last'?: string;
+    'shadow'?: string|"light"|"medium"|"heavy";
     /**
-    * The middle name
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
+    'tag'?: "stencil-route-link"|"a"|"button"|"div";
+    'transition'?: boolean;
     /**
-    * The first name
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
-    'first': string;
+    'type'?: string;
     /**
-    * The last name
+    * Sets the value if the card is a button.
     */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'value'?: string;
   }
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface StellarGrid {
+    'align': string;
+    'cols': number|string;
+    'compact': boolean;
+    'padding': boolean;
+    'refresh': () => Promise<void>;
+    'responsive': boolean|string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface StellarGridAttributes extends StencilHTMLAttributes {
+    'align'?: string;
+    'cols'?: number|string;
+    'compact'?: boolean;
+    'padding'?: boolean;
+    'responsive'?: boolean|string;
   }
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface StellarTooltip {
+    'align': "left"|"center"|"right";
+  }
+  interface StellarTooltipAttributes extends StencilHTMLAttributes {
+    'align'?: "left"|"center"|"right";
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
+    'StellarAsset': Components.StellarAsset;
     'StellarAvatar': Components.StellarAvatar;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
-    'MyComponent': Components.MyComponent;
+    'StellarButton': Components.StellarButton;
+    'StellarCard': Components.StellarCard;
+    'StellarGrid': Components.StellarGrid;
+    'StellarTooltip': Components.StellarTooltip;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
+    'stellar-asset': Components.StellarAssetAttributes;
     'stellar-avatar': Components.StellarAvatarAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
+    'stellar-button': Components.StellarButtonAttributes;
+    'stellar-card': Components.StellarCardAttributes;
+    'stellar-grid': Components.StellarGridAttributes;
+    'stellar-tooltip': Components.StellarTooltipAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLStellarAssetElement extends Components.StellarAsset, HTMLStencilElement {}
+  var HTMLStellarAssetElement: {
+    prototype: HTMLStellarAssetElement;
+    new (): HTMLStellarAssetElement;
   };
 
   interface HTMLStellarAvatarElement extends Components.StellarAvatar, HTMLStencilElement {}
@@ -1891,472 +354,46 @@ declare global {
     new (): HTMLStellarAvatarElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLStellarButtonElement extends Components.StellarButton, HTMLStencilElement {}
+  var HTMLStellarButtonElement: {
+    prototype: HTMLStellarButtonElement;
+    new (): HTMLStellarButtonElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLStellarCardElement extends Components.StellarCard, HTMLStencilElement {}
+  var HTMLStellarCardElement: {
+    prototype: HTMLStellarCardElement;
+    new (): HTMLStellarCardElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
+  var HTMLStellarGridElement: {
+    prototype: HTMLStellarGridElement;
+    new (): HTMLStellarGridElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLStellarTooltipElement extends Components.StellarTooltip, HTMLStencilElement {}
+  var HTMLStellarTooltipElement: {
+    prototype: HTMLStellarTooltipElement;
+    new (): HTMLStellarTooltipElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
+    'stellar-asset': HTMLStellarAssetElement
     'stellar-avatar': HTMLStellarAvatarElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
-    'my-component': HTMLMyComponentElement
+    'stellar-button': HTMLStellarButtonElement
+    'stellar-card': HTMLStellarCardElement
+    'stellar-grid': HTMLStellarGridElement
+    'stellar-tooltip': HTMLStellarTooltipElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
+    'stellar-asset': HTMLStellarAssetElement;
     'stellar-avatar': HTMLStellarAvatarElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
-    'my-component': HTMLMyComponentElement;
+    'stellar-button': HTMLStellarButtonElement;
+    'stellar-card': HTMLStellarCardElement;
+    'stellar-grid': HTMLStellarGridElement;
+    'stellar-tooltip': HTMLStellarTooltipElement;
   }
 
 

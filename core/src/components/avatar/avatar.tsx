@@ -1,5 +1,5 @@
 import { Component, Prop, State, Watch, Element } from '@stencil/core';
-import { titleCase, properties, isHexColor, colors } from '../../utils';
+import { titleCase, properties, colors, isHexColor } from '../../utils';
 
 @Component({
   tag: 'stellar-avatar',

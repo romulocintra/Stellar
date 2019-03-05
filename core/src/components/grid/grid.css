@@ -1,0 +1,70 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: inherit;
+}
+
+:host {
+    display: block;
+    --grid-width: 200px;
+    --grid-gap: 2rem;
+}
+
+:host .grid {
+    display: flex;
+    display: grid;
+    flex-wrap: wrap;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+}
+
+:host([padding]) .grid {
+    padding: var(--grid-gap);
+}
+
+/* Non-Responsive Grid */
+:host([responsive="false"]) .grid {
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+}
+
+:host([responsive="false"][cols="1"]) .grid {
+    grid-template-columns: 1fr;
+}
+
+:host([responsive="false"][cols="2"]) .grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+:host([responsive="false"][cols="3"]) .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+:host([responsive="false"][cols="4"]) .grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+:host([responsive="false"][cols="5"]) .grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+:host([responsive="false"][cols="6"]) .grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+:host .grid :slotted(.size-2) {
+    grid-column: auto / span 2;
+}
+
+:host .grid :slotted(.size-3) {
+    grid-column: auto / span 3;
+}
+
+:host .grid :slotted(.size-4) {
+    grid-column: auto / span 4;
+}
+
+:host .grid :slotted(.size-5) {
+    grid-column: auto / span 5;
+}
+
+:host .grid :slotted(.size-6) {
+    grid-column: auto / span 6;
+}

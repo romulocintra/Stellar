@@ -1,0 +1,237 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.18.0"
+  },
+  "app": {
+    "namespace": "StellarCore",
+    "fsNamespace": "stellar-core",
+    "components": 7,
+    "entries": 4,
+    "bundles": 4
+  },
+  "options": {
+    "minifyJs": false,
+    "minifyCss": false,
+    "hashFileNames": false,
+    "hashedFileNameLength": 8,
+    "buildEs5": false
+  },
+  "components": [
+    {
+      "tag": "stellar-asset",
+      "dependencies": [
+        "ion-icon"
+      ],
+      "dependencyOf": [
+        "stellar-button",
+        "stellar-card"
+      ]
+    },
+    {
+      "tag": "ion-icon",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-asset"
+      ]
+    },
+    {
+      "tag": "stellar-button",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "dependencyOf": [
+        "stellar-card"
+      ]
+    },
+    {
+      "tag": "stellar-card",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-button"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-grid",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-avatar",
+      "dependencies": [
+        "stellar-tooltip"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-tooltip",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-avatar"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "entry.stellar-asset.ion-icon",
+      "components": [
+        {
+          "tag": "stellar-asset",
+          "dependencies": [
+            "ion-icon"
+          ],
+          "dependencyOf": [
+            "stellar-button",
+            "stellar-card"
+          ]
+        },
+        {
+          "tag": "ion-icon",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-asset"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "stellar-asset.entry.js",
+          "outputs": [
+            "dist/stellar-core/stellar-asset.entry.js",
+            "www/build/stellar-core/stellar-asset.entry.js"
+          ],
+          "size": 11920,
+          "target": "es2017"
+        }
+      ],
+      "inputs": [
+        "node_modules/ionicons/dist/collection/icon/icon.js",
+        "src/components/asset/asset.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "entry.stellar-button.stellar-card",
+      "components": [
+        {
+          "tag": "stellar-button",
+          "dependencies": [
+            "stellar-asset"
+          ],
+          "dependencyOf": [
+            "stellar-card"
+          ]
+        },
+        {
+          "tag": "stellar-card",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-button"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "stellar-button.entry.js",
+          "outputs": [
+            "dist/stellar-core/stellar-button.entry.js",
+            "www/build/stellar-core/stellar-button.entry.js"
+          ],
+          "size": 23951,
+          "target": "es2017"
+        }
+      ],
+      "inputs": [
+        "src/components/button/button.js",
+        "src/components/card/card.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "entry.stellar-grid",
+      "components": [
+        {
+          "tag": "stellar-grid",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "stellar-grid.entry.js",
+          "outputs": [
+            "dist/stellar-core/stellar-grid.entry.js",
+            "www/build/stellar-core/stellar-grid.entry.js"
+          ],
+          "size": 6744,
+          "target": "es2017"
+        }
+      ],
+      "inputs": [
+        "src/components/grid/grid.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "entry.stellar-avatar.stellar-tooltip",
+      "components": [
+        {
+          "tag": "stellar-avatar",
+          "dependencies": [
+            "stellar-tooltip"
+          ],
+          "dependencyOf": []
+        },
+        {
+          "tag": "stellar-tooltip",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-avatar"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "stellar-avatar.entry.js",
+          "outputs": [
+            "dist/stellar-core/stellar-avatar.entry.js",
+            "www/build/stellar-core/stellar-avatar.entry.js"
+          ],
+          "size": 15892,
+          "target": "es2017"
+        }
+      ],
+      "inputs": [
+        "src/components/avatar/avatar.js",
+        "src/components/tooltip/tooltip.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/asset/asset.tsx": [],
+    "src/components/avatar/avatar.tsx": [
+      "src/utils"
+    ],
+    "src/components/button/button.tsx": [],
+    "src/components/card/card.tsx": [
+      "src/utils"
+    ],
+    "src/components/grid/grid.tsx": [],
+    "src/components/tooltip/tooltip.tsx": [],
+    "src/global/colors.ts": [],
+    "src/global/helpers.ts": [],
+    "src/utils/index.ts": []
+  },
+  "collections": []
+}
