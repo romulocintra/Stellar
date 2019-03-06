@@ -115,7 +115,7 @@ export namespace Components {
     /**
     * Allows the button to render for different tags.
     */
-    'tag': "button"|"submit"|"link"|"span";
+    'tag': "button"|"submit"|"link"|"span"|"route-link";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -190,7 +190,7 @@ export namespace Components {
     /**
     * Allows the button to render for different tags.
     */
-    'tag'?: "button"|"submit"|"link"|"span";
+    'tag'?: "button"|"submit"|"link"|"span"|"route-link";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -202,7 +202,7 @@ export namespace Components {
   }
 
   interface StellarCard {
-    'flip_card': () => Promise<void>;
+    'flip_card': (e?: UIEvent) => Promise<void>;
     /**
     * Sets the href on the anchor tag if the button is a link.
     */
@@ -305,13 +305,18 @@ export namespace Components {
     'padding': boolean;
     'refresh': () => Promise<void>;
     'responsive': boolean|string;
+    'swappable': boolean;
+    'swappableSelector': string;
   }
   interface StellarGridAttributes extends StencilHTMLAttributes {
     'align'?: string;
     'cols'?: number|string;
     'compact'?: boolean;
+    'onOrderChanged'?: (event: CustomEvent) => void;
     'padding'?: boolean;
     'responsive'?: boolean|string;
+    'swappable'?: boolean;
+    'swappableSelector'?: string;
   }
 
   interface StellarTooltip {

@@ -8,6 +8,7 @@
     display: block;
     background: var(--background);
     border-radius: var(--border-radius);
+    height: 100%;
 
     --border: 1px solid var(--gray1);
     --background: var(--white);
@@ -40,7 +41,7 @@
     display: block;
     border: var(--border);
     width: auto;
-    height: auto;
+    height: 100%;
     text-decoration: none;
     outline: none;
     display: grid;
@@ -181,8 +182,8 @@
 
 :host([flippable]) .wrap .flip-button {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 0.5rem;
+    top: 0.5rem;
     z-index: 1;
     transform: translateZ(1px)
 }

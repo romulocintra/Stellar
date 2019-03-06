@@ -62,7 +62,7 @@ export class Card {
   /**
    * Sets the href on the anchor tag if the button is a link.
    */
-  @Prop() flip_icon: string = "cog";
+  @Prop() flip_icon: string = "options";
 
   @State() width: number;
   @State() height: number;
@@ -90,6 +90,10 @@ export class Card {
       this.element.addEventListener('mouseleave', this.removeRotation.bind(this))
     }
 
+    this.updateFlippableCardHeight()
+  }
+
+  updateFlippableCardHeight () {
     if (this.flippable) {
       const front: HTMLElement = this.element.shadowRoot.querySelector('.front');
       const front_height = front.offsetHeight;
@@ -101,7 +105,7 @@ export class Card {
     }
   }
 
-  addRotation() {
+  addRotation () {
     this.refresh()
 
     this.transition = true;
@@ -139,7 +143,12 @@ export class Card {
     }, 250)
   }
 
-  async click() {
+  async click(e?: UIEvent) {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+
     if (this.for) {
       const target = this.for.split(":");
 
@@ -154,7 +163,12 @@ export class Card {
   }
 
   @Method()
-  async flip_card() {
+  async flip_card(e?: UIEvent) {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+
     if (this.flippable) {
       this.flipped = !this.flipped
       this.flip.emit();
@@ -171,10 +185,10 @@ export class Card {
     };
 
     return (
-      <this.tag {...childProps} class="wrap" onClick={() => { this.click() }}>
+      <this.tag {...childProps} class="wrap" onClick={(e) => { this.click(e) }}>
         { this.flippable && [
-            <stellar-button ghost class="flip-button" onClick={() => { this.flip_card() }}>
-              <stellar-asset name={this.flipped ? "close-circle-outline" : this.flip_icon} class="ma0" />
+            <stellar-button ghost class="flip-button" onClick={(e) => { this.flip_card(e) }}>
+              <stellar-asset name={this.flipped ? "close" : this.flip_icon} class="ma0" />
             </stellar-button>,
             <div class="front">
               <slot></slot>

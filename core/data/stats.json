@@ -8,14 +8,14 @@
     "fsNamespace": "stellar-core",
     "components": 7,
     "entries": 4,
-    "bundles": 4
+    "bundles": 32
   },
   "options": {
-    "minifyJs": false,
-    "minifyCss": false,
-    "hashFileNames": false,
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
     "hashedFileNameLength": 8,
-    "buildEs5": false
+    "buildEs5": true
   },
   "components": [
     {
@@ -96,13 +96,76 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-asset.entry.js",
+          "fileName": "8zbja5u4.entry.js",
           "outputs": [
-            "dist/stellar-core/stellar-asset.entry.js",
-            "www/build/stellar-core/stellar-asset.entry.js"
+            "dist/stellar-core/8zbja5u4.entry.js",
+            "www/build/stellar-core/8zbja5u4.entry.js"
           ],
-          "size": 11920,
+          "size": 5903,
           "target": "es2017"
+        },
+        {
+          "fileName": "8zbja5u4.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/8zbja5u4.entry.js"
+          ],
+          "size": 11198,
+          "target": "es2017"
+        },
+        {
+          "fileName": "8zbja5u4.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/8zbja5u4.entry.js"
+          ],
+          "size": 7056,
+          "target": "es5"
+        },
+        {
+          "fileName": "8zbja5u4.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/8zbja5u4.es5.entry.js",
+            "www/build/stellar-core/8zbja5u4.es5.entry.js"
+          ],
+          "size": 6834,
+          "target": "es5"
+        },
+        {
+          "fileName": "8zbja5u4.sc.entry.js",
+          "outputs": [
+            "dist/stellar-core/8zbja5u4.sc.entry.js",
+            "www/build/stellar-core/8zbja5u4.sc.entry.js"
+          ],
+          "size": 6254,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "8zbja5u4.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/8zbja5u4.sc.entry.js"
+          ],
+          "size": 11549,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "8zbja5u4.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/8zbja5u4.sc.entry.js"
+          ],
+          "size": 7407,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "8zbja5u4.sc.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/8zbja5u4.sc.es5.entry.js",
+            "www/build/stellar-core/8zbja5u4.sc.es5.entry.js"
+          ],
+          "size": 7185,
+          "target": "es5",
+          "scopedStyles": true
         }
       ],
       "inputs": [
@@ -136,13 +199,76 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-button.entry.js",
+          "fileName": "kcuex7ra.entry.js",
           "outputs": [
-            "dist/stellar-core/stellar-button.entry.js",
-            "www/build/stellar-core/stellar-button.entry.js"
+            "dist/stellar-core/kcuex7ra.entry.js",
+            "www/build/stellar-core/kcuex7ra.entry.js"
           ],
-          "size": 23951,
+          "size": 13846,
           "target": "es2017"
+        },
+        {
+          "fileName": "kcuex7ra.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/kcuex7ra.entry.js"
+          ],
+          "size": 19582,
+          "target": "es2017"
+        },
+        {
+          "fileName": "kcuex7ra.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/kcuex7ra.entry.js"
+          ],
+          "size": 15574,
+          "target": "es5"
+        },
+        {
+          "fileName": "kcuex7ra.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/kcuex7ra.es5.entry.js",
+            "www/build/stellar-core/kcuex7ra.es5.entry.js"
+          ],
+          "size": 16886,
+          "target": "es5"
+        },
+        {
+          "fileName": "kcuex7ra.sc.entry.js",
+          "outputs": [
+            "dist/stellar-core/kcuex7ra.sc.entry.js",
+            "www/build/stellar-core/kcuex7ra.sc.entry.js"
+          ],
+          "size": 16070,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "kcuex7ra.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/kcuex7ra.sc.entry.js"
+          ],
+          "size": 21806,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "kcuex7ra.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/kcuex7ra.sc.entry.js"
+          ],
+          "size": 17798,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "kcuex7ra.sc.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/kcuex7ra.sc.es5.entry.js",
+            "www/build/stellar-core/kcuex7ra.sc.es5.entry.js"
+          ],
+          "size": 19110,
+          "target": "es5",
+          "scopedStyles": true
         }
       ],
       "inputs": [
@@ -164,20 +290,83 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-grid.entry.js",
+          "fileName": "6mh68jtv.entry.js",
           "outputs": [
-            "dist/stellar-core/stellar-grid.entry.js",
-            "www/build/stellar-core/stellar-grid.entry.js"
+            "dist/stellar-core/6mh68jtv.entry.js",
+            "www/build/stellar-core/6mh68jtv.entry.js"
           ],
-          "size": 6744,
+          "size": 61543,
           "target": "es2017"
+        },
+        {
+          "fileName": "6mh68jtv.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/6mh68jtv.entry.js"
+          ],
+          "size": 155155,
+          "target": "es2017"
+        },
+        {
+          "fileName": "6mh68jtv.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/6mh68jtv.entry.js"
+          ],
+          "size": 72724,
+          "target": "es5"
+        },
+        {
+          "fileName": "6mh68jtv.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/6mh68jtv.es5.entry.js",
+            "www/build/stellar-core/6mh68jtv.es5.entry.js"
+          ],
+          "size": 74011,
+          "target": "es5"
+        },
+        {
+          "fileName": "6mh68jtv.sc.entry.js",
+          "outputs": [
+            "dist/stellar-core/6mh68jtv.sc.entry.js",
+            "www/build/stellar-core/6mh68jtv.sc.entry.js"
+          ],
+          "size": 61543,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "6mh68jtv.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/6mh68jtv.sc.entry.js"
+          ],
+          "size": 155155,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "6mh68jtv.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/6mh68jtv.sc.entry.js"
+          ],
+          "size": 72724,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "6mh68jtv.sc.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/6mh68jtv.sc.es5.entry.js",
+            "www/build/stellar-core/6mh68jtv.sc.es5.entry.js"
+          ],
+          "size": 74011,
+          "target": "es5",
+          "scopedStyles": true
         }
       ],
       "inputs": [
         "src/components/grid/grid.js"
       ],
       "encapsulations": [
-        "shadow"
+        "none"
       ]
     },
     {
@@ -200,13 +389,76 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-avatar.entry.js",
+          "fileName": "ffq7wtc2.entry.js",
           "outputs": [
-            "dist/stellar-core/stellar-avatar.entry.js",
-            "www/build/stellar-core/stellar-avatar.entry.js"
+            "dist/stellar-core/ffq7wtc2.entry.js",
+            "www/build/stellar-core/ffq7wtc2.entry.js"
           ],
-          "size": 15892,
+          "size": 10860,
           "target": "es2017"
+        },
+        {
+          "fileName": "ffq7wtc2.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/ffq7wtc2.entry.js"
+          ],
+          "size": 13356,
+          "target": "es2017"
+        },
+        {
+          "fileName": "ffq7wtc2.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/ffq7wtc2.entry.js"
+          ],
+          "size": 11615,
+          "target": "es5"
+        },
+        {
+          "fileName": "ffq7wtc2.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/ffq7wtc2.es5.entry.js",
+            "www/build/stellar-core/ffq7wtc2.es5.entry.js"
+          ],
+          "size": 11612,
+          "target": "es5"
+        },
+        {
+          "fileName": "ffq7wtc2.sc.entry.js",
+          "outputs": [
+            "dist/stellar-core/ffq7wtc2.sc.entry.js",
+            "www/build/stellar-core/ffq7wtc2.sc.entry.js"
+          ],
+          "size": 13533,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "ffq7wtc2.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/ffq7wtc2.sc.entry.js"
+          ],
+          "size": 16029,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "ffq7wtc2.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/ffq7wtc2.sc.entry.js"
+          ],
+          "size": 14288,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "ffq7wtc2.sc.es5.entry.js",
+          "outputs": [
+            "dist/stellar-core/ffq7wtc2.sc.es5.entry.js",
+            "www/build/stellar-core/ffq7wtc2.sc.es5.entry.js"
+          ],
+          "size": 14285,
+          "target": "es5",
+          "scopedStyles": true
         }
       ],
       "inputs": [
@@ -218,6 +470,218 @@
       ]
     }
   ],
+  "rollupResults": {
+    "modules": [
+      {
+        "id": "entry.stellar-avatar.stellar-tooltip.js",
+        "isEntry": true,
+        "imports": [
+          "chunk-f0fe7cf5.js",
+          "chunk-7761b7b0.js"
+        ],
+        "exports": [
+          "StellarAvatar",
+          "StellarTooltip"
+        ],
+        "modules": [
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/avatar/avatar.js",
+            "exports": [
+              "Avatar"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/tooltip/tooltip.js",
+            "exports": [
+              "Tooltip"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/entry.stellar-avatar.stellar-tooltip.js",
+            "exports": []
+          }
+        ]
+      },
+      {
+        "id": "entry.stellar-grid.js",
+        "isEntry": true,
+        "imports": [
+          "chunk-7761b7b0.js"
+        ],
+        "exports": [
+          "StellarGrid"
+        ],
+        "modules": [
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/eq.js/dist/eq.min.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/@shopify/draggable/lib/sortable.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/@shopify/draggable/lib/plugins/swap-animation.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/grid/grid.js",
+            "exports": [
+              "Grid"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/entry.stellar-grid.js",
+            "exports": []
+          }
+        ]
+      },
+      {
+        "id": "entry.stellar-button.stellar-card.js",
+        "isEntry": true,
+        "imports": [
+          "chunk-f0fe7cf5.js",
+          "chunk-7761b7b0.js"
+        ],
+        "exports": [
+          "StellarButton",
+          "StellarCard"
+        ],
+        "modules": [
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/button/button.js",
+            "exports": [
+              "Button"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/card/card.js",
+            "exports": [
+              "Card"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/entry.stellar-button.stellar-card.js",
+            "exports": []
+          }
+        ]
+      },
+      {
+        "id": "entry.stellar-asset.ion-icon.js",
+        "isEntry": true,
+        "imports": [],
+        "exports": [
+          "StellarAsset",
+          "IonIcon"
+        ],
+        "modules": [
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/components/asset/asset.js",
+            "exports": [
+              "Asset"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/ionicons/dist/collection/icon/utils.js",
+            "exports": [
+              "getIconMap",
+              "getName",
+              "getSrc",
+              "isSrc",
+              "isValid"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/ionicons/dist/collection/icon/icon.js",
+            "exports": [
+              "Icon"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/entry.stellar-asset.ion-icon.js",
+            "exports": []
+          }
+        ]
+      },
+      {
+        "id": "chunk-7761b7b0.js",
+        "isEntry": false,
+        "imports": [],
+        "exports": [
+          "createCommonjsModule",
+          "commonjsGlobal",
+          "unwrapExports"
+        ],
+        "modules": [
+          {
+            "filename": "\u0000commonjsHelpers",
+            "exports": [
+              "commonjsGlobal",
+              "unwrapExports",
+              "createCommonjsModule"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chunk-f0fe7cf5.js",
+        "isEntry": false,
+        "imports": [
+          "chunk-7761b7b0.js"
+        ],
+        "exports": [
+          "properties",
+          "colors",
+          "isHexColor",
+          "titleCase"
+        ],
+        "modules": [
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/global/colors.js",
+            "exports": [
+              "colors"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/css-custom-properties/lib/css-custom-properties.min.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/validator/lib/util/assertString.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "\u0000commonjs-proxy:/Users/williammriley/Sites/personal/@stellar/core/node_modules/validator/lib/util/assertString.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/node_modules/validator/lib/isHexColor.js",
+            "exports": [
+              "default"
+            ]
+          },
+          {
+            "filename": "/Users/williammriley/Sites/personal/@stellar/core/src/utils/index.js",
+            "exports": [
+              "titleCase"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "sourceGraph": {
     "src/components/asset/asset.tsx": [],
     "src/components/avatar/avatar.tsx": [

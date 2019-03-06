@@ -1,10 +1,12 @@
-import { Component, Prop, Element, Method } from '@stencil/core';
+import { Component, Prop, Element, Method, Event, EventEmitter, State } from '@stencil/core';
 import { default as eqjs } from 'eq.js';
+import Sortable from '@shopify/draggable/lib/sortable';
+import SwapAnimation from '@shopify/draggable/lib/plugins/swap-animation';
 
 @Component({
   tag: 'stellar-grid',
   styleUrl: 'grid.css',
-  shadow: true
+  shadow: false
 })
 export class Grid {
   @Element() element: HTMLElement;
@@ -14,6 +16,14 @@ export class Grid {
   @Prop({reflectToAttr: true}) padding: boolean = false;
   @Prop({reflectToAttr: true}) align: string = "items-start";
   @Prop({reflectToAttr: true}) responsive: boolean|string = true;
+
+  @Prop() swappable: boolean = false;
+  @Prop() swappableSelector: string = "stellar-card";
+
+  @Event() orderChanged: EventEmitter;
+
+  @State() order: string[];
+  @State() __swappable;
 
   async makeResponsive() {
     if (this.responsive && this.responsive !== "false") {
@@ -29,12 +39,43 @@ export class Grid {
     }
   }
 
+  async makeSwappable() {
+    if (this.swappable) {
+      this.__swappable = new Sortable(this.element.querySelectorAll('.grid'), {
+        draggable: this.swappableSelector,
+        swapAnimation: {
+          duration: 200,
+          easingFunction: 'ease-in-out',
+          horizontal: true
+        },
+        plugins: [SwapAnimation]
+      });
+
+      this.__swappable.on('swappable:start', () => { this.refresh(); });
+      this.__swappable.on('swappable:stop', () => { this.updateOrder(); });
+    }
+  }
+
+  async updateOrder() {
+    const elements = this.element.querySelectorAll(this.swappableSelector);
+    const order = [];
+
+    Array.from(elements).forEach((element) => {
+      order.push(element.id);
+    })
+    this.order = order;
+
+    this.orderChanged.emit(this.order)
+  }
+
   componentWillLoad() {
     this.makeResponsive()
+    this.makeSwappable()
   }
 
   componentDidLoad() {
     this.makeResponsive()
+    this.makeSwappable()
   }
 
   @Method()
@@ -45,10 +86,8 @@ export class Grid {
   }
 
   render() {
-    return (
-      <div class={`grid ${this.align}`}>
-        <slot></slot>
-      </div>
-    );
+    return <div class={`grid ${this.align}`}>
+      <slot></slot>
+    </div>
   }
 }

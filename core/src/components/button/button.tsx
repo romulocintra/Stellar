@@ -11,7 +11,7 @@ export class Button {
   /**
    * Allows the button to render for different tags.
    */
-  @Prop() tag: "button"|"submit"|"link"|"span" = "button";
+  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "button";
 
   /**
    * Sets accessibility options on the buttons
@@ -118,7 +118,7 @@ export class Button {
 
     if (this.tag === "submit") {
       // @ts-ignore
-      this.element.closest('stellar-form').submit();
+      this.element.closest('stellar-form').submit_form();
     }
 
     return true;
@@ -157,6 +157,15 @@ export class Button {
     );
   }
 
+  renderAppLink() {
+    return (
+      <stencil-route-link url={this.href} anchorClass="button" data-disabled={this.disabled} title={this.label} onClick={() => { this.click() }}>
+        <div class="content"><slot>Submit</slot></div>
+        {this.processing && <div class="processing">{this.renderSVG()}</div>}
+      </stencil-route-link>
+    );
+  }
+
   renderSpan() {
     return (
       <span class="button" title={this.label} data-disabled={this.disabled} aria-label={`Button ${this.label} ${this.element.textContent}`} tabIndex={0} onClick={() => { this.click() }}>
@@ -171,8 +180,8 @@ export class Button {
       this.tag === "button" && this.renderButton(),
       this.tag === "submit" && this.renderSubmit(),
       this.tag === "link" && this.renderLink(),
+      this.tag === "route-link" && this.renderAppLink(),
       this.tag === "span" && this.renderSpan()
     ]
   }
-
 }
