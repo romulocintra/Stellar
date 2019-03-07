@@ -10,7 +10,7 @@ export class Avatar {
   @Element() element: HTMLElement;
 
   @Prop() src: string;
-  @Prop() notooltip: boolean = false;
+  @Prop() tooltip: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) size: string = "medium";
   @Prop({mutable: true, reflectToAttr: true}) color: string = "auto";
   @Prop({mutable: true, reflectToAttr: true}) name: string = "Stellar";
@@ -92,11 +92,11 @@ export class Avatar {
       <button class="wrapper" title={`You tabbed on an Avatar for ${this.name}`}>
         {this.processing && <div class="processing"><stellar-avatar src="Loading" /></div>}
         <div class="content">
+          <div class="spacer"></div>
           <div class="letter" title={this.name}>{this.initials}</div>
           { this.src && <img src={this.src} alt={this.name} /> }
-          <div class="spacer"></div>
         </div>
-        {!this.notooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
+        {this.tooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
       </button>
     );
   }

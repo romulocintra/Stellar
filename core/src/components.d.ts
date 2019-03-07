@@ -33,21 +33,21 @@ export namespace Components {
     'color': string;
     'initials': string;
     'name': string;
-    'notooltip': boolean;
     'processing': boolean;
     'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
     'size': string;
     'src': string;
+    'tooltip': boolean;
   }
   interface StellarAvatarAttributes extends StencilHTMLAttributes {
     'color'?: string;
     'initials'?: string;
     'name'?: string;
-    'notooltip'?: boolean;
     'processing'?: boolean;
     'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
     'size'?: string;
     'src'?: string;
+    'tooltip'?: boolean;
   }
 
   interface StellarButton {

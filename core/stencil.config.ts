@@ -13,6 +13,7 @@ export const config: Config = {
     { src: "global/video" },
     { src: "global/vector" },
     { src: "global/audio" },
+    { src: "global/page2layers.js" },
     { src: "*.html" },
     { src: "../data" },
   ],

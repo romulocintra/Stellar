@@ -13,8 +13,8 @@
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test": "stencil test --spec --e2e --screenshot",
+    "test.watch": "stencil test --spec --e2e --screenshot --watchAll"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
@@ -32,14 +32,15 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@brainly/html-sketchapp": "^4.2.0",
     "@stencil/core": "latest",
     "@stencil/postcss": "latest",
     "@types/jest": "23.3.14",
     "@types/puppeteer": "1.12.1",
     "jest": "23.6.0",
     "jest-cli": "23.6.0",
-    "puppeteer": "1.8.0",
-    "postcss-design-token-function": "^1.0.0"
+    "postcss-design-token-function": "^1.0.0",
+    "puppeteer": "1.11.0"
   },
   "license": "MIT",
   "jest": {
