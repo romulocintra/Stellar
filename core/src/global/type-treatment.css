@@ -9,7 +9,7 @@ h6 {
   font-stretch: normal;
   max-width: 23.5em;
   display: block;
-  color: var(--theme-copy-base, var(--black));
+  color: var(--theme-copy-header, var(--black));
 }
 
 h1[alt],

@@ -1,7 +1,7 @@
 // Color system made via: https://palx.jxnblk.com/e5405c
 export const colors = {
   "base": "#e5405c",
-  "black": "#000000",
+  "black": "#2b2b2a",
   "white": "#ffffff",
   "gray": [
     "#f9f9f7",

@@ -7,6 +7,24 @@ export const config: Config = {
   namespace: 'stellar-core',
   preamble: '(C) Split Infinities https://splitinfinities.com - MIT License',
   globalStyle: "./src/global/stellar.css",
+  testing: {
+    collectCoverage: true,
+    notify: true,
+    coverageDirectory: "./data/tests/",
+    coverageThreshold: {
+      global: {
+        branches: 90,
+        functions: 80,
+        lines: 80,
+        statements: -1000
+      }
+    },
+    coverageReporters: [
+      "json-summary",
+      "lcov",
+      "text",
+    ]
+  },
   copy: [
     { src: "global/fonts" },
     { src: "global/images" },
@@ -15,7 +33,6 @@ export const config: Config = {
     { src: "global/audio" },
     { src: "global/page2layers.js" },
     { src: "*.html" },
-    { src: "../data" },
   ],
   outputTargets:[
     { type: 'dist' },

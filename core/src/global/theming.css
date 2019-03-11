@@ -676,7 +676,8 @@
 }
 
 [class*="theme-"] {
-  --theme-copy-base: var(--white);
+  --theme-copy-header: var(--theme-base9);
+  --theme-copy-base: var(--theme-base0);
   --theme-copy-supporting: var(--theme-base5);
   --theme-bg-base: var(--theme-base9);
   --theme-bg-supporting: var(--theme-base2);
@@ -684,13 +685,15 @@
 }
 
 [class*="complement-"] {
-  --theme-copy-base: var(--white);
+  --theme-copy-header: var(--theme-complement9);
+  --theme-copy-base: var(--theme-complement0);
   --theme-copy-supporting: var(--theme-complement5);
   --theme-bg-base: var(--theme-complement9);
   --theme-bg-supporting: var(--theme-complement2);
 }
 
-[class*="theme-inverted"] {
+[class*="theme-dark"] {
+  --theme-copy-header: var(--theme-base1);
   --theme-copy-base: var(--theme-base5);
   --theme-copy-supporting: var(--theme-base3);
   --theme-bg-base: var(--theme-base5);
@@ -698,9 +701,44 @@
   color: var(--theme-copy-base);
 }
 
-[class*="complement-inverted"] {
+[class*="complement-dark"] {
+  --theme-copy-header: var(--theme-base9);
   --complement-copy-base: var(--black);
   --complement-copy-supporting: var(--theme-complement2);
   --complement-bg-base: var(--theme-complement5);
   --complement-bg-supporting: var(--theme-complement7);
+}
+
+[class*="theme-light"] {
+  --theme-copy-header: var(--theme-base9);
+  --theme-copy-base: var(--theme-base5);
+  --theme-copy-supporting: var(--theme-base3);
+  --theme-bg-base: var(--theme-base5);
+  --theme-bg-supporting: var(--theme-base7);
+  color: var(--theme-copy-base);
+}
+
+[class*="complement-light"] {
+  --theme-copy-header: var(--theme-base9);
+  --complement-copy-base: var(--black);
+  --complement-copy-supporting: var(--theme-complement2);
+  --complement-bg-base: var(--theme-complement5);
+  --complement-bg-supporting: var(--theme-complement7);
+}
+
+[class*="theme-plain"] {
+  --theme-copy-header: var(--theme-base9);
+  --theme-copy-base: var(--theme-base0);
+  --theme-copy-supporting: var(--theme-base5);
+  --theme-bg-base: var(--theme-base9);
+  --theme-bg-supporting: var(--theme-base2);
+  color: var(--theme-copy-base);
+}
+
+[class*="complement-plain"] {
+  --theme-copy-header: var(--theme-complement9);
+  --theme-copy-base: var(--theme-complement0);
+  --theme-copy-supporting: var(--theme-complement5);
+  --theme-bg-base: var(--theme-complement9);
+  --theme-bg-supporting: var(--theme-complement2);
 }

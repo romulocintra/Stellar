@@ -12,6 +12,20 @@ import 'ionicons';
 
 export namespace Components {
 
+  interface StellarAccordion {
+    'label': string;
+    'name': string;
+    'open': boolean;
+    'refresh': () => void;
+    'tight': boolean;
+  }
+  interface StellarAccordionAttributes extends StencilHTMLAttributes {
+    'label'?: string;
+    'name'?: string;
+    'open'?: boolean;
+    'tight'?: boolean;
+  }
+
   interface StellarAsset {
     'align': string;
     'ariaLabel': string;
@@ -48,6 +62,16 @@ export namespace Components {
     'size'?: string;
     'src'?: string;
     'tooltip'?: boolean;
+  }
+
+  interface StellarBlur {
+    'horizontal': number;
+    'setBlurFilter': () => void;
+    'vertical': number;
+  }
+  interface StellarBlurAttributes extends StencilHTMLAttributes {
+    'horizontal'?: number;
+    'vertical'?: number;
   }
 
   interface StellarButton {
@@ -298,6 +322,15 @@ export namespace Components {
     'value'?: string;
   }
 
+  interface CopyWrap {
+    'align': string;
+    'full': boolean;
+  }
+  interface CopyWrapAttributes extends StencilHTMLAttributes {
+    'align'?: string;
+    'full'?: boolean;
+  }
+
   interface StellarGrid {
     'align': string;
     'cols': number|string;
@@ -329,23 +362,35 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'StellarAccordion': Components.StellarAccordion;
     'StellarAsset': Components.StellarAsset;
     'StellarAvatar': Components.StellarAvatar;
+    'StellarBlur': Components.StellarBlur;
     'StellarButton': Components.StellarButton;
     'StellarCard': Components.StellarCard;
+    'CopyWrap': Components.CopyWrap;
     'StellarGrid': Components.StellarGrid;
     'StellarTooltip': Components.StellarTooltip;
   }
 
   interface StencilIntrinsicElements {
+    'stellar-accordion': Components.StellarAccordionAttributes;
     'stellar-asset': Components.StellarAssetAttributes;
     'stellar-avatar': Components.StellarAvatarAttributes;
+    'stellar-blur': Components.StellarBlurAttributes;
     'stellar-button': Components.StellarButtonAttributes;
     'stellar-card': Components.StellarCardAttributes;
+    'copy-wrap': Components.CopyWrapAttributes;
     'stellar-grid': Components.StellarGridAttributes;
     'stellar-tooltip': Components.StellarTooltipAttributes;
   }
 
+
+  interface HTMLStellarAccordionElement extends Components.StellarAccordion, HTMLStencilElement {}
+  var HTMLStellarAccordionElement: {
+    prototype: HTMLStellarAccordionElement;
+    new (): HTMLStellarAccordionElement;
+  };
 
   interface HTMLStellarAssetElement extends Components.StellarAsset, HTMLStencilElement {}
   var HTMLStellarAssetElement: {
@@ -359,6 +404,12 @@ declare global {
     new (): HTMLStellarAvatarElement;
   };
 
+  interface HTMLStellarBlurElement extends Components.StellarBlur, HTMLStencilElement {}
+  var HTMLStellarBlurElement: {
+    prototype: HTMLStellarBlurElement;
+    new (): HTMLStellarBlurElement;
+  };
+
   interface HTMLStellarButtonElement extends Components.StellarButton, HTMLStencilElement {}
   var HTMLStellarButtonElement: {
     prototype: HTMLStellarButtonElement;
@@ -369,6 +420,12 @@ declare global {
   var HTMLStellarCardElement: {
     prototype: HTMLStellarCardElement;
     new (): HTMLStellarCardElement;
+  };
+
+  interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
+  var HTMLCopyWrapElement: {
+    prototype: HTMLCopyWrapElement;
+    new (): HTMLCopyWrapElement;
   };
 
   interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
@@ -384,19 +441,25 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'stellar-accordion': HTMLStellarAccordionElement
     'stellar-asset': HTMLStellarAssetElement
     'stellar-avatar': HTMLStellarAvatarElement
+    'stellar-blur': HTMLStellarBlurElement
     'stellar-button': HTMLStellarButtonElement
     'stellar-card': HTMLStellarCardElement
+    'copy-wrap': HTMLCopyWrapElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-tooltip': HTMLStellarTooltipElement
   }
 
   interface ElementTagNameMap {
+    'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-asset': HTMLStellarAssetElement;
     'stellar-avatar': HTMLStellarAvatarElement;
+    'stellar-blur': HTMLStellarBlurElement;
     'stellar-button': HTMLStellarButtonElement;
     'stellar-card': HTMLStellarCardElement;
+    'copy-wrap': HTMLCopyWrapElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
   }

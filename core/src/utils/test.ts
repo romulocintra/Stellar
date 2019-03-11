@@ -8,6 +8,6 @@ export const renderToSketch = async function (page, component, name) {
 
     const asketchPageJSONString = await page.evaluate('JSON.stringify(page2layers.run())');
 
-    const outputFile = `../../data/components/${component}/sketch/${name}.asketch.json`;
+    const outputFile = `../../data/sketch/${component}-${name}.asketch.json`;
     fs.writeFileSync(path.resolve(__dirname, outputFile), asketchPageJSONString);
 }

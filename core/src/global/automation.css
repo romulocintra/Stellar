@@ -14,3 +14,18 @@ stellar-header[invert] stellar-dropdown {
   --dropdown-color: white;
   --dropdown-hover-color: white;
 }
+
+copy-wrap + copy-wrap,
+copy-wrap + stellar-grid,
+stellar-grid + copy-wrap {
+  margin-top: 4rem;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: 1em !important;
+}

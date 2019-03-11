@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/button/button.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">components/button</a> button.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.49% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.49% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>23/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, Prop, State, Element } from '@stencil/core';
+&nbsp;
+@Component({
+  tag: 'stellar-button',
+  styleUrl: 'button.css',
+  shadow: true
+})
+export class Button {
+  @Element() element: HTMLElement;
+&nbsp;
+  /**
+   * Allows the button to render for different tags.
+   */
+  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "button";
+&nbsp;
+  /**
+   * Sets accessibility options on the buttons
+   */
+  @Prop() label: string = 'Submit';
+&nbsp;
+  /**
+   * Sets the name on the button if the button is an input. Allows the button to act as an item in a form.
+   */
+  @Prop() name: string = '';
+&nbsp;
+  /**
+   * Sets the value on the button if the button is an input.
+   */
+  @Prop() value: string = '';
+&nbsp;
+  /**
+   * Sets the href on the anchor tag if the button is a link.
+   */
+  @Prop() href: string = '#';
+&nbsp;
+  /**
+   * Sets the href on the anchor tag if the button is a link.
+   */
+  @Prop() for: string;
+&nbsp;
+  /**
+   * Sets the target on the anchor tag if the button is a link.
+   */
+  @Prop() target: string = '_self';
+&nbsp;
+  /**
+   * Sets the size of the button. Can be tiny, small, medium, or large.
+   */
+  @Prop({reflectToAttr: true}) size: string|"tiny"|"small"|"medium"|"large" = "medium";
+&nbsp;
+  /**
+   * Sets the padding inside of the button. Can be small, medium, or large.
+   */
+  @Prop({reflectToAttr: true}) padding: string|"small"|"medium"|"large" = "medium";
+&nbsp;
+  /**
+   * Sets the button or link as a button with only an icon.
+   */
+  @Prop({reflectToAttr: true}) icon: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link as an active state.
+   */
+  @Prop({reflectToAttr: true}) active: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link as disabled and not-interactable.
+   */
+  @Prop({reflectToAttr: true}) disabled: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link to provide the affordance of a dangerous action.
+   */
+  @Prop({reflectToAttr: true}) danger: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link to render as a pill.
+   */
+  @Prop({reflectToAttr: true}) pill: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link to render at full width to the parent.
+   */
+  @Prop({reflectToAttr: true}) block: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflectToAttr: true}) outline: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflectToAttr: true}) invert: boolean = false;
+&nbsp;
+  /**
+   * Sets the button or link as processing when clicked.
+   */
+  @Prop() processable: boolean = false;
+  @State() processing: boolean = false;
+&nbsp;
+  @Prop({reflectToAttr: true}) ghost: boolean = false;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async</span> click() {
+<span class="cstat-no" title="statement not covered" >    if (this.processable) {</span>
+<span class="cstat-no" title="statement not covered" >      this.processing = true;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.for) {</span>
+      const target = <span class="cstat-no" title="statement not covered" >this.for.split(":");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (target[0] === "modal") {</span>
+        // @ts-ignore
+        const modal: HTMLStellarModalElement = <span class="cstat-no" title="statement not covered" >document.querySelector(`stellar-modal[name="${target[1]}"]`);</span>
+<span class="cstat-no" title="statement not covered" >        modal.open();</span>
+      }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.tag === "submit") {</span>
+      // @ts-ignore
+<span class="cstat-no" title="statement not covered" >      this.element.closest('stellar-form').submit_form();</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  renderSVG</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;stellar-asset src="Loading" color="white"&gt;&lt;/stellar-asset&gt;
+    )
+  }
+&nbsp;
+  renderButton() {
+    return (
+      &lt;button type="button" class="button" title={this.label} disabled={this.disabled} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
+        &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
+        {this.processing &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}</span>
+      &lt;/button&gt;
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  renderSubmit</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;button type="submit" class="button" title={this.label} disabled={this.disabled} name={this.name} value={this.value} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
+        &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
+        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
+      &lt;/button&gt;
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  renderLink</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;a href={this.href} target={this.target} class="button" data-disabled={this.disabled} title={this.label} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
+        &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
+        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
+      &lt;/a&gt;
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  renderAppLink</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;stencil-route-link url={this.href} anchorClass="button" data-disabled={this.disabled} title={this.label} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
+        &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
+        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
+      &lt;/stencil-route-link&gt;
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  renderSpan</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;span class="button" title={this.label} data-disabled={this.disabled} aria-label={`Button ${this.label} ${this.element.textContent}`} tabIndex={0} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
+        &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
+        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
+      &lt;/span&gt;
+    );
+  }
+&nbsp;
+  render() {
+    return [
+      this.tag === "button" &amp;&amp; this.renderButton(),
+      this.tag === "submit" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderSubmit(),</span>
+      this.tag === "link" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderLink(),</span>
+      this.tag === "route-link" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderAppLink(),</span>
+      this.tag === "span" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderSpan()</span>
+    ]
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 19:27:10 GMT-0500 (Central Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
