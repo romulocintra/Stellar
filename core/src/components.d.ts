@@ -352,6 +352,36 @@ export namespace Components {
     'swappableSelector'?: string;
   }
 
+  interface StellarImage {
+    'bg': string;
+    'height': number;
+    'medium': () => Promise<any>;
+    'nozoom': boolean;
+    'poster': string;
+    'width': number;
+  }
+  interface StellarImageAttributes extends StencilHTMLAttributes {
+    'bg'?: string;
+    'height'?: number;
+    'nozoom'?: boolean;
+    'poster'?: string;
+    'width'?: number;
+  }
+
+  interface StellarLayout {
+    'align': "baseline"|"center"|"top"|"bottom";
+    'padding': "tiny"|"small"|"medium"|"large";
+    'refresh': () => void;
+    'size': "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'type': string;
+  }
+  interface StellarLayoutAttributes extends StencilHTMLAttributes {
+    'align'?: "baseline"|"center"|"top"|"bottom";
+    'padding'?: "tiny"|"small"|"medium"|"large";
+    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'type'?: string;
+  }
+
   interface StellarTooltip {
     'align': "left"|"center"|"right";
   }
@@ -370,6 +400,8 @@ declare global {
     'StellarCard': Components.StellarCard;
     'CopyWrap': Components.CopyWrap;
     'StellarGrid': Components.StellarGrid;
+    'StellarImage': Components.StellarImage;
+    'StellarLayout': Components.StellarLayout;
     'StellarTooltip': Components.StellarTooltip;
   }
 
@@ -382,6 +414,8 @@ declare global {
     'stellar-card': Components.StellarCardAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-grid': Components.StellarGridAttributes;
+    'stellar-image': Components.StellarImageAttributes;
+    'stellar-layout': Components.StellarLayoutAttributes;
     'stellar-tooltip': Components.StellarTooltipAttributes;
   }
 
@@ -434,6 +468,18 @@ declare global {
     new (): HTMLStellarGridElement;
   };
 
+  interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
+  var HTMLStellarImageElement: {
+    prototype: HTMLStellarImageElement;
+    new (): HTMLStellarImageElement;
+  };
+
+  interface HTMLStellarLayoutElement extends Components.StellarLayout, HTMLStencilElement {}
+  var HTMLStellarLayoutElement: {
+    prototype: HTMLStellarLayoutElement;
+    new (): HTMLStellarLayoutElement;
+  };
+
   interface HTMLStellarTooltipElement extends Components.StellarTooltip, HTMLStencilElement {}
   var HTMLStellarTooltipElement: {
     prototype: HTMLStellarTooltipElement;
@@ -449,6 +495,8 @@ declare global {
     'stellar-card': HTMLStellarCardElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-grid': HTMLStellarGridElement
+    'stellar-image': HTMLStellarImageElement
+    'stellar-layout': HTMLStellarLayoutElement
     'stellar-tooltip': HTMLStellarTooltipElement
   }
 
@@ -461,6 +509,8 @@ declare global {
     'stellar-card': HTMLStellarCardElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-grid': HTMLStellarGridElement;
+    'stellar-image': HTMLStellarImageElement;
+    'stellar-layout': HTMLStellarLayoutElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
   }
 

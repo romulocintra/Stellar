@@ -8,6 +8,17 @@ export const config: Config = {
   preamble: '(C) Split Infinities https://splitinfinities.com - MIT License',
   globalStyle: "./src/global/stellar.css",
   testing: {
+    emulate: [
+      { device: "iPad" },
+      { device: "iPad landscape" },
+      { device: "iPhone 8" },
+      { device: "iPhone SE" },
+      { device: "iPhone X" },
+      { device: "Pixel 2" },
+      { viewport: { width: 320, height: 640 } },
+      { viewport: { width: 720, height: 1000 } },
+      { viewport: { width: 1400, height: 1200 } }
+    ],
     collectCoverage: true,
     notify: true,
     coverageDirectory: "./data/tests/",
@@ -32,12 +43,13 @@ export const config: Config = {
     { src: "global/vector" },
     { src: "global/audio" },
     { src: "global/page2layers.js" },
+    { src: "**/*.md", dest: "../data/docs" },
     { src: "*.html" },
   ],
   outputTargets:[
     { type: 'dist' },
     { type: "stats", file: "./data/stats.json" },
-    { type: "docs", dir: "./data" },
+    { type: "docs" },
     {
       type: 'www',
       serviceWorker: null // disable service workers
