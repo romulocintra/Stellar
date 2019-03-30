@@ -15,8 +15,9 @@
     --flipped-background: var(--white);
     --flipped-min-height: var(--flipped-min-height, 20rem);
     --border-radius: var(--border-radius-sm);
-    --padding: 2rem;
+    --padding: 3rem;
     --min-height: 10rem;
+    --card-width: auto;
 }
 
 :host([tag="a"]) {
@@ -40,7 +41,7 @@
     -webkit-appearance: none !important;
     display: block;
     border: var(--border);
-    width: auto;
+    width: var(--card-width);
     height: 100%;
     text-decoration: none;
     outline: none;
@@ -54,6 +55,7 @@
     ". . ."
     "footer footer footer";
     border-radius: var(--border-radius);
+    min-height: var(--min-height);
 }
 
 :host([flippable]) .wrap .front,
@@ -74,6 +76,7 @@
 :host .wrap ::slotted(*),
 :host .wrap ::slotted(section) {
     grid-area: section;
+    max-width: calc(var(--card-width) - (var(--padding) * 2));
 }
 
 :host .wrap ::slotted(header) {
@@ -81,6 +84,8 @@
     border-bottom: var(--border);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     grid-area: header !important;
+    width: calc(var(--card-width) - 2);
+    max-width: calc(var(--card-width) - 2);
 }
 
 :host .wrap ::slotted(header.subhead) {
@@ -97,14 +102,8 @@
     grid-area: footer !important;
     padding: 1rem var(--padding);
     border-top: var(--border);
-}
-
-:host([has*="header"]) {
-
-}
-
-:host([has*="footer"]) {
-
+    width: calc(var(--card-width) - 2);
+    max-width: calc(var(--card-width) - 2);
 }
 
 :host([has*="header"][has*="footer"]) {
@@ -152,6 +151,7 @@
     backface-visibility: hidden;
     z-index: 1;
     opacity: 1;
+    height: 100%;
 }
 
 :host([flippable]) .wrap .back * {
@@ -189,6 +189,7 @@
 }
 
 :host([flippable][flipped]) {
+    --background: var(--flipped-background, white) !important;
     --min-height: var(--flipped-min-height) !important;
     z-index: 1;
 }

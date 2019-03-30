@@ -2,6 +2,7 @@ export { colors } from '../global/colors';
 import properties from 'css-custom-properties';
 import isHexColor from 'validator/lib/isHexColor';
 import delay from 'async-delay';
+import ResizeObserver from 'resize-observer-polyfill';
 
 import Tween, { Easing } from 'tweenkle';
 
@@ -54,5 +55,6 @@ export function titleCase(str) {
 export {
   properties,
   isHexColor,
-  delay
+  delay,
+  ResizeObserver
 }

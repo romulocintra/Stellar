@@ -1,5 +1,5 @@
 import { Component, Prop, State, Element, Event, EventEmitter, Method } from '@stencil/core';
-import { properties } from '../../utils'
+import { properties, ResizeObserver } from '../../utils'
 
 @Component({
   tag: 'stellar-card',
@@ -22,7 +22,7 @@ export class Card {
   /**
    * Renders a flipped card
    */
-  @Prop({  mutable: true, reflectToAttr: true }) flipped: boolean = false;
+  @Prop({ mutable: true, reflectToAttr: true }) flipped: boolean = false;
 
   /**
    * Sets the padding inside of the button. Can be small, medium, or large.
@@ -62,13 +62,15 @@ export class Card {
   /**
    * Sets the href on the anchor tag if the button is a link.
    */
-  @Prop() flip_icon: string = "options";
+  @Prop() flip_icon: string = "cog";
 
   @State() width: number;
   @State() height: number;
   @State() middleX: number;
   @State() middleY: number;
   @State() rotationLimit: number = 0.75;
+
+  @State() ro: ResizeObserver;
 
   @Prop({reflectToAttr: true, mutable: true}) transition: boolean = false;
 
@@ -90,7 +92,20 @@ export class Card {
       this.element.addEventListener('mouseleave', this.removeRotation.bind(this))
     }
 
-    this.updateFlippableCardHeight()
+    this.updateFlippableCardHeight();
+
+    this.addResizeObserver();
+  }
+
+  addResizeObserver() {
+    this.ro = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const {width} = entry.contentRect;
+        properties.set({'--card-width': `${width}px`}, entry.target)
+      }
+    });
+
+    this.ro.observe(this.element);
   }
 
   updateFlippableCardHeight () {
@@ -184,8 +199,8 @@ export class Card {
       type: this.type
     };
 
-    return (
-      <this.tag {...childProps} class="wrap" onClick={(e) => { this.click(e) }}>
+    // @ts-ignore
+    return (<this.tag {...childProps} class={"stencil-route-link" !== this.tag ? "wrap" : ""} anchorClass={"stencil-route-link" === this.tag ? "wrap" : ""} onClick={(e) => { this.click(e) }}>
         { this.flippable && [
             <stellar-button ghost class="flip-button" onClick={(e) => { this.flip_card(e) }}>
               <stellar-asset name={this.flipped ? "close" : this.flip_icon} class="ma0" />
