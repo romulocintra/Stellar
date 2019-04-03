@@ -18,8 +18,12 @@ h3[alt],
 h4[alt],
 h5[alt],
 h6[alt] {
-  color: var(--complement-copy-base, var(--gray5));
+  color: var(--complement-copy-base, var(--gray7));
 }
+
+h6 { color: var(--complement-copy-base, var(--gray7)); }
+h6[alt] { color: var(--theme-copy-header, var(--black)); }
+
 
 h1[fill],
 h2[fill],
@@ -47,42 +51,42 @@ h6,
 
 h1,
 .fs1 {
-  font-size: 2.8rem;
+  font-size: var(--h1-size, 2.8rem);
 }
 
 h2,
 .fs2 {
-  font-size: 2.4rem;
+  font-size: var(--h2-size, 2.4rem);
 }
 
 h3,
 .fs3 {
-  font-size: 2rem;
+  font-size: var(--h3-size, 2rem);
 }
 
 h4,
 .fs4 {
-  font-size: 1.8rem;
+  font-size: var(--h4-size, 2.8rem);
 }
 
 h5,
 .fs5 {
-  font-size: 1.4rem;
+  font-size: var(--h5-size, 1.4rem);
 }
 
 h6,
 .fs6 {
-  font-size: 1.2rem;
+  font-size: var(--h6-size, 1.2rem);
 }
 
 p,
 .fs7 {
-  font-size: 1rem;
+  font-size: var(--font-size, 1rem);
 }
 
 small,
 .fs8 {
-  font-size: .8em;
+  font-size: var(--small-size, 0.8em);
   letter-spacing: 0.02em;
 }
 
@@ -90,41 +94,9 @@ a {
   color: var(--theme-base6);
 }
 
-
 a:hover,
 a:focus {
   color: var(--theme-base8);
-}
-
-h1 {
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-
-h2 {
-  line-height: 1.33;
-  letter-spacing: 0.01em;
-}
-
-h3 {
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-}
-
-h4 {
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-}
-
-h5 {
-  line-height: 1.22;
-  letter-spacing: 0.0225em;
-}
-
-h6 {
-  line-height: 1.5;
-  letter-spacing: 0.025em;
 }
 
 hr {

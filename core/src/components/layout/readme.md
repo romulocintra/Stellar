@@ -5,21 +5,38 @@
 <!-- Auto Generated Below -->
 
 
+## Usage
+
+### Default
+
+<stellar-layout>
+    <aside class="bg-theme-3"></aside>
+    <section class="bg-theme-5"></section>
+</stellar-layout>
+
+
+
 ## Properties
 
-| Property  | Attribute | Description | Type                                             |
-| --------- | --------- | ----------- | ------------------------------------------------ |
-| `align`   | `align`   |             | `"baseline"|"center"|"top"|"bottom"`             |
-| `padding` | `padding` |             | `"tiny"|"small"|"medium"|"large"`                |
-| `size`    | `size`    |             | `"tiny"|"small"|"medium"|"large"|"full"|"flush"` |
-| `type`    | `type`    |             | `string`                                         |
+| Property  | Attribute | Description | Type                                                            | Default     |
+| --------- | --------- | ----------- | --------------------------------------------------------------- | ----------- |
+| `align`   | `align`   |             | `"baseline" \| "bottom" \| "center" \| "top"`                   | `"top"`     |
+| `padding` | `padding` |             | `"large" \| "medium" \| "none" \| "small" \| "tiny"`            | `"medium"`  |
+| `size`    | `size`    |             | `"flush" \| "full" \| "large" \| "medium" \| "small" \| "tiny"` | `"medium"`  |
+| `type`    | `type`    |             | `string`                                                        | `undefined` |
 
 
 ## Methods
 
-| Method    | Description |
-| --------- | ----------- |
-| `refresh` |             |
+### `refresh() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
 
 
 ----------------------------------------------

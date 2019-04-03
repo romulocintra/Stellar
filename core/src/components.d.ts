@@ -74,6 +74,44 @@ export namespace Components {
     'vertical'?: number;
   }
 
+  interface StellarBreadcrumb {
+    'color': string;
+    'disabled': boolean;
+    'first': boolean;
+    'href': string;
+    'label': string;
+    'last': boolean;
+    'target': string;
+  }
+  interface StellarBreadcrumbAttributes extends StencilHTMLAttributes {
+    'color'?: string;
+    'disabled'?: boolean;
+    'first'?: boolean;
+    'href'?: string;
+    'label'?: string;
+    'last'?: boolean;
+    'target'?: string;
+  }
+
+  interface StellarBreadcrumbs {
+    'color': string;
+    'description': string;
+    'home': string;
+    'icon': string;
+    'icon_size': number;
+    'icon_src': string;
+    'label': string;
+  }
+  interface StellarBreadcrumbsAttributes extends StencilHTMLAttributes {
+    'color'?: string;
+    'description'?: string;
+    'home'?: string;
+    'icon'?: string;
+    'icon_size'?: number;
+    'icon_src'?: string;
+    'label'?: string;
+  }
+
   interface StellarButton {
     /**
     * Sets the button or link as an active state.
@@ -370,14 +408,14 @@ export namespace Components {
 
   interface StellarLayout {
     'align': "baseline"|"center"|"top"|"bottom";
-    'padding': "tiny"|"small"|"medium"|"large";
+    'padding': "none"|"tiny"|"small"|"medium"|"large";
     'refresh': () => void;
     'size': "tiny"|"small"|"medium"|"large"|"full"|"flush";
     'type': string;
   }
   interface StellarLayoutAttributes extends StencilHTMLAttributes {
     'align'?: "baseline"|"center"|"top"|"bottom";
-    'padding'?: "tiny"|"small"|"medium"|"large";
+    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
     'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
     'type'?: string;
   }
@@ -396,6 +434,8 @@ declare global {
     'StellarAsset': Components.StellarAsset;
     'StellarAvatar': Components.StellarAvatar;
     'StellarBlur': Components.StellarBlur;
+    'StellarBreadcrumb': Components.StellarBreadcrumb;
+    'StellarBreadcrumbs': Components.StellarBreadcrumbs;
     'StellarButton': Components.StellarButton;
     'StellarCard': Components.StellarCard;
     'CopyWrap': Components.CopyWrap;
@@ -410,6 +450,8 @@ declare global {
     'stellar-asset': Components.StellarAssetAttributes;
     'stellar-avatar': Components.StellarAvatarAttributes;
     'stellar-blur': Components.StellarBlurAttributes;
+    'stellar-breadcrumb': Components.StellarBreadcrumbAttributes;
+    'stellar-breadcrumbs': Components.StellarBreadcrumbsAttributes;
     'stellar-button': Components.StellarButtonAttributes;
     'stellar-card': Components.StellarCardAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
@@ -442,6 +484,18 @@ declare global {
   var HTMLStellarBlurElement: {
     prototype: HTMLStellarBlurElement;
     new (): HTMLStellarBlurElement;
+  };
+
+  interface HTMLStellarBreadcrumbElement extends Components.StellarBreadcrumb, HTMLStencilElement {}
+  var HTMLStellarBreadcrumbElement: {
+    prototype: HTMLStellarBreadcrumbElement;
+    new (): HTMLStellarBreadcrumbElement;
+  };
+
+  interface HTMLStellarBreadcrumbsElement extends Components.StellarBreadcrumbs, HTMLStencilElement {}
+  var HTMLStellarBreadcrumbsElement: {
+    prototype: HTMLStellarBreadcrumbsElement;
+    new (): HTMLStellarBreadcrumbsElement;
   };
 
   interface HTMLStellarButtonElement extends Components.StellarButton, HTMLStencilElement {}
@@ -491,6 +545,8 @@ declare global {
     'stellar-asset': HTMLStellarAssetElement
     'stellar-avatar': HTMLStellarAvatarElement
     'stellar-blur': HTMLStellarBlurElement
+    'stellar-breadcrumb': HTMLStellarBreadcrumbElement
+    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
     'stellar-button': HTMLStellarButtonElement
     'stellar-card': HTMLStellarCardElement
     'copy-wrap': HTMLCopyWrapElement
@@ -505,6 +561,8 @@ declare global {
     'stellar-asset': HTMLStellarAssetElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
+    'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
+    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement;
     'stellar-button': HTMLStellarButtonElement;
     'stellar-card': HTMLStellarCardElement;
     'copy-wrap': HTMLCopyWrapElement;

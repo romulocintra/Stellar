@@ -11,7 +11,7 @@ export class Button {
   /**
    * Allows the button to render for different tags.
    */
-  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "button";
+  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "link";
 
   /**
    * Sets accessibility options on the buttons
@@ -119,6 +119,10 @@ export class Button {
     if (this.tag === "submit") {
       // @ts-ignore
       this.element.closest('stellar-form').submit_form();
+    }
+
+    if (this.tag === "link") {
+      window.location.href = this.href;
     }
 
     return true;

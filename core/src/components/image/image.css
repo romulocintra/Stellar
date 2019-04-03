@@ -6,6 +6,16 @@
   max-height: var(--height, 300px);
 }
 
+:host([block]) {
+  --width: 100% !important;
+  --height: 100% !important;
+}
+
+:host([nozoom]) figure {
+  transform: none !important;
+  cursor: default !important;
+}
+
 :host figure {
   display: block;
   position: relative;

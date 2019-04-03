@@ -48,15 +48,11 @@ export class Picture {
   mountZoom() {
     let zoomable = this.element.shadowRoot.querySelector('img');
 
-    console.log(this.bg);
-
     this.zoom = mediumZoom(zoomable, {
       background: `${this.bg}`,
       scrollOffset: 1,
-      margin: 0
+      margin: 30
     });
-
-    console.log(this.zoom);
   }
 
   @Watch('poster')
@@ -128,8 +124,6 @@ export class Picture {
 
     img.src = this.poster;
     img.crossOrigin = "Anonymous";
-
-    console.log(img);
   }
 
   setBG() {
@@ -154,7 +148,6 @@ export class Picture {
 
     this.sources = sourcesArray;
     this.poster = this.poster ? this.poster : this.sources[this.sources.length - 1].srcset;
-    console.log(this.poster)
   }
 
   updateAspectRatio() {

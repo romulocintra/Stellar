@@ -11,7 +11,7 @@ export class Layout {
 
 	@Prop({reflectToAttr: true}) type: string;
 	@Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large"|"full"|"flush" = "medium";
-	@Prop({reflectToAttr: true}) padding: "tiny"|"small"|"medium"|"large" = "medium";
+	@Prop({reflectToAttr: true}) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
 	@Prop({reflectToAttr: true}) align: "baseline"|"center"|"top"|"bottom" = "top";
 
 	componentWillLoad() {

@@ -58,6 +58,18 @@
   display: table-column-group;
 }
 
+.dg {
+  display: grid;
+}
+
+.dig {
+  display: inline-grid;
+}
+.dc {
+  display: contents;
+}
+
+
 /*
   This will set table to full width and then
   all cells will be equal width
@@ -101,6 +113,16 @@
   .dt-column-group-ns {
     display: table-column-group;
   }
+  .dg-ns {
+    display: grid;
+  }
+  .dig-ns {
+    display: inline-grid;
+  }
+  .dc-ns {
+    display: contents;
+  }
+
 
   .dt--fixed-ns {
     width: 100%;
@@ -142,6 +164,16 @@
   .dt-column-group-m {
     display: table-column-group;
   }
+  .dg-m {
+    display: grid;
+  }
+  .dig-m {
+    display: inline-grid;
+  }
+  .dc-m {
+    display: contents;
+  }
+
 
   .dt--fixed-m {
     width: 100%;
@@ -182,6 +214,15 @@
   }
   .dt-column-group-l {
     display: table-column-group;
+  }
+  .dg-l {
+    display: grid;
+  }
+  .dig-l {
+    display: inline-grid;
+  }
+  .dc-l {
+    display: contents;
   }
 
   .dt--fixed-l {

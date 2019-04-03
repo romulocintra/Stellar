@@ -1,4 +1,4 @@
-# stellar-image
+# stellar-accordian
 
 
 
@@ -7,26 +7,20 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      |
-| -------- | --------- | ----------- | --------- |
-| `bg`     | `bg`      |             | `string`  |
-| `height` | `height`  |             | `number`  |
-| `nozoom` | `nozoom`  |             | `boolean` |
-| `poster` | `poster`  |             | `string`  |
-| `width`  | `width`   |             | `number`  |
-
-
-## Methods
-
-| Method   | Description |
-| -------- | ----------- |
-| `medium` |             |
+| Property | Attribute | Description | Type                      |
+| -------- | --------- | ----------- | ------------------------- |
+| `align`  | `align`   |             | `"left"|"center"|"right"` |
 
 
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
- Methods
+        | `"tiny"|"small"|"medium"|"large"`                |
+| `size`    | `size`    |             | `"tiny"|"small"|"medium"|"large"|"full"|"flush"` |
+| `type`    | `type`    |             | `string`                                         |
+
+
+## Methods
 
 | Method    | Description |
 | --------- | ----------- |

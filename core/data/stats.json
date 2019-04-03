@@ -2,38 +2,38 @@
   "diagnostics": [
     {
       "level": "error",
-      "type": "bundling",
-      "language": "javascript",
-      "code": "MISSING_EXPORT",
-      "header": "Rollup: Missing Export",
-      "messageText": "'delay' is not exported by node_modules/async-delay/dist/index.js",
-      "relFilePath": "src/utils/index.js",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/utils/index.js",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2740",
+      "messageText": "Type 'NodeListOf<HTMLStellarBreadcrumbElement>' is missing the following properties from type 'HTMLStellarBreadcrumbElement[]': pop, push, concat, join, and 24 more.",
+      "relFilePath": "src/components/breadcrumbs/breadcrumbs.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/breadcrumbs/breadcrumbs.tsx",
       "lines": [
         {
-          "lineIndex": 2,
-          "lineNumber": 3,
-          "text": "import isHexColor from 'validator/lib/isHexColor';\r",
+          "lineIndex": 25,
+          "lineNumber": 26,
+          "text": "    const last_breadcrumb: HTMLStellarBreadcrumbElement = this.el.querySelector('stellar-breadcrumb:last-of-type');",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 3,
-          "lineNumber": 4,
-          "text": "import { delay } from 'async-delay';\r",
-          "errorCharStart": 9,
-          "errorLength": 5
+          "lineIndex": 26,
+          "lineNumber": 27,
+          "text": "    const breadcrumbs: HTMLStellarBreadcrumbElement[] = this.el.querySelectorAll('stellar-breadcrumb');",
+          "errorCharStart": 10,
+          "errorLength": 11
         },
         {
-          "lineIndex": 4,
-          "lineNumber": 5,
-          "text": "import Tween, { Easing } from 'tweenkle';\r",
+          "lineIndex": 27,
+          "lineNumber": 28,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 4,
-      "columnNumber": 9
+      "lineNumber": 27,
+      "columnNumber": 10
     }
   ]
 }

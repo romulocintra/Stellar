@@ -7,7 +7,7 @@
 }
 
 :host([align="left"]) ::slotted(*) {
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 :host([align="center"]) {
@@ -15,8 +15,8 @@
 }
 
 :host([align="center"]) ::slotted(*) {
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 :host([align="right"]) {
@@ -24,7 +24,7 @@
 }
 
 :host([align="right"]) ::slotted(*) {
-  margin-left: auto;
+  margin-left: auto !important;
 }
 
 :host ::slotted(stellar-button) {
@@ -33,11 +33,11 @@
 
 :host ::slotted(img),
 :host ::slotted(stellar-code-block) {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 :host ::slotted(*:last-child) {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 :host ::slotted(h1),
@@ -47,21 +47,21 @@
 :host ::slotted(h5),
 :host ::slotted(h6),
 :host ::slotted(p) {
-  margin-bottom: .25em !important;
-  max-width: 25em;
+  margin-bottom: 2rem !important;
+  max-width: 25em !important;
 }
 
-:host[full] ::slotted(*) {
-  max-width: 100%;
+:host([full]) ::slotted(*) {
+  max-width: 100% !important;
 }
 
 :host ::slotted(ul),
 :host ::slotted(ol) {
-  margin: .25em 0;
-  display: inline-block;
-  text-align: left;
+  margin: .25em 0 !important;
+  display: inline-block !important;
+  text-align: left !important;
 }
 
 :host ::slotted(li) {
-  margin-top: 0.5em;
+  margin-top: 0.5em !important;
 }

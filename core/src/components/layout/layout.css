@@ -1,11 +1,12 @@
 :host {
   display: block;
   font-family: inherit;
+  --grid-gap: 3rem;
 }
 
 :host .layout {
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: var(--grid-gap, 3rem);
   margin: 0 auto;
   padding: 4rem 0;
   width: 95%;
@@ -41,6 +42,10 @@
 :host([size="flush"]) .layout {
   max-width: 100%;
   width: 100%;
+}
+
+:host([padding="none"]) .layout {
+  padding: 0;
 }
 
 :host([padding="tiny"]) .layout {
@@ -90,6 +95,10 @@
 
   :host([type="sidebar"]) .layout {
     grid-template-columns: 1fr 3fr;
+  }
+
+  :host([type="half"]) .layout {
+    grid-template-columns: 1fr 1fr;
   }
 
   :host([type="supporting-content"]) .layout {
