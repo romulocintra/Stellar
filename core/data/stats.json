@@ -5,35 +5,245 @@
       "type": "typescript",
       "language": "typescript",
       "header": "TypeScript",
-      "code": "2740",
-      "messageText": "Type 'NodeListOf<HTMLStellarBreadcrumbElement>' is missing the following properties from type 'HTMLStellarBreadcrumbElement[]': pop, push, concat, join, and 24 more.",
-      "relFilePath": "src/components/breadcrumbs/breadcrumbs.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/breadcrumbs/breadcrumbs.tsx",
+      "code": "1005",
+      "messageText": "';' expected.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
       "lines": [
         {
-          "lineIndex": 25,
-          "lineNumber": 26,
-          "text": "    const last_breadcrumb: HTMLStellarBreadcrumbElement = this.el.querySelector('stellar-breadcrumb:last-of-type');",
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 26,
-          "lineNumber": 27,
-          "text": "    const breadcrumbs: HTMLStellarBreadcrumbElement[] = this.el.querySelectorAll('stellar-breadcrumb');",
-          "errorCharStart": 10,
-          "errorLength": 11
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 14,
+          "errorLength": 1
         },
         {
-          "lineIndex": 27,
-          "lineNumber": 28,
-          "text": "",
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 27,
-      "columnNumber": 10
+      "lineNumber": 16,
+      "columnNumber": 14
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "1005",
+      "messageText": "':' expected.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 102,
+          "errorLength": 1
+        },
+        {
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 16,
+      "columnNumber": 102
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2554",
+      "messageText": "Expected 2 arguments, but got 0.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 13,
+          "lineNumber": 14,
+          "text": "  componentDidLoad() {",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": 4,
+          "errorLength": 27
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 15,
+      "columnNumber": 4
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'aria'.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 4,
+          "errorLength": 4
+        },
+        {
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 16,
+      "columnNumber": 4
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'label'.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 9,
+          "errorLength": 5
+        },
+        {
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 16,
+      "columnNumber": 9
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'role'.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 77,
+          "errorLength": 4
+        },
+        {
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 16,
+      "columnNumber": 77
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'tabindex'.",
+      "relFilePath": "src/components/callout/callout.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/callout/callout.tsx",
+      "lines": [
+        {
+          "lineIndex": 14,
+          "lineNumber": 15,
+          "text": "    this.element.setAttribute()",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 15,
+          "lineNumber": 16,
+          "text": "    aria-label={`An ${this.type} message. ${this.element.textContent}`} aria-role=\"status\" tabindex={0}",
+          "errorCharStart": 91,
+          "errorLength": 8
+        },
+        {
+          "lineIndex": 16,
+          "lineNumber": 17,
+          "text": "  }",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 16,
+      "columnNumber": 91
     }
   ]
 }

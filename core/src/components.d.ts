@@ -263,6 +263,13 @@ export namespace Components {
     'value'?: string;
   }
 
+  interface StellarCallout {
+    'type': "alert"|"error"|"info"|"success"|"default";
+  }
+  interface StellarCalloutAttributes extends StencilHTMLAttributes {
+    'type'?: "alert"|"error"|"info"|"success"|"default";
+  }
+
   interface StellarCard {
     'flip_card': (e?: UIEvent) => Promise<void>;
     /**
@@ -437,6 +444,7 @@ declare global {
     'StellarBreadcrumb': Components.StellarBreadcrumb;
     'StellarBreadcrumbs': Components.StellarBreadcrumbs;
     'StellarButton': Components.StellarButton;
+    'StellarCallout': Components.StellarCallout;
     'StellarCard': Components.StellarCard;
     'CopyWrap': Components.CopyWrap;
     'StellarGrid': Components.StellarGrid;
@@ -453,6 +461,7 @@ declare global {
     'stellar-breadcrumb': Components.StellarBreadcrumbAttributes;
     'stellar-breadcrumbs': Components.StellarBreadcrumbsAttributes;
     'stellar-button': Components.StellarButtonAttributes;
+    'stellar-callout': Components.StellarCalloutAttributes;
     'stellar-card': Components.StellarCardAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-grid': Components.StellarGridAttributes;
@@ -504,6 +513,12 @@ declare global {
     new (): HTMLStellarButtonElement;
   };
 
+  interface HTMLStellarCalloutElement extends Components.StellarCallout, HTMLStencilElement {}
+  var HTMLStellarCalloutElement: {
+    prototype: HTMLStellarCalloutElement;
+    new (): HTMLStellarCalloutElement;
+  };
+
   interface HTMLStellarCardElement extends Components.StellarCard, HTMLStencilElement {}
   var HTMLStellarCardElement: {
     prototype: HTMLStellarCardElement;
@@ -548,6 +563,7 @@ declare global {
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement
     'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
     'stellar-button': HTMLStellarButtonElement
+    'stellar-callout': HTMLStellarCalloutElement
     'stellar-card': HTMLStellarCardElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-grid': HTMLStellarGridElement
@@ -564,6 +580,7 @@ declare global {
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
     'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement;
     'stellar-button': HTMLStellarButtonElement;
+    'stellar-callout': HTMLStellarCalloutElement;
     'stellar-card': HTMLStellarCardElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-grid': HTMLStellarGridElement;

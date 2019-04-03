@@ -1,0 +1,18 @@
+:host {
+	display: block;
+	padding: 2rem;
+	background-color: var(--theme-base1);
+}
+
+:host .callout-wrap {
+	display: flex;
+	align-items: center;
+}
+
+:host(.db) .callout-wrap {
+	display: block;
+}
+
+:host ::slotted(*) {
+	color: var(--gray9);
+}
