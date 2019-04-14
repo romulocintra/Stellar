@@ -84,8 +84,8 @@
     border-bottom: var(--border);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     grid-area: header !important;
-    width: calc(var(--card-width) - 2);
-    max-width: calc(var(--card-width) - 2);
+    width: calc(var(--card-width) - 2px);
+    max-width: calc(var(--card-width) - 2px);
 }
 
 :host .wrap ::slotted(header.subhead) {
@@ -102,8 +102,8 @@
     grid-area: footer !important;
     padding: 1rem var(--padding);
     border-top: var(--border);
-    width: calc(var(--card-width) - 2);
-    max-width: calc(var(--card-width) - 2);
+    width: calc(var(--card-width) - 2px);
+    max-width: calc(var(--card-width) - 2px);
 }
 
 :host([has*="header"][has*="footer"]) {

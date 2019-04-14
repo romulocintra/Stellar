@@ -367,6 +367,31 @@ export namespace Components {
     'value'?: string;
   }
 
+  interface StellarCode {
+    'clipboard': () => Promise<void>;
+    'codeString': string;
+    'copy': boolean;
+    'expandable': boolean;
+    'expanded': boolean;
+    'feature': boolean;
+    'highlight': () => void;
+    'language': string;
+    'preview': boolean;
+    'result': () => Promise<string>;
+    'setCode': (code: any) => void;
+    'simple': boolean;
+  }
+  interface StellarCodeAttributes extends StencilHTMLAttributes {
+    'codeString'?: string;
+    'copy'?: boolean;
+    'expandable'?: boolean;
+    'expanded'?: boolean;
+    'feature'?: boolean;
+    'language'?: string;
+    'preview'?: boolean;
+    'simple'?: boolean;
+  }
+
   interface CopyWrap {
     'align': string;
     'full': boolean;
@@ -446,6 +471,7 @@ declare global {
     'StellarButton': Components.StellarButton;
     'StellarCallout': Components.StellarCallout;
     'StellarCard': Components.StellarCard;
+    'StellarCode': Components.StellarCode;
     'CopyWrap': Components.CopyWrap;
     'StellarGrid': Components.StellarGrid;
     'StellarImage': Components.StellarImage;
@@ -463,6 +489,7 @@ declare global {
     'stellar-button': Components.StellarButtonAttributes;
     'stellar-callout': Components.StellarCalloutAttributes;
     'stellar-card': Components.StellarCardAttributes;
+    'stellar-code': Components.StellarCodeAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-grid': Components.StellarGridAttributes;
     'stellar-image': Components.StellarImageAttributes;
@@ -525,6 +552,12 @@ declare global {
     new (): HTMLStellarCardElement;
   };
 
+  interface HTMLStellarCodeElement extends Components.StellarCode, HTMLStencilElement {}
+  var HTMLStellarCodeElement: {
+    prototype: HTMLStellarCodeElement;
+    new (): HTMLStellarCodeElement;
+  };
+
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
   var HTMLCopyWrapElement: {
     prototype: HTMLCopyWrapElement;
@@ -565,6 +598,7 @@ declare global {
     'stellar-button': HTMLStellarButtonElement
     'stellar-callout': HTMLStellarCalloutElement
     'stellar-card': HTMLStellarCardElement
+    'stellar-code': HTMLStellarCodeElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-image': HTMLStellarImageElement
@@ -582,6 +616,7 @@ declare global {
     'stellar-button': HTMLStellarButtonElement;
     'stellar-callout': HTMLStellarCalloutElement;
     'stellar-card': HTMLStellarCardElement;
+    'stellar-code': HTMLStellarCodeElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-image': HTMLStellarImageElement;
