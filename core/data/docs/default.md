@@ -1,7 +1,8 @@
-<stellar-button block>
-	Hover over me...
-	<stellar-tooltip>
-		<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
+<stellar-layout>
+    <aside class="bg-theme-3"></aside>
+    <section class="bg-theme-5"></section>
+</stellar-layout>
+ss="mr2"></stellar-avatar>
 		<span>
 			William M. Riley
 			<small class="db o-70">Joined Feb. 2nd</small>

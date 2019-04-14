@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">53.49% </span>
+        <span class="strong">51.11% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>23/43</span>
+        <span class='fraction'>23/45</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">25% </span>
+        <span class="strong">23.33% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>7/28</span>
+        <span class='fraction'>7/30</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">21.43% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>3/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">53.49% </span>
+        <span class="strong">51.11% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>23/43</span>
+        <span class='fraction'>23/45</span>
       </div>
     </div>
   </div>
@@ -230,7 +230,11 @@
 185
 186
 187
-188</td><td class="line-coverage quiet"><span class="cline-any cline-yes">9x</span>
+188
+189
+190
+191
+192</td><td class="line-coverage quiet"><span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -354,34 +358,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -430,7 +438,7 @@ export class Button {
   /**
    * Allows the button to render for different tags.
    */
-  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "button";
+  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "link";
 &nbsp;
   /**
    * Sets accessibility options on the buttons
@@ -540,6 +548,10 @@ export class Button {
 <span class="cstat-no" title="statement not covered" >      this.element.closest('stellar-form').submit_form();</span>
     }
 &nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.tag === "link") {</span>
+<span class="cstat-no" title="statement not covered" >      window.location.href = this.href;</span>
+    }
+&nbsp;
 <span class="cstat-no" title="statement not covered" >    return true;</span>
   }
 &nbsp;
@@ -549,11 +561,11 @@ export class Button {
     )
   }
 &nbsp;
-  renderButton() {
-    return (
+<span class="fstat-no" title="function not covered" >  renderButton</span>() {
+<span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;button type="button" class="button" title={this.label} disabled={this.disabled} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
         &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
-        {this.processing &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}</span>
+        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
       &lt;/button&gt;
     );
   }
@@ -567,11 +579,11 @@ export class Button {
     );
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  renderLink</span>() {
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  renderLink() {
+    return (
       &lt;a href={this.href} target={this.target} class="button" data-disabled={this.disabled} title={this.label} onClick={<span class="fstat-no" title="function not covered" >() </span>=&gt; { <span class="cstat-no" title="statement not covered" >this.click() </span>}}&gt;
         &lt;div class="content"&gt;&lt;slot&gt;Submit&lt;/slot&gt;&lt;/div&gt;
-        {this.processing &amp;&amp; &lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}
+        {this.processing &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div class="processing"&gt;{this.renderSVG()}&lt;/div&gt;}</span>
       &lt;/a&gt;
     );
   }
@@ -596,9 +608,9 @@ export class Button {
 &nbsp;
   render() {
     return [
-      this.tag === "button" &amp;&amp; this.renderButton(),
+      this.tag === "button" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderButton(),</span>
       this.tag === "submit" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderSubmit(),</span>
-      this.tag === "link" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderLink(),</span>
+      this.tag === "link" &amp;&amp; this.renderLink(),
       this.tag === "route-link" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderAppLink(),</span>
       this.tag === "span" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.renderSpan()</span>
     ]
@@ -610,7 +622,7 @@ export class Button {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Mar 30 2019 18:27:53 GMT-0500 (Central Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Apr 08 2019 16:45:46 GMT-0500 (Central Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

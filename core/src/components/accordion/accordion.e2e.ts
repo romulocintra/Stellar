@@ -20,6 +20,6 @@ describe('stellar-accordion', () => {
     expect(element).toHaveClass('hydrated');
     const results = await page.compareScreenshot();
     expect(results).toMatchScreenshot()
-    await renderToSketch(page, "accordion", "default")
+    await renderToSketch(page, "site", "default")
   });
 });
