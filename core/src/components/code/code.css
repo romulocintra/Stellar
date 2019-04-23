@@ -1,5 +1,5 @@
 :host, :host *, :host *:before, :host *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 :host ::-webkit-scrollbar {
@@ -36,6 +36,10 @@
   overflow: auto;
   background: var(--gray0);
   letter-spacing: 0;
+}
+
+:host stellar-card {
+  --background: var(--white);
 }
 
 :host([simple]) {
@@ -262,21 +266,25 @@
   content: "·";
 }
 
-:host-context(.theme-inverted),
-:host-context(.theme-inverted) footer {
+:host-context(.theme-dark),
+:host-context(.theme-dark) footer {
   background: var(--gray9);
 }
 
-:host-context(.theme-inverted) code[class*=language-],
-:host-context(.theme-inverted) pre[class*=language-] {
+:host-context(.theme-dark) stellar-card {
+  --background: var(--black);
+}
+
+:host-context(.theme-dark) code[class*=language-],
+:host-context(.theme-dark) pre[class*=language-] {
   color: var(--gray1);
   text-shadow: 0 1px var(--gray9);
 }
 
-:host-context(.theme-inverted) pre .token.comment,
-:host-context(.theme-inverted) pre .token.prolog,
-:host-context(.theme-inverted) pre .token.doctype,
-:host-context(.theme-inverted) pre .token.cdata {
+:host-context(.theme-dark) pre .token.comment,
+:host-context(.theme-dark) pre .token.prolog,
+:host-context(.theme-dark) pre .token.doctype,
+:host-context(.theme-dark) pre .token.cdata {
   color: var(--gray5);
 }
 
@@ -284,67 +292,67 @@
   color: var(--gray5);
 }
 
-:host-context(.theme-inverted) pre .token.property,
-:host-context(.theme-inverted) pre .token.tag,
-:host-context(.theme-inverted) pre .token.boolean,
-:host-context(.theme-inverted) pre .token.number,
-:host-context(.theme-inverted) pre .token.constant,
-:host-context(.theme-inverted) pre .token.symbol,
-:host-context(.theme-inverted) pre .token.deleted {
+:host-context(.theme-dark) pre .token.property,
+:host-context(.theme-dark) pre .token.tag,
+:host-context(.theme-dark) pre .token.boolean,
+:host-context(.theme-dark) pre .token.number,
+:host-context(.theme-dark) pre .token.constant,
+:host-context(.theme-dark) pre .token.symbol,
+:host-context(.theme-dark) pre .token.deleted {
   color: var(--cyan5);
 }
 
-:host-context(.theme-inverted) pre .token.selector,
-:host-context(.theme-inverted) pre .token.attr-name,
-:host-context(.theme-inverted) pre .token.string,
-:host-context(.theme-inverted) pre .token.char,
-:host-context(.theme-inverted) pre .token.builtin,
-:host-context(.theme-inverted) pre .token.inserted {
+:host-context(.theme-dark) pre .token.selector,
+:host-context(.theme-dark) pre .token.attr-name,
+:host-context(.theme-dark) pre .token.string,
+:host-context(.theme-dark) pre .token.char,
+:host-context(.theme-dark) pre .token.builtin,
+:host-context(.theme-dark) pre .token.inserted {
   color: var(--green5);
 }
 
-:host-context(.theme-inverted) pre .token.operator,
-:host-context(.theme-inverted) pre .token.entity,
-:host-context(.theme-inverted) pre .token.url,
-:host-context(.theme-inverted) pre.language-css .token.string,
-:host-context(.theme-inverted) pre.style .token.string {
+:host-context(.theme-dark) pre .token.operator,
+:host-context(.theme-dark) pre .token.entity,
+:host-context(.theme-dark) pre .token.url,
+:host-context(.theme-dark) pre.language-css .token.string,
+:host-context(.theme-dark) pre.style .token.string {
   color: var(--yellow5);
   font-family: "Hack", monospace;
 }
 
-:host-context(.theme-inverted) pre .token.atrule,
-:host-context(.theme-inverted) pre .token.attr-value,
-:host-context(.theme-inverted) pre .token.keyword {
+:host-context(.theme-dark) pre .token.atrule,
+:host-context(.theme-dark) pre .token.attr-value,
+:host-context(.theme-dark) pre .token.keyword {
   color: var(--cyan5);
 }
 
-:host-context(.theme-inverted) pre .token.function {
+:host-context(.theme-dark) pre .token.function {
   color: var(--blue5);
 }
 
-:host-context(.theme-inverted) pre .token.regex,
-:host-context(.theme-inverted) pre .token.important,
-:host-context(.theme-inverted) pre .token.variable {
+:host-context(.theme-dark) pre .token.regex,
+:host-context(.theme-dark) pre .token.important,
+:host-context(.theme-dark) pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.theme-inverted) pre .token.regex,
-:host-context(.theme-inverted) pre .token.important,
-:host-context(.theme-inverted) pre .token.variable {
+:host-context(.theme-dark) pre .token.regex,
+:host-context(.theme-dark) pre .token.important,
+:host-context(.theme-dark) pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.theme-inverted) pre.show-line-numbers .line-numbers-rows {
+:host-context(.theme-dark) pre.show-line-numbers .line-numbers-rows {
   color: var(--gray2);
 }
 
-:host-context(.theme-inverted) pre.show-line-numbers .line-numbers-rows > span::before {
+:host-context(.theme-dark) pre.show-line-numbers .line-numbers-rows > span::before {
   color: var(--gray2);
 }
 
-:host-context(.theme-inverted) .token.tab:not(:empty)::before,
-:host-context(.theme-inverted) .token.cr::before,
-:host-context(.theme-inverted) .token.lf::before,
-:host-context(.theme-inverted) .token.space::before {
+:host-context(.theme-dark) .token.tab:not(:empty)::before,
+:host-context(.theme-dark) .token.cr::before,
+:host-context(.theme-dark) .token.lf::before,
+:host-context(.theme-dark) .token.space::before {
   color: var(--gray2);
 }

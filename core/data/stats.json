@@ -5,35 +5,35 @@
       "type": "typescript",
       "language": "typescript",
       "header": "TypeScript",
-      "code": "2304",
-      "messageText": "Cannot find name 'classes'.",
-      "relFilePath": "src/components/code/code.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/code/code.tsx",
+      "code": "2339",
+      "messageText": "Property 'updateColor' does not exist on type 'Avatar'.",
+      "relFilePath": "src/components/avatar/avatar.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/avatar/avatar.tsx",
       "lines": [
         {
-          "lineIndex": 121,
-          "lineNumber": 122,
-          "text": "  renderCode() {",
+          "lineIndex": 62,
+          "lineNumber": 63,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 122,
-          "lineNumber": 123,
-          "text": "    return <pre class={classes} aria-label={`The ${this.language} code`} tabindex={0}>",
-          "errorCharStart": 23,
-          "errorLength": 7
+          "lineIndex": 63,
+          "lineNumber": 64,
+          "text": "    this.updateColor();",
+          "errorCharStart": 9,
+          "errorLength": 11
         },
         {
-          "lineIndex": 123,
-          "lineNumber": 124,
-          "text": "        <code class={`language-${this.language}`} innerHTML={this.code}></code>",
+          "lineIndex": 64,
+          "lineNumber": 65,
+          "text": "  }",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 123,
-      "columnNumber": 23
+      "lineNumber": 64,
+      "columnNumber": 9
     }
   ]
 }

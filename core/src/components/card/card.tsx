@@ -202,7 +202,7 @@ export class Card {
     // @ts-ignore
     return (<this.tag {...childProps} class={"stencil-route-link" !== this.tag ? "wrap" : ""} anchorClass={"stencil-route-link" === this.tag ? "wrap" : ""} onClick={(e) => { this.click(e) }}>
         { this.flippable && [
-            <stellar-button ghost class="flip-button" onClick={(e) => { this.flip_card(e) }}>
+            <stellar-button tag="button" ghost class="flip-button" onClick={(e) => { e.stopPropagation(); e.preventDefault(); this.flip_card(e) }}>
               <stellar-asset name={this.flipped ? "close" : this.flip_icon} class="ma0" />
             </stellar-button>,
             <div class="front">

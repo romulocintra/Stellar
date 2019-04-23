@@ -64,8 +64,8 @@
     var(--indigo8) 80%,
     var(--violet8) 80%,
     var(--violet8) 90%,
-    var(--fuchsia8) 90%,
-    var(--fuchsia8) 100%
+    var(--fuschia8) 90%,
+    var(--fuschia8) 100%
   );
   bakground-position: 1000px 75vh;
   background-repeat: repeat-y;

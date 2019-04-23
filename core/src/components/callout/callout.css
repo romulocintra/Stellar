@@ -1,7 +1,11 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
 :host {
 	display: block;
 	padding: 2rem;
-	background-color: var(--theme-base1);
+	background-color: var(--theme-base4);
 }
 
 :host .callout-wrap {
@@ -15,4 +19,8 @@
 
 :host ::slotted(*) {
 	color: var(--gray9);
+}
+
+:host-context(.theme-dark):host {
+	background-color: var(--theme-base6);
 }

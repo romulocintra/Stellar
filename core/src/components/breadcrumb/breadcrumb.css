@@ -1,3 +1,7 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
 :host {
 	display: flex;
 	position: relative;
@@ -10,7 +14,6 @@
 	text-align: center;
 	text-decoration: none;
 	color: var(--theme-base8);
-	transition: all 300ms var(--ease) 0s;
 }
 
 :host a:hover,
@@ -46,6 +49,9 @@
 	background: var(--theme-base7);
 	color: var(--white);
 	margin: 0 -0.25rem 0 -0.15em;
+    position: sticky;
+    left: -.5rem;
+    z-index: 2;
 }
 
 :host([first]) a {
@@ -70,22 +76,33 @@
 	color: var(--gray9);
 }
 
-:host-context(.theme-inverted) {
-	background: var(--theme-base0);
+:host-context(.theme-dark) {
+	background: var(--black);
+	color: var(--theme-base0)
 }
 
-:host-context(.theme-inverted):host([last]) {
+:host-context(.theme-dark):host(:hover),
+:host-context(.theme-dark):host(:focus),
+:host-context(.theme-dark):host a:hover,
+:host-context(.theme-dark):host a:focus,
+:host-context(.theme-dark):host(:focus-within) {
+	color: var(--white);
+	background: var(--theme-base7);
+}
+
+:host-context(.theme-dark):host([last]) {
 	color: white;
+	background: var(--black);
 }
 
-:host-context(.theme-inverted):host([first]) {
-	margin: 0 0 0 -0.15em;
-}
-
-:host-context(.theme-inverted):host([last]:hover),
-:host-context(.theme-inverted):host([last]:focus),
-:host-context(.theme-inverted):host([last]) a:hover,
-:host-context(.theme-inverted):host([last]) a:focus {
+:host-context(.theme-dark):host([first]) {
 	background: var(--theme-base9);
-	color: var(--gray9);
+}
+
+:host-context(.theme-dark):host([last]:hover),
+:host-context(.theme-dark):host([last]:focus),
+:host-context(.theme-dark):host([last]) a:hover,
+:host-context(.theme-dark):host([last]) a:focus {
+	background: var(--black);
+	color: white;
 }

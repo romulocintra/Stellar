@@ -17,6 +17,6 @@ describe('colors', () => {
     expect(Object.keys(colors)).toContain('blue');
     expect(Object.keys(colors)).toContain('indigo');
     expect(Object.keys(colors)).toContain('violet');
-    expect(Object.keys(colors)).toContain('fuchsia');
+    expect(Object.keys(colors)).toContain('fuschia');
   });
 });

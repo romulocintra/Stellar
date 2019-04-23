@@ -1,5 +1,5 @@
 import { Component, Prop, State, Watch, Element } from '@stencil/core';
-import { titleCase, properties, colors, isHexColor } from '../../utils';
+import { titleCase, colors } from '../../utils';
 
 @Component({
   tag: 'stellar-avatar',
@@ -34,27 +34,10 @@ export class Avatar {
     this.formatName()
   }
 
-  @Watch('color')
-  updateColor() {
-    let color = 'rgba(0, 0, 0, 0)';
-    let colorDark = 'rgba(0, 0, 0, 0)';
-    let fontColor = 'rgba(255, 255, 255, 1)';
-
-    if (!this.src) {
-      if (isHexColor(this.color)) {
-        color = this.color
-      } else {
-        color = `var(--${this.color}5)`
-        colorDark = `var(--${this.color}6)`
-        fontColor = `var(--white)`
-      }
+  hostData() {
+    return {
+      class: `theme-${this.color}`
     }
-
-    properties.set({
-      '--avatar-color': color,
-      '--avatar-color-dark': colorDark,
-      '--avatar-font-color': fontColor,
-    },  this.element);
   }
 
   @Watch('name')
@@ -83,8 +66,6 @@ export class Avatar {
     if (this.shape === "star" || this.shape === "diamond" ) {
       this.initials = this.initials.substring(0, 1);
     }
-
-    this.updateColor();
   }
 
   render() {

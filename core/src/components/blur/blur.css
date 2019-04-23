@@ -1,3 +1,7 @@
+stellar-blur, stellar-blur *, stellar-blur *:before, stellar-blur *:after {
+	box-sizing: border-box;
+}
+
 stellar-blur {
 	filter: var(--blur-url);
 	display: block;

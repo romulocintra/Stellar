@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" class="theme-green theme-dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -8,77 +8,16 @@
   <script src="/build/stellar-core.js"></script>
   <script src="/global/page2layers.js"></script>
 </head>
-<body>
-  <stellar-grid>
-    <stellar-code language="html" feature>
-      <h3 slot="feature">Awesome</h3>
-      <h6 slot="property">Awesome</h6>
-      <template>
-        <stellar-breadcrumbs>
-          <stellar-breadcrumb>Reports</stellar-breadcrumb>
-          <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
-          <stellar-breadcrumb>Chart</stellar-breadcrumb>
-          <stellar-breadcrumb>New</stellar-breadcrumb>
-        </stellar-breadcrumbs>
-      </template>
-    </stellar-code>
-    <stellar-code language="html" feature>
-      <template>
-        <stellar-code language="html" feature>
-            <h3 slot="feature">Awesome</h3>
-            <h6 slot="property">Awesome</h6>
-            <template>
-              <!-- Nice -->
-              <stellar-breadcrumbs>
-                <stellar-breadcrumb>Reports</stellar-breadcrumb>
-                <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
-                <stellar-breadcrumb>Chart</stellar-breadcrumb>
-                <stellar-breadcrumb>New</stellar-breadcrumb>
-              </stellar-breadcrumbs>
-            </template>
-          </stellar-code>
-      </template>
-    </stellar-code>
-    <stellar-code language="ts" simple>
-      <template>
-          export class Code {
-            // Comment
-            @Element() element: HTMLElement;
-            @Prop({reflectToAttr: true, mutable: true}) language: string = "html";
-            @Prop() simple: boolean = false;
-            @Prop() codeString: string;
-            @Prop() copy: boolean = true;
-            @State() copied: boolean = false;
-            @Prop({mutable: true}) expanded: boolean = false;
-            @Prop() expandable: boolean = false;
-            @State() randomName: number = Math.round((Math.random() * 10000));
-            @State() observer: MutationObserver;
+<body class="bg-black">
+  <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="document.querySelector('html').classList.toggle('theme-dark');document.querySelector('body').classList.toggle('bg-black');">Switch Modes</stellar-button>
 
-            @Prop() preview: boolean = true;
-            @Prop() feature: boolean = false;
-
-            @State() code: string;
-            @State() raw: string;
-          }
-      </template>
-    </stellar-code>
-    <stellar-code language="html" simple>
-      <template>
-        <stellar-breadcrumbs>
-          <stellar-breadcrumb>Reports</stellar-breadcrumb>
-          <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
-          <stellar-breadcrumb>Chart</stellar-breadcrumb>
-          <stellar-breadcrumb>New</stellar-breadcrumb>
-        </stellar-breadcrumbs>
-      </template>
-    </stellar-code>
-  </stellar-grid>
   <stellar-breadcrumbs>
     <stellar-breadcrumb>Reports</stellar-breadcrumb>
     <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
     <stellar-breadcrumb>Chart</stellar-breadcrumb>
     <stellar-breadcrumb>New</stellar-breadcrumb>
   </stellar-breadcrumbs>
+
   <stellar-callout>
     <p><b>Hello!</b>Suuuup!!!</p>
   </stellar-callout>
@@ -94,45 +33,53 @@
   <stellar-callout type="alert">
     <p><b>Hello!</b>Suuuup!!!</p>
   </stellar-callout>
-  <stellar-layout type="sidebar" align="top">
+
+  <stellar-card class="ma4" flippable>
+    <header>
+      <p>nice</p>
+    </header>
     <section>
-      <stellar-card></stellar-card>
+      <p>nice</p>
+      <stellar-button size="large">uh oh</stellar-button>
+      <stellar-button>uh oh</stellar-button>
+      <stellar-button size="small">uh oh</stellar-button>
+      <stellar-button size="tiny">uh oh</stellar-button>
+      <stellar-button size="large" outline>uh oh</stellar-button>
+      <stellar-button outline>uh oh</stellar-button>
+      <stellar-button size="small" outline>uh oh</stellar-button>
+      <stellar-button size="tiny" outline>uh oh</stellar-button>
+      <stellar-button size="large" pill>uh oh</stellar-button>
+      <stellar-button pill>uh oh</stellar-button>
+      <stellar-button size="small" pill>uh oh</stellar-button>
+      <stellar-button size="tiny" pill>uh oh</stellar-button>
+      <stellar-button size="large" pill outline>uh oh</stellar-button>
+      <stellar-button pill outline>uh oh</stellar-button>
+      <stellar-button size="small" pill outline>uh oh</stellar-button>
+      <stellar-button size="tiny" pill outline>uh oh</stellar-button>
+      <stellar-button size="large" ghost>uh oh</stellar-button>
+      <stellar-button ghost>uh oh</stellar-button>
+      <stellar-button size="small" ghost>uh oh</stellar-button>
+      <stellar-button size="tiny" ghost>uh oh</stellar-button>
     </section>
-    <aside>
-      <stellar-card flippable>
-        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
-          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-        </stellar-image>
-      </stellar-card>
-    </aside>
-  </stellar-layout>
-  <stellar-layout type="sidebar-right" align="top">
-    <aside>
-      <stellar-card flippable>
-        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
-          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-        </stellar-image>
-      </stellar-card>
-    </aside>
-    <section>
-      <stellar-card></stellar-card>
-    </section>  </stellar-layout>
-    <stellar-layout type="">
-      <section>
-      </section>
-    </stellar-layout>
-    <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
-      <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-    </stellar-image>
+    <footer>
+      <p>nice</p>
+    </footer>
+  </stellar-card>
+  <copy-wrap class="pa4">
+    <h1>The spectacle before us was indeed sublime.</h1>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    <h2>The spectacle before us was indeed sublime.</h2>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    <h3>The spectacle before us was indeed sublime.</h3>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    <h4>The spectacle before us was indeed sublime.</h4>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    <h5>The spectacle before us was indeed sublime.</h5>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    <h6>The spectacle before us was indeed sublime.</h6>
+    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+  </copy-wrap>
+  <div class="bg-theme-base5 pa4">
     <copy-wrap>
       <h1>The spectacle before us was indeed sublime.</h1>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
@@ -147,55 +94,41 @@
       <h6>The spectacle before us was indeed sublime.</h6>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
     </copy-wrap>
-    <div class="bg-theme-base5">
-      <copy-wrap>
-        <h1>The spectacle before us was indeed sublime.</h1>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h2>The spectacle before us was indeed sublime.</h2>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h3>The spectacle before us was indeed sublime.</h3>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h4>The spectacle before us was indeed sublime.</h4>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h5>The spectacle before us was indeed sublime.</h5>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h6>The spectacle before us was indeed sublime.</h6>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      </copy-wrap>
-    </div>
-    <div class="bg-theme-base0 theme-light">
-      <copy-wrap>
-        <h1>The spectacle before us was indeed sublime.</h1>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h2>The spectacle before us was indeed sublime.</h2>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h3>The spectacle before us was indeed sublime.</h3>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h4>The spectacle before us was indeed sublime.</h4>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h5>The spectacle before us was indeed sublime.</h5>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h6>The spectacle before us was indeed sublime.</h6>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      </copy-wrap>
-    </div>
-    <div class="bg-theme-base9 theme-dark">
-      <copy-wrap>
-        <h1>The spectacle before us was indeed sublime.</h1>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h2>The spectacle before us was indeed sublime.</h2>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h3>The spectacle before us was indeed sublime.</h3>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h4>The spectacle before us was indeed sublime.</h4>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h5>The spectacle before us was indeed sublime.</h5>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-        <h6>The spectacle before us was indeed sublime.</h6>
-        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      </copy-wrap>
-    </div>
-    <stellar-grid>
+  </div>
+  <div class="bg-theme-base0 theme-light pa4">
+    <copy-wrap>
+      <h1>The spectacle before us was indeed sublime.</h1>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h2>The spectacle before us was indeed sublime.</h2>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h3>The spectacle before us was indeed sublime.</h3>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h4>The spectacle before us was indeed sublime.</h4>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h5>The spectacle before us was indeed sublime.</h5>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h6>The spectacle before us was indeed sublime.</h6>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    </copy-wrap>
+  </div>
+
+  <div class="bg-theme-base9 theme-dark pa4">
+    <copy-wrap>
+      <h1>The spectacle before us was indeed sublime.</h1>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h2>The spectacle before us was indeed sublime.</h2>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h3>The spectacle before us was indeed sublime.</h3>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h4>The spectacle before us was indeed sublime.</h4>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h5>The spectacle before us was indeed sublime.</h5>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      <h6>The spectacle before us was indeed sublime.</h6>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+    </copy-wrap>
+  </div>
+  <stellar-grid class="ma4">
       <stellar-avatar name="William M. Riley" color="red"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="orange"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="yellow"></stellar-avatar>
@@ -252,7 +185,7 @@
       <stellar-button block></stellar-button>
     </stellar-grid>
 
-    <stellar-grid style="--grid-width: 270px" cols="3">
+    <stellar-grid style="--grid-width: 570px" cols="3">
       <stellar-button block>
         Hover over me...
         <stellar-tooltip align="top-left">
@@ -285,7 +218,17 @@
       </stellar-button>
       <stellar-button block>
         Hover over me...
-        <stellar-tooltip align="middle-left">
+        <stellar-tooltip align="middle-right">
+          <stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
+          <span>
+            William M. Riley
+            <small class="db o-70">Joined Feb. 2nd</small>
+          </span>
+        </stellar-tooltip>
+      </stellar-button>
+      <stellar-button block>
+        Default
+        <stellar-tooltip>
           <stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
           <span>
             William M. Riley
@@ -295,7 +238,7 @@
       </stellar-button>
       <stellar-button block>
         Hover over me...
-        <stellar-tooltip align="middle-right">
+        <stellar-tooltip align="middle-left">
           <stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
           <span>
             William M. Riley
@@ -333,207 +276,151 @@
           </span>
         </stellar-tooltip>
       </stellar-button>
-
-      <stellar-button block>
-        Hover over me...
-        <stellar-tooltip>
-          <stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-          <span>
-            William M. Riley
-            <small class="db o-70">Joined Feb. 2nd</small>
-          </span>
-        </stellar-tooltip>
-      </stellar-button>
     </stellar-grid>
 
-    <stellar-grid>
-      <stellar-card>
-        <h1>Hey! Awesome!</h1>
-      </stellar-card>
+    <stellar-card flippable>
+      <header>
+        <h6>header</h6>
+      </header>
+      <section>
+        <h6>body</h6>
+      </section>
+      <footer>
+        <h6>footer</h6>
+      </footer>
 
+      <header slot="back">
+        <h6>back header</h6>
+      </header>
+      <section slot="back">
+        <h6>back body</h6>
+        <h6>back body</h6>
+        <h6>back body</h6>
+        <h6>back body</h6>
+        <h6>back body</h6>
+      </section>
+      <footer slot="back">
+        <h6>back footer</h6>
+      </footer>
+    </stellar-card>
+
+    <stellar-card>
+      <header>
+        <h6>header</h6>
+      </header>
+      <section>
+        <h6>body</h6>
+      </section>
+      <footer>
+        <h6>footer</h6>
+      </footer>
+    </stellar-card>
+  </stellar-grid>
+
+  <stellar-grid>
+    <stellar-code language="html" feature>
+      <h3 slot="feature">Awesome</h3>
+      <h6 slot="property">Awesome</h6>
+      <template>
+        <stellar-breadcrumbs>
+          <stellar-breadcrumb>Reports</stellar-breadcrumb>
+          <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
+          <stellar-breadcrumb>Chart</stellar-breadcrumb>
+          <stellar-breadcrumb>New</stellar-breadcrumb>
+        </stellar-breadcrumbs>
+      </template>
+    </stellar-code>
+    <stellar-code language="ts" simple>
+      <template>
+          export class Code {
+            // Comment
+            @Element() element: HTMLElement;
+            @Prop({reflectToAttr: true, mutable: true}) language: string = "html";
+            @Prop() simple: boolean = false;
+            @Prop() codeString: string;
+            @Prop() copy: boolean = true;
+            @State() copied: boolean = false;
+            @Prop({mutable: true}) expanded: boolean = false;
+            @Prop() expandable: boolean = false;
+            @State() randomName: number = Math.round((Math.random() * 10000));
+            @State() observer: MutationObserver;
+
+            @Prop() preview: boolean = true;
+            @Prop() feature: boolean = false;
+
+            @State() code: string;
+            @State() raw: string;
+          }
+      </template>
+    </stellar-code>
+    <stellar-code language="html" simple>
+      <template>
+        <stellar-breadcrumbs>
+          <stellar-breadcrumb>Reports</stellar-breadcrumb>
+          <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
+          <stellar-breadcrumb>Chart</stellar-breadcrumb>
+          <stellar-breadcrumb>New</stellar-breadcrumb>
+        </stellar-breadcrumbs>
+      </template>
+    </stellar-code>
+  </stellar-grid>
+  <stellar-layout type="sidebar" align="top">
+    <section>
+      <stellar-card></stellar-card>
+    </section>
+    <aside>
       <stellar-card flippable>
-        <header>
-          <h6>header</h6>
-        </header>
-        <section>
-          <h6>body</h6>
-        </section>
-        <footer>
-          <h6>footer</h6>
-        </footer>
-
-        <header slot="back">
-          <h6>back header</h6>
-        </header>
-        <section slot="back">
-          <h6>back body</h6>
-          <h6>back body</h6>
-          <h6>back body</h6>
-          <h6>back body</h6>
-          <h6>back body</h6>
-        </section>
-        <footer slot="back">
-          <h6>back footer</h6>
-        </footer>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
       </stellar-card>
-
-      <stellar-card>
-        <header>
-          <h6>header</h6>
-        </header>
+    </aside>
+  </stellar-layout>
+  <stellar-code>
+    <template>
+      <stellar-layout type="sidebar-right" align="top">
+        <aside>
+          <stellar-card flippable>
+            <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+              <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+              <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+            </stellar-image>
+            <header slot="back">
+              <h4>Nice!</h4>
+            </header>
+            <section slot="back">
+              <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+                <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+                <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+              </stellar-image>
+            </section>
+            <footer slot="back">
+                <h4>Nice!</h4>
+            </footer>
+          </stellar-card>
+        </aside>
         <section>
-          <h6>body</h6>
+          <stellar-card></stellar-card>
         </section>
-        <footer>
-          <h6>footer</h6>
-        </footer>
-      </stellar-card>
-    </stellar-grid>
-
-    <stellar-grid swappable>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card flippable>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-      <stellar-card>nice 1</stellar-card>
-      <stellar-card>nice 2</stellar-card>
-      <stellar-card>nice 3</stellar-card>
-      <stellar-card>nice 4</stellar-card>
-      <stellar-card>nice 5</stellar-card>
-      <stellar-card>nice 6</stellar-card>
-      <stellar-card>nice 7</stellar-card>
-    </stellar-grid>
-
-    <stellar-accordion>
-      <p slot="label">Title <stellar-tag size='tiny'>New</stellar-tag></p>
-      <h1>Content!</h1>
-      <h2>Hello!</h2>
-    </stellar-accordion>
-
-    <stellar-blur class="example mb4 db">
-      <copy-wrap>
-        <h1>Awesome~</h1>
-        <h2 alt>Change the values below to see the blurring changes.</h2>
-      </copy-wrap>
-    </stellar-blur>
-    <stellar-grid cols="1" class="theme-gray">
-      <stellar-input type="number" max="50" min="0" placeholder="Vertical" onChange="document.querySelector('stellar-blur.example').vertical = this.value;"></stellar-input>
-      <stellar-input type="number" max="50" min="0" placeholder="Horizontal" onChange="document.querySelector('stellar-blur.example').horizontal = this.value;"></stellar-input>
-    </stellar-grid>
-
-    <stellar-blur>
-      <h1>Awesome!</h1>
-    </stellar-blur>
-    <stellar-blur horizontal="10">
-      <h1>Awesome!</h1>
-    </stellar-blur>
-    <stellar-blur vertical="10">
-      <h1>Awesome!</h1>
-    </stellar-blur>
-    <stellar-blur horizontal="10" vertical="10">
-      <h1>Awesome!</h1>
-    </stellar-blur>
-
-  </body>
-  </html>
+      </template>
+    </stellar-layout>
+  </stellar-code>
+    <stellar-layout type="">
+      <section>
+      </section>
+    </stellar-layout>
+    <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+      <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+      <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+    </stellar-image>
+</body>
+</html>

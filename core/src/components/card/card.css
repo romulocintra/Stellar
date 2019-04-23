@@ -1,5 +1,5 @@
 :host, :host *, :host *:before, :host *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 :host {
@@ -135,7 +135,7 @@
 
 
 :host([flippable]) {
-    perspective: 1000px;
+    perspective: 3000px;
     background: transparent;
 }
 
@@ -216,4 +216,10 @@
     pointer-events: initial;
     overflow-y: initial;
     opacity: 1;
+}
+
+:host-context(.theme-dark) {
+    --border: 1px solid var(--gray8);
+    --background: var(--gray9);
+    --flipped-background: var(--gray9);
 }

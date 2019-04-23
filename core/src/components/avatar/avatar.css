@@ -1,5 +1,5 @@
 :host, :host *, :host *:before, :host *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 :host {
@@ -7,11 +7,12 @@
     width: var(--avatar-size);
     max-height: var(--avatar-size);
     font-size: var(--avatar-font-size);
-    --avatar-color: var(--theme-base5, var(--red5));
-    --avatar-color-dark: var(--theme-base6, var(--red6));
-    --avatar-font-color: var(--red0);
+    --avatar-color: var(--theme-base7, var(--red7));
+    --avatar-color-dark: var(--theme-base5, var(--red5));
+    --avatar-font-color: var(--white);
     --avatar-size: 2.2em;
     --avatar-font-size: 1.8rem;
+    --avatar-text-shadow: 0 0 0px rgba(255, 255, 255, .4);
     filter: drop-shadow(var(--drop-shadow));
 }
 
@@ -76,7 +77,7 @@
     color: var(--avatar-font-color);
     font-size: var(--avatar-font-size);
     font-weight: 600;
-    text-shadow: 0 0 2px rgba(0, 0, 0, .4);
+    text-shadow: var(--avatar-text-shadow);
 }
 
 :host img {
@@ -141,4 +142,12 @@
 
 :host([processing][size='medium']) .letter {
     background-size: 16px;
+}
+
+
+:host-context(.theme-dark):host {
+    --avatar-color: var(--theme-base8, var(--red8));
+    --avatar-color-dark: var(--theme-base6, var(--red6));
+    --avatar-font-color: var(--black);
+    --avatar-text-shadow: 0 0 0px rgba(0, 0, 0, .4)
 }

@@ -22,6 +22,9 @@
 .fixed {
   position: fixed;
 }
+.sticky {
+  position: sticky;
+}
 
 @media (min-width: 480px) {
   .static-ns {
@@ -35,6 +38,9 @@
   }
   .fixed-ns {
     position: fixed;
+  }
+  .sticky-ns {
+    position: sticky;
   }
 }
 
@@ -51,6 +57,9 @@
   .fixed-m {
     position: fixed;
   }
+  .sticky-m {
+    position: sticky;
+  }
 }
 
 @media (min-width: 960px) {
@@ -65,5 +74,8 @@
   }
   .fixed-l {
     position: fixed;
+  }
+  .sticky-l {
+    position: sticky;
   }
 }

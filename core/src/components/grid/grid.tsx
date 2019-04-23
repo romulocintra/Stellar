@@ -43,10 +43,12 @@ export class Grid {
     if (this.swappable) {
       this.__swappable = new Sortable(this.element.querySelectorAll('.grid'), {
         draggable: this.swappableSelector,
+        delay: 350,
         swapAnimation: {
           duration: 200,
           easingFunction: 'ease-in-out',
-          horizontal: true
+          horizontal: true,
+          vertical: true
         },
         plugins: [SwapAnimation]
       });

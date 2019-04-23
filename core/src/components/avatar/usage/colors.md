@@ -8,6 +8,6 @@
 <stellar-avatar name="William M. Riley" color="blue"></stellar-avatar>
 <stellar-avatar name="William M. Riley" color="indigo"></stellar-avatar>
 <stellar-avatar name="William M. Riley" color="violet"></stellar-avatar>
-<stellar-avatar name="William M. Riley" color="fuchsia"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="fuschia"></stellar-avatar>
 <stellar-avatar name="William M. Riley" color="pink"></stellar-avatar>
 <stellar-avatar name="William M. Riley" color="gray"></stellar-avatar>

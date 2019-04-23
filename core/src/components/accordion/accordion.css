@@ -1,16 +1,13 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
 :host {
   display: block;
   position: relative;
   width: 100%;
   overflow: hidden;
   --accordion-height: 200vh;
-}
-
-:host,
-:host *,
-:host *::after,
-:host *::before {
-  box-sizing: inherit;
 }
 
 :host .expander {

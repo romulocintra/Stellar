@@ -1,5 +1,5 @@
 stellar-grid, stellar-grid *, stellar-grid *:before, stellar-grid *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 stellar-grid {

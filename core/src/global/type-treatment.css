@@ -21,10 +21,6 @@ h6[alt] {
   color: var(--complement-copy-base, var(--gray7));
 }
 
-h6 { color: var(--complement-copy-base, var(--gray7)); }
-h6[alt] { color: var(--theme-copy-header, var(--black)); }
-
-
 h1[fill],
 h2[fill],
 h3[fill],
