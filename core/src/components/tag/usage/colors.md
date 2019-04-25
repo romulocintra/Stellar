@@ -13,7 +13,3 @@
 <stellar-tag color="fuchsia5">Awesome</stellar-tag>
 <stellar-tag color="pink5">Awesome</stellar-tag>
 <stellar-tag color="gray5">Awesome</stellar-tag>
->
-<stellar-avatar name="William M. Riley" color="fuschia"></stellar-avatar>
-<stellar-avatar name="William M. Riley" color="pink"></stellar-avatar>
-<stellar-avatar name="William M. Riley" color="gray"></stellar-avatar>

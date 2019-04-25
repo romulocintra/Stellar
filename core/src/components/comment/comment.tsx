@@ -18,10 +18,12 @@ export class Comment {
   }
 
   componentDidLoad() {
-    // @ts-ignore
-    this.element.querySelector('stellar-avatar button.wrapper').tabIndex = -1;
-    this.name = this.element.querySelector('stellar-avatar').name;
-    this.content = this.element.querySelector('.content [slot="content"]').textContent;
+    if (this.element.querySelector('stellar-avatar')) {
+      // @ts-ignore
+      this.element.querySelector('stellar-avatar').tabIndex = -1;
+      this.name = this.element.querySelector('stellar-avatar').name;
+    }
+    this.content = this.element.querySelector('[slot="content"]').textContent.trim();
   }
 
   render() {

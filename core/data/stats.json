@@ -5,70 +5,35 @@
       "type": "typescript",
       "language": "typescript",
       "header": "TypeScript",
-      "code": "2307",
-      "messageText": "Cannot find module '@stencil/router'.",
-      "relFilePath": "src/components.d.ts",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components.d.ts",
+      "code": "2339",
+      "messageText": "Property 'handleImage' does not exist on type 'Scatter'.",
+      "relFilePath": "src/components/reveal/reveal.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/reveal/reveal.tsx",
       "lines": [
         {
-          "lineIndex": 15,
-          "lineNumber": 16,
-          "text": "  RouterHistory,",
+          "lineIndex": 32,
+          "lineNumber": 33,
+          "text": "        if (data[0].isIntersecting) {",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 16,
-          "lineNumber": 17,
-          "text": "} from '@stencil/router';",
-          "errorCharStart": 7,
-          "errorLength": 17
+          "lineIndex": 33,
+          "lineNumber": 34,
+          "text": "          this.handleImage();",
+          "errorCharStart": 15,
+          "errorLength": 11
         },
         {
-          "lineIndex": 17,
-          "lineNumber": 18,
-          "text": "",
+          "lineIndex": 34,
+          "lineNumber": 35,
+          "text": "          this.removeIntersectionObserver();",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 17,
-      "columnNumber": 7
-    },
-    {
-      "level": "error",
-      "type": "typescript",
-      "language": "typescript",
-      "header": "TypeScript",
-      "code": "2307",
-      "messageText": "Cannot find module '@stencil/router'.",
-      "relFilePath": "src/components/item/item.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/item/item.tsx",
-      "lines": [
-        {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "import { Component, Prop, State, Element, Method, Event, EventEmitter} from '@stencil/core';",
-          "errorCharStart": -1,
-          "errorLength": -1
-        },
-        {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';",
-          "errorCharStart": 63,
-          "errorLength": 17
-        },
-        {
-          "lineIndex": 2,
-          "lineNumber": 3,
-          "text": "",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ],
-      "lineNumber": 2,
-      "columnNumber": 63
+      "lineNumber": 34,
+      "columnNumber": 15
     }
   ]
 }

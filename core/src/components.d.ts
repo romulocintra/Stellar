@@ -436,6 +436,19 @@ export namespace Components {
   interface StellarComments {}
   interface StellarCommentsAttributes extends StencilHTMLAttributes {}
 
+  interface StellarContent {
+    'behavior': string;
+    'for': string;
+    'name': string;
+    'open': boolean;
+  }
+  interface StellarContentAttributes extends StencilHTMLAttributes {
+    'behavior'?: string;
+    'for'?: string;
+    'name'?: string;
+    'open'?: boolean;
+  }
+
   interface CopyWrap {
     'align': string;
     'full': boolean;
@@ -479,6 +492,26 @@ export namespace Components {
     'swappableSelector'?: string;
   }
 
+  interface StellarGroupOverflow {
+    'count': number;
+    'size': string;
+  }
+  interface StellarGroupOverflowAttributes extends StencilHTMLAttributes {
+    'count'?: number;
+    'size'?: string;
+  }
+
+  interface StellarGroup {
+    'count': number;
+    'overflow': boolean;
+    'size': string;
+  }
+  interface StellarGroupAttributes extends StencilHTMLAttributes {
+    'count'?: number;
+    'overflow'?: boolean;
+    'size'?: string;
+  }
+
   interface StellarImage {
     'bg': string;
     'height': number;
@@ -498,7 +531,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -542,6 +575,17 @@ export namespace Components {
     'wrap'?: boolean;
   }
 
+  interface StellarLabel {
+    'for': string;
+    'size': string;
+    'underneath': boolean;
+  }
+  interface StellarLabelAttributes extends StencilHTMLAttributes {
+    'for'?: string;
+    'size'?: string;
+    'underneath'?: boolean;
+  }
+
   interface StellarLayout {
     'align': "baseline"|"center"|"top"|"bottom";
     'padding': "none"|"tiny"|"small"|"medium"|"large";
@@ -554,6 +598,175 @@ export namespace Components {
     'padding'?: "none"|"tiny"|"small"|"medium"|"large";
     'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
     'type'?: string;
+  }
+
+  interface StellarPagination {
+    'color': string;
+    'current': number;
+    'padding': number;
+    /**
+    * Public: Sets the max cap of pages you can skip through
+    */
+    'pages': number;
+    'type': "full"|"compact";
+    'url': any;
+  }
+  interface StellarPaginationAttributes extends StencilHTMLAttributes {
+    'color'?: string;
+    'current'?: number;
+    'onChanged'?: (event: CustomEvent) => void;
+    'padding'?: number;
+    /**
+    * Public: Sets the max cap of pages you can skip through
+    */
+    'pages'?: number;
+    'type'?: "full"|"compact";
+    'url'?: any;
+  }
+
+  interface StellarProgress {
+    'blurable': boolean;
+    /**
+    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+    */
+    'editable': boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'max': number;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'noease': boolean;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'rounded': boolean;
+    /**
+    * Renders if this element is slender or not
+    */
+    'slender': boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'value': number;
+  }
+  interface StellarProgressAttributes extends StencilHTMLAttributes {
+    'blurable'?: boolean;
+    /**
+    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+    */
+    'editable'?: boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'max'?: number;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'noease'?: boolean;
+    'onValueChange'?: (event: CustomEvent) => void;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'rounded'?: boolean;
+    /**
+    * Renders if this element is slender or not
+    */
+    'slender'?: boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'value'?: number;
+  }
+
+  interface StellarReveal {
+    'active': boolean;
+    'animation': "fadeIn"|"fadeInUp"|"fadeInDown";
+    'delay': number;
+    'in': () => Promise<void>;
+    'out': () => Promise<void>;
+    'outAnimation': "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'timing': number;
+  }
+  interface StellarRevealAttributes extends StencilHTMLAttributes {
+    'active'?: boolean;
+    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
+    'delay'?: number;
+    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'timing'?: number;
+  }
+
+  interface StellarScatter {
+    'colors': boolean;
+    'float': boolean;
+    'max': number;
+    'min': number;
+    'sizes': boolean;
+  }
+  interface StellarScatterAttributes extends StencilHTMLAttributes {
+    'colors'?: boolean;
+    'float'?: boolean;
+    'max'?: number;
+    'min'?: number;
+    'sizes'?: boolean;
+  }
+
+  interface StellarTab {
+    'disabled': boolean;
+    'href': string;
+    'notifications': boolean|number;
+    'open': boolean;
+    'order': number;
+    'tabCount': number;
+    'tag': string;
+  }
+  interface StellarTabAttributes extends StencilHTMLAttributes {
+    'disabled'?: boolean;
+    'href'?: string;
+    'notifications'?: boolean|number;
+    'onContentChange'?: (event: CustomEvent) => void;
+    'open'?: boolean;
+    'order'?: number;
+    'tabCount'?: number;
+    'tag'?: string;
+  }
+
+  interface StellarTabs {
+    'behavior': string;
+    'block': boolean;
+    'blurring': () => void;
+    'contents': () => Promise<any[]>;
+    'height': string;
+    'name': string;
+    'noanimation': boolean;
+    'size': string|"tiny"|"small"|"medium"|"large";
+    'tabs': () => Promise<any[]>;
+    'vertical': boolean;
+  }
+  interface StellarTabsAttributes extends StencilHTMLAttributes {
+    'behavior'?: string;
+    'block'?: boolean;
+    'height'?: string;
+    'name'?: string;
+    'noanimation'?: boolean;
+    'size'?: string|"tiny"|"small"|"medium"|"large";
+    'vertical'?: boolean;
+  }
+
+  interface StellarTag {
+    'color': string;
+    'outline': boolean;
+    'pill': boolean;
+    'size': string;
+    'textColor': string;
+  }
+  interface StellarTagAttributes extends StencilHTMLAttributes {
+    'color'?: string;
+    'outline'?: boolean;
+    'pill'?: boolean;
+    'size'?: string;
+    'textColor'?: string;
   }
 
   interface StellarTooltip {
@@ -580,12 +793,23 @@ declare global {
     'StellarColorPicker': Components.StellarColorPicker;
     'StellarComment': Components.StellarComment;
     'StellarComments': Components.StellarComments;
+    'StellarContent': Components.StellarContent;
     'CopyWrap': Components.CopyWrap;
     'StellarDropdown': Components.StellarDropdown;
     'StellarGrid': Components.StellarGrid;
+    'StellarGroupOverflow': Components.StellarGroupOverflow;
+    'StellarGroup': Components.StellarGroup;
     'StellarImage': Components.StellarImage;
     'StellarItem': Components.StellarItem;
+    'StellarLabel': Components.StellarLabel;
     'StellarLayout': Components.StellarLayout;
+    'StellarPagination': Components.StellarPagination;
+    'StellarProgress': Components.StellarProgress;
+    'StellarReveal': Components.StellarReveal;
+    'StellarScatter': Components.StellarScatter;
+    'StellarTab': Components.StellarTab;
+    'StellarTabs': Components.StellarTabs;
+    'StellarTag': Components.StellarTag;
     'StellarTooltip': Components.StellarTooltip;
   }
 
@@ -604,12 +828,23 @@ declare global {
     'stellar-color-picker': Components.StellarColorPickerAttributes;
     'stellar-comment': Components.StellarCommentAttributes;
     'stellar-comments': Components.StellarCommentsAttributes;
+    'stellar-content': Components.StellarContentAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-dropdown': Components.StellarDropdownAttributes;
     'stellar-grid': Components.StellarGridAttributes;
+    'stellar-group-overflow': Components.StellarGroupOverflowAttributes;
+    'stellar-group': Components.StellarGroupAttributes;
     'stellar-image': Components.StellarImageAttributes;
     'stellar-item': Components.StellarItemAttributes;
+    'stellar-label': Components.StellarLabelAttributes;
     'stellar-layout': Components.StellarLayoutAttributes;
+    'stellar-pagination': Components.StellarPaginationAttributes;
+    'stellar-progress': Components.StellarProgressAttributes;
+    'stellar-reveal': Components.StellarRevealAttributes;
+    'stellar-scatter': Components.StellarScatterAttributes;
+    'stellar-tab': Components.StellarTabAttributes;
+    'stellar-tabs': Components.StellarTabsAttributes;
+    'stellar-tag': Components.StellarTagAttributes;
     'stellar-tooltip': Components.StellarTooltipAttributes;
   }
 
@@ -698,6 +933,12 @@ declare global {
     new (): HTMLStellarCommentsElement;
   };
 
+  interface HTMLStellarContentElement extends Components.StellarContent, HTMLStencilElement {}
+  var HTMLStellarContentElement: {
+    prototype: HTMLStellarContentElement;
+    new (): HTMLStellarContentElement;
+  };
+
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
   var HTMLCopyWrapElement: {
     prototype: HTMLCopyWrapElement;
@@ -716,6 +957,18 @@ declare global {
     new (): HTMLStellarGridElement;
   };
 
+  interface HTMLStellarGroupOverflowElement extends Components.StellarGroupOverflow, HTMLStencilElement {}
+  var HTMLStellarGroupOverflowElement: {
+    prototype: HTMLStellarGroupOverflowElement;
+    new (): HTMLStellarGroupOverflowElement;
+  };
+
+  interface HTMLStellarGroupElement extends Components.StellarGroup, HTMLStencilElement {}
+  var HTMLStellarGroupElement: {
+    prototype: HTMLStellarGroupElement;
+    new (): HTMLStellarGroupElement;
+  };
+
   interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
   var HTMLStellarImageElement: {
     prototype: HTMLStellarImageElement;
@@ -728,10 +981,58 @@ declare global {
     new (): HTMLStellarItemElement;
   };
 
+  interface HTMLStellarLabelElement extends Components.StellarLabel, HTMLStencilElement {}
+  var HTMLStellarLabelElement: {
+    prototype: HTMLStellarLabelElement;
+    new (): HTMLStellarLabelElement;
+  };
+
   interface HTMLStellarLayoutElement extends Components.StellarLayout, HTMLStencilElement {}
   var HTMLStellarLayoutElement: {
     prototype: HTMLStellarLayoutElement;
     new (): HTMLStellarLayoutElement;
+  };
+
+  interface HTMLStellarPaginationElement extends Components.StellarPagination, HTMLStencilElement {}
+  var HTMLStellarPaginationElement: {
+    prototype: HTMLStellarPaginationElement;
+    new (): HTMLStellarPaginationElement;
+  };
+
+  interface HTMLStellarProgressElement extends Components.StellarProgress, HTMLStencilElement {}
+  var HTMLStellarProgressElement: {
+    prototype: HTMLStellarProgressElement;
+    new (): HTMLStellarProgressElement;
+  };
+
+  interface HTMLStellarRevealElement extends Components.StellarReveal, HTMLStencilElement {}
+  var HTMLStellarRevealElement: {
+    prototype: HTMLStellarRevealElement;
+    new (): HTMLStellarRevealElement;
+  };
+
+  interface HTMLStellarScatterElement extends Components.StellarScatter, HTMLStencilElement {}
+  var HTMLStellarScatterElement: {
+    prototype: HTMLStellarScatterElement;
+    new (): HTMLStellarScatterElement;
+  };
+
+  interface HTMLStellarTabElement extends Components.StellarTab, HTMLStencilElement {}
+  var HTMLStellarTabElement: {
+    prototype: HTMLStellarTabElement;
+    new (): HTMLStellarTabElement;
+  };
+
+  interface HTMLStellarTabsElement extends Components.StellarTabs, HTMLStencilElement {}
+  var HTMLStellarTabsElement: {
+    prototype: HTMLStellarTabsElement;
+    new (): HTMLStellarTabsElement;
+  };
+
+  interface HTMLStellarTagElement extends Components.StellarTag, HTMLStencilElement {}
+  var HTMLStellarTagElement: {
+    prototype: HTMLStellarTagElement;
+    new (): HTMLStellarTagElement;
   };
 
   interface HTMLStellarTooltipElement extends Components.StellarTooltip, HTMLStencilElement {}
@@ -755,12 +1056,23 @@ declare global {
     'stellar-color-picker': HTMLStellarColorPickerElement
     'stellar-comment': HTMLStellarCommentElement
     'stellar-comments': HTMLStellarCommentsElement
+    'stellar-content': HTMLStellarContentElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-dropdown': HTMLStellarDropdownElement
     'stellar-grid': HTMLStellarGridElement
+    'stellar-group-overflow': HTMLStellarGroupOverflowElement
+    'stellar-group': HTMLStellarGroupElement
     'stellar-image': HTMLStellarImageElement
     'stellar-item': HTMLStellarItemElement
+    'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
+    'stellar-pagination': HTMLStellarPaginationElement
+    'stellar-progress': HTMLStellarProgressElement
+    'stellar-reveal': HTMLStellarRevealElement
+    'stellar-scatter': HTMLStellarScatterElement
+    'stellar-tab': HTMLStellarTabElement
+    'stellar-tabs': HTMLStellarTabsElement
+    'stellar-tag': HTMLStellarTagElement
     'stellar-tooltip': HTMLStellarTooltipElement
   }
 
@@ -779,12 +1091,23 @@ declare global {
     'stellar-color-picker': HTMLStellarColorPickerElement;
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
+    'stellar-content': HTMLStellarContentElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-grid': HTMLStellarGridElement;
+    'stellar-group-overflow': HTMLStellarGroupOverflowElement;
+    'stellar-group': HTMLStellarGroupElement;
     'stellar-image': HTMLStellarImageElement;
     'stellar-item': HTMLStellarItemElement;
+    'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
+    'stellar-pagination': HTMLStellarPaginationElement;
+    'stellar-progress': HTMLStellarProgressElement;
+    'stellar-reveal': HTMLStellarRevealElement;
+    'stellar-scatter': HTMLStellarScatterElement;
+    'stellar-tab': HTMLStellarTabElement;
+    'stellar-tabs': HTMLStellarTabsElement;
+    'stellar-tag': HTMLStellarTagElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
   }
 

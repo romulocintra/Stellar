@@ -1,4 +1,4 @@
-<stellar-tabs block>
+<stellar-tabs>
   <stellar-tab>
     <stellar-asset name="person"></stellar-asset>
     Profile
@@ -10,3 +10,8 @@
     William M. Riley
   </stellar-tab>
 </stellar-tabs>
+
+
+
+
+
