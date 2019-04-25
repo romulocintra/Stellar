@@ -1,8 +1,13 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
 :host {
   display: block;
   width: 32px;
   height: 32px;
   background: var(--selected-color, var(--red5));
+  border: 2px solid var(--selected-color, var(--red5));
   border-radius: 100%;
 }
 
@@ -58,6 +63,25 @@
   background: var(--red);
   width: 32px;
   height: 4px;
+}
+
+:host([val="none"]),
+:host button.none {
+  background: white;
+  border: 2px solid var(--black);
+}
+
+:host([val="none"])::after,
+:host button.none::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(50% - 2px);
+  top: calc(0% - .2rem);
+  width: 4px;
+  height: calc(100% + .4rem);
+  transform: rotate(45deg);
+  background: var(--red5)
 }
 
 :host button[data-selected="true"] {
@@ -136,11 +160,15 @@
 }
 
 :host .wrap:hover button:nth-of-type(13) {
+  transform: translate3d(0, 170px, 0);
+}
+
+:host .wrap:hover button:nth-of-type(14) {
   transform: translate3d(34px, 170px, 0);
 }
 
-:host .wrap stellar-input {
-  transform: translate3d(0px, 0px, 0);
-  opacity: 1;
-  box-shadow: 0 0 0 4px white;
+:host-context(.dark-mode):host([val="none"]),
+:host-context(.dark-mode):host button.none {
+  background: var(--black) !important;
+  border: 2px solid var(--white) !important;
 }

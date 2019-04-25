@@ -88,7 +88,7 @@
 }
 
 
-:host-context(.theme-dark):host .wrap .button-wrap {
+:host-context(.dark-mode):host .wrap .button-wrap {
   background: linear-gradient(var(--black), transparent);
   color: var(--theme-base5);
 }

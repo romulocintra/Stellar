@@ -266,25 +266,25 @@
   content: "·";
 }
 
-:host-context(.theme-dark),
-:host-context(.theme-dark) footer {
+:host-context(.dark-mode),
+:host-context(.dark-mode) footer {
   background: var(--gray9);
 }
 
-:host-context(.theme-dark) stellar-card {
+:host-context(.dark-mode) stellar-card {
   --background: var(--black);
 }
 
-:host-context(.theme-dark) code[class*=language-],
-:host-context(.theme-dark) pre[class*=language-] {
+:host-context(.dark-mode) code[class*=language-],
+:host-context(.dark-mode) pre[class*=language-] {
   color: var(--gray1);
   text-shadow: 0 1px var(--gray9);
 }
 
-:host-context(.theme-dark) pre .token.comment,
-:host-context(.theme-dark) pre .token.prolog,
-:host-context(.theme-dark) pre .token.doctype,
-:host-context(.theme-dark) pre .token.cdata {
+:host-context(.dark-mode) pre .token.comment,
+:host-context(.dark-mode) pre .token.prolog,
+:host-context(.dark-mode) pre .token.doctype,
+:host-context(.dark-mode) pre .token.cdata {
   color: var(--gray5);
 }
 
@@ -292,67 +292,67 @@
   color: var(--gray5);
 }
 
-:host-context(.theme-dark) pre .token.property,
-:host-context(.theme-dark) pre .token.tag,
-:host-context(.theme-dark) pre .token.boolean,
-:host-context(.theme-dark) pre .token.number,
-:host-context(.theme-dark) pre .token.constant,
-:host-context(.theme-dark) pre .token.symbol,
-:host-context(.theme-dark) pre .token.deleted {
+:host-context(.dark-mode) pre .token.property,
+:host-context(.dark-mode) pre .token.tag,
+:host-context(.dark-mode) pre .token.boolean,
+:host-context(.dark-mode) pre .token.number,
+:host-context(.dark-mode) pre .token.constant,
+:host-context(.dark-mode) pre .token.symbol,
+:host-context(.dark-mode) pre .token.deleted {
   color: var(--cyan5);
 }
 
-:host-context(.theme-dark) pre .token.selector,
-:host-context(.theme-dark) pre .token.attr-name,
-:host-context(.theme-dark) pre .token.string,
-:host-context(.theme-dark) pre .token.char,
-:host-context(.theme-dark) pre .token.builtin,
-:host-context(.theme-dark) pre .token.inserted {
+:host-context(.dark-mode) pre .token.selector,
+:host-context(.dark-mode) pre .token.attr-name,
+:host-context(.dark-mode) pre .token.string,
+:host-context(.dark-mode) pre .token.char,
+:host-context(.dark-mode) pre .token.builtin,
+:host-context(.dark-mode) pre .token.inserted {
   color: var(--green5);
 }
 
-:host-context(.theme-dark) pre .token.operator,
-:host-context(.theme-dark) pre .token.entity,
-:host-context(.theme-dark) pre .token.url,
-:host-context(.theme-dark) pre.language-css .token.string,
-:host-context(.theme-dark) pre.style .token.string {
+:host-context(.dark-mode) pre .token.operator,
+:host-context(.dark-mode) pre .token.entity,
+:host-context(.dark-mode) pre .token.url,
+:host-context(.dark-mode) pre.language-css .token.string,
+:host-context(.dark-mode) pre.style .token.string {
   color: var(--yellow5);
   font-family: "Hack", monospace;
 }
 
-:host-context(.theme-dark) pre .token.atrule,
-:host-context(.theme-dark) pre .token.attr-value,
-:host-context(.theme-dark) pre .token.keyword {
+:host-context(.dark-mode) pre .token.atrule,
+:host-context(.dark-mode) pre .token.attr-value,
+:host-context(.dark-mode) pre .token.keyword {
   color: var(--cyan5);
 }
 
-:host-context(.theme-dark) pre .token.function {
+:host-context(.dark-mode) pre .token.function {
   color: var(--blue5);
 }
 
-:host-context(.theme-dark) pre .token.regex,
-:host-context(.theme-dark) pre .token.important,
-:host-context(.theme-dark) pre .token.variable {
+:host-context(.dark-mode) pre .token.regex,
+:host-context(.dark-mode) pre .token.important,
+:host-context(.dark-mode) pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.theme-dark) pre .token.regex,
-:host-context(.theme-dark) pre .token.important,
-:host-context(.theme-dark) pre .token.variable {
+:host-context(.dark-mode) pre .token.regex,
+:host-context(.dark-mode) pre .token.important,
+:host-context(.dark-mode) pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.theme-dark) pre.show-line-numbers .line-numbers-rows {
+:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows {
   color: var(--gray2);
 }
 
-:host-context(.theme-dark) pre.show-line-numbers .line-numbers-rows > span::before {
+:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows > span::before {
   color: var(--gray2);
 }
 
-:host-context(.theme-dark) .token.tab:not(:empty)::before,
-:host-context(.theme-dark) .token.cr::before,
-:host-context(.theme-dark) .token.lf::before,
-:host-context(.theme-dark) .token.space::before {
+:host-context(.dark-mode) .token.tab:not(:empty)::before,
+:host-context(.dark-mode) .token.cr::before,
+:host-context(.dark-mode) .token.lf::before,
+:host-context(.dark-mode) .token.space::before {
   color: var(--gray2);
 }

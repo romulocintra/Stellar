@@ -8,9 +8,14 @@
 import '@stencil/core';
 
 import 'ionicons';
+import '@stencil/router';
 import {
   HighchartsModel,
 } from './components/chart/options';
+import {
+  LocationSegments,
+  RouterHistory,
+} from '@stencil/router';
 
 
 export namespace Components {
@@ -412,12 +417,24 @@ export namespace Components {
   }
 
   interface StellarColorPicker {
-    'value': string;
+    'val': string;
   }
   interface StellarColorPickerAttributes extends StencilHTMLAttributes {
     'onChange'?: (event: CustomEvent) => void;
-    'value'?: string;
+    'val'?: string;
   }
+
+  interface StellarComment {
+    'content': any;
+    'name': any;
+  }
+  interface StellarCommentAttributes extends StencilHTMLAttributes {
+    'content'?: any;
+    'name'?: any;
+  }
+
+  interface StellarComments {}
+  interface StellarCommentsAttributes extends StencilHTMLAttributes {}
 
   interface CopyWrap {
     'align': string;
@@ -426,6 +443,19 @@ export namespace Components {
   interface CopyWrapAttributes extends StencilHTMLAttributes {
     'align'?: string;
     'full'?: boolean;
+  }
+
+  interface StellarDropdown {
+    'icon': boolean;
+    'label': string;
+    'open': boolean;
+    'position': "left"|"center"|"right";
+  }
+  interface StellarDropdownAttributes extends StencilHTMLAttributes {
+    'icon'?: boolean;
+    'label'?: string;
+    'open'?: boolean;
+    'position'?: "left"|"center"|"right";
   }
 
   interface StellarGrid {
@@ -465,6 +495,53 @@ export namespace Components {
     'width'?: number;
   }
 
+  interface StellarItem {
+    'apply': (data: any) => Promise<void>;
+    'danger': boolean;
+    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'fit': boolean;
+    'focused': boolean;
+    'history': RouterHistory;
+    'href': string;
+    'label': string;
+    'location': LocationSegments;
+    'multiple': boolean;
+    'route': boolean;
+    'select_item': (state?: { selected: boolean; }) => void;
+    'selectable': boolean;
+    'selected': boolean;
+    'setFocus': () => Promise<void>;
+    'simple': boolean;
+    'size': string;
+    'type': "a"|"button"|"stencil-route-link";
+    'value': string;
+    'valueLabel': string;
+    'wrap': boolean;
+  }
+  interface StellarItemAttributes extends StencilHTMLAttributes {
+    'danger'?: boolean;
+    'fit'?: boolean;
+    'focused'?: boolean;
+    'history'?: RouterHistory;
+    'href'?: string;
+    'label'?: string;
+    'location'?: LocationSegments;
+    'multiple'?: boolean;
+    'onBlurChanged'?: (event: CustomEvent) => void;
+    'onFocusChanged'?: (event: CustomEvent) => void;
+    'onMounted'?: (event: CustomEvent) => void;
+    'onSelectionChanged'?: (event: CustomEvent) => void;
+    'route'?: boolean;
+    'selectable'?: boolean;
+    'selected'?: boolean;
+    'simple'?: boolean;
+    'size'?: string;
+    'type'?: "a"|"button"|"stencil-route-link";
+    'value'?: string;
+    'valueLabel'?: string;
+    'wrap'?: boolean;
+  }
+
   interface StellarLayout {
     'align': "baseline"|"center"|"top"|"bottom";
     'padding': "none"|"tiny"|"small"|"medium"|"large";
@@ -501,9 +578,13 @@ declare global {
     'StellarChart': Components.StellarChart;
     'StellarCode': Components.StellarCode;
     'StellarColorPicker': Components.StellarColorPicker;
+    'StellarComment': Components.StellarComment;
+    'StellarComments': Components.StellarComments;
     'CopyWrap': Components.CopyWrap;
+    'StellarDropdown': Components.StellarDropdown;
     'StellarGrid': Components.StellarGrid;
     'StellarImage': Components.StellarImage;
+    'StellarItem': Components.StellarItem;
     'StellarLayout': Components.StellarLayout;
     'StellarTooltip': Components.StellarTooltip;
   }
@@ -521,9 +602,13 @@ declare global {
     'stellar-chart': Components.StellarChartAttributes;
     'stellar-code': Components.StellarCodeAttributes;
     'stellar-color-picker': Components.StellarColorPickerAttributes;
+    'stellar-comment': Components.StellarCommentAttributes;
+    'stellar-comments': Components.StellarCommentsAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
+    'stellar-dropdown': Components.StellarDropdownAttributes;
     'stellar-grid': Components.StellarGridAttributes;
     'stellar-image': Components.StellarImageAttributes;
+    'stellar-item': Components.StellarItemAttributes;
     'stellar-layout': Components.StellarLayoutAttributes;
     'stellar-tooltip': Components.StellarTooltipAttributes;
   }
@@ -601,10 +686,28 @@ declare global {
     new (): HTMLStellarColorPickerElement;
   };
 
+  interface HTMLStellarCommentElement extends Components.StellarComment, HTMLStencilElement {}
+  var HTMLStellarCommentElement: {
+    prototype: HTMLStellarCommentElement;
+    new (): HTMLStellarCommentElement;
+  };
+
+  interface HTMLStellarCommentsElement extends Components.StellarComments, HTMLStencilElement {}
+  var HTMLStellarCommentsElement: {
+    prototype: HTMLStellarCommentsElement;
+    new (): HTMLStellarCommentsElement;
+  };
+
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
   var HTMLCopyWrapElement: {
     prototype: HTMLCopyWrapElement;
     new (): HTMLCopyWrapElement;
+  };
+
+  interface HTMLStellarDropdownElement extends Components.StellarDropdown, HTMLStencilElement {}
+  var HTMLStellarDropdownElement: {
+    prototype: HTMLStellarDropdownElement;
+    new (): HTMLStellarDropdownElement;
   };
 
   interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
@@ -617,6 +720,12 @@ declare global {
   var HTMLStellarImageElement: {
     prototype: HTMLStellarImageElement;
     new (): HTMLStellarImageElement;
+  };
+
+  interface HTMLStellarItemElement extends Components.StellarItem, HTMLStencilElement {}
+  var HTMLStellarItemElement: {
+    prototype: HTMLStellarItemElement;
+    new (): HTMLStellarItemElement;
   };
 
   interface HTMLStellarLayoutElement extends Components.StellarLayout, HTMLStencilElement {}
@@ -644,9 +753,13 @@ declare global {
     'stellar-chart': HTMLStellarChartElement
     'stellar-code': HTMLStellarCodeElement
     'stellar-color-picker': HTMLStellarColorPickerElement
+    'stellar-comment': HTMLStellarCommentElement
+    'stellar-comments': HTMLStellarCommentsElement
     'copy-wrap': HTMLCopyWrapElement
+    'stellar-dropdown': HTMLStellarDropdownElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-image': HTMLStellarImageElement
+    'stellar-item': HTMLStellarItemElement
     'stellar-layout': HTMLStellarLayoutElement
     'stellar-tooltip': HTMLStellarTooltipElement
   }
@@ -664,9 +777,13 @@ declare global {
     'stellar-chart': HTMLStellarChartElement;
     'stellar-code': HTMLStellarCodeElement;
     'stellar-color-picker': HTMLStellarColorPickerElement;
+    'stellar-comment': HTMLStellarCommentElement;
+    'stellar-comments': HTMLStellarCommentsElement;
     'copy-wrap': HTMLCopyWrapElement;
+    'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-image': HTMLStellarImageElement;
+    'stellar-item': HTMLStellarItemElement;
     'stellar-layout': HTMLStellarLayoutElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
   }

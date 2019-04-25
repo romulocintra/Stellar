@@ -7,7 +7,7 @@
 }
 
 :host([align="left"]) {
-  text-align: left;
+  text-align: left !important;
 }
 
 :host([align="left"]) ::slotted(*) {
@@ -15,7 +15,7 @@
 }
 
 :host([align="center"]) {
-  text-align: center;
+  text-align: center !important;
 }
 
 :host([align="center"]) ::slotted(*) {
@@ -24,7 +24,7 @@
 }
 
 :host([align="right"]) {
-  text-align: right;
+  text-align: right !important;
 }
 
 :host([align="right"]) ::slotted(*) {
@@ -37,35 +37,24 @@
 
 :host ::slotted(img),
 :host ::slotted(stellar-code-block) {
-  margin-bottom: 2rem !important;
+  margin-bottom: 2rem ;
 }
 
 :host ::slotted(*:last-child) {
-  margin-bottom: 0 !important;
-}
-
-:host ::slotted(h1),
-:host ::slotted(h2),
-:host ::slotted(h3),
-:host ::slotted(h4),
-:host ::slotted(h5),
-:host ::slotted(h6),
-:host ::slotted(p) {
-  margin-bottom: 2rem !important;
-  max-width: 25em !important;
+  margin-bottom: 0 ;
 }
 
 :host([full]) ::slotted(*) {
-  max-width: 100% !important;
+  max-width: 100% ;
 }
 
 :host ::slotted(ul),
 :host ::slotted(ol) {
-  margin: .25em 0 !important;
-  display: inline-block !important;
-  text-align: left !important;
+  margin: .25em 0 ;
+  display: inline-block ;
+  text-align: left ;
 }
 
 :host ::slotted(li) {
-  margin-top: 0.5em !important;
+  margin-top: 0.5em ;
 }

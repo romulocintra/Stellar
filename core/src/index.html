@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="theme-green theme-dark">
+<html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -18,10 +18,10 @@
 
     const changeDarkMode = function() {
       if (dark) {
-        document.querySelector('html').classList.add('theme-dark');
+        document.querySelector('html').classList.add('dark-mode');
         document.querySelector('body').classList.add('bg-black');
       } else {
-        document.querySelector('html').classList.remove('theme-dark');
+        document.querySelector('html').classList.remove('dark-mode');
         document.querySelector('body').classList.remove('bg-black');
       }
     }
@@ -30,17 +30,129 @@
       document.querySelector('html').classList = "";
       document.querySelector('body').classList = "";
       changeDarkMode();
-      document.querySelector('html').classList.add(`theme-${color}`);
-      document.querySelector('body').classList.add(`theme-${color}`);
+      if (color !== "none") {
+        document.querySelector('html').classList.add(`theme-${color}`);
+        document.querySelector('body').classList.add(`theme-${color}`);
+      }
     }
-
-    changeTheme("green", true)
   </script>
 </head>
 <body>
   <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="darkMode()">Switch Modes</stellar-button>
 
-  <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.value)"></stellar-color-picker>
+  <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.val)"></stellar-color-picker>
+
+  <stellar-dropdown position="left">
+    <stellar-button ghost slot="handle">Account</stellar-button>
+    <stellar-item>
+      <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
+      Your Account
+    </stellar-item>
+    <stellar-item>Billing</stellar-item>
+    <stellar-item>Settings</stellar-item>
+    <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
+  </stellar-dropdown>
+
+  <br />
+
+  <stellar-dropdown position="right">
+    <stellar-button ghost slot="handle">Account</stellar-button>
+    <stellar-item>
+      <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
+      Your Account
+    </stellar-item>
+    <stellar-item>Billing</stellar-item>
+    <stellar-item>Settings</stellar-item>
+    <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
+  </stellar-dropdown>
+
+  <stellar-comments>
+      <stellar-comment>
+        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+        <copy-wrap slot="content">
+          <p>Nice! good work.</p>
+        </copy-wrap>
+      </stellar-comment>
+      <stellar-comment>
+        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+        <copy-wrap slot="content">
+          <p>Nice! good work.</p>
+        </copy-wrap>
+        <stellar-comment>
+          <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+          <copy-wrap slot="content">
+            <p>Nice! good work.</p>
+          </copy-wrap>
+          <stellar-comment>
+            <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+            <copy-wrap slot="content">
+              <p>Nice! good work.</p>
+            </copy-wrap>
+          </stellar-comment>
+          <stellar-comment>
+            <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+            <copy-wrap slot="content">
+              <p>Nice! good work.</p>
+            </copy-wrap>
+          </stellar-comment>
+          <stellar-comment>
+            <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+            <copy-wrap slot="content">
+              <p class="mw-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae ipsa iure ratione sit? Eaque culpa optio, sunt ipsa minus aspernatur suscipit molestiae in cumque soluta molestias, unde expedita iste?</p>
+            </copy-wrap>
+            <stellar-comment>
+              <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+              <copy-wrap slot="content">
+                <p>Nice! good work.</p>
+              </copy-wrap>
+            </stellar-comment>
+            <stellar-comment>
+              <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+              <copy-wrap slot="content">
+                <p>Nice! good work.</p>
+              </copy-wrap>
+            </stellar-comment>
+          </stellar-comment>
+          <stellar-comment>
+            <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+            <copy-wrap slot="content">
+              <p>Nice! good work.</p>
+            </copy-wrap>
+          </stellar-comment>
+          <stellar-comment>
+            <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+            <copy-wrap slot="content">
+              <p>Nice! good work.</p>
+            </copy-wrap>
+            <stellar-comment>
+              <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+              <copy-wrap slot="content">
+                <p>Nice! good work.</p>
+              </copy-wrap>
+            </stellar-comment>
+            <stellar-comment>
+              <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+              <copy-wrap slot="content">
+                <p>Nice! good work.</p>
+              </copy-wrap>
+            </stellar-comment>
+          </stellar-comment>
+        </stellar-comment>
+      </stellar-comment>
+      <stellar-comment>
+        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+        <copy-wrap slot="content">
+          <p>Nice! good work.</p>
+        </copy-wrap>
+        <stellar-comment>
+          <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
+          <copy-wrap slot="content">
+            <p>Nice! good work.</p>
+          </copy-wrap>
+        </stellar-comment>
+      </stellar-comment>
+    </stellar-comments>
+
 
   <stellar-accordion>
     <h5 slot="label">Title <stellar-tag size='tiny'>New</stellar-tag></h5>
@@ -155,7 +267,7 @@
     <h6>The spectacle before us was indeed sublime.</h6>
     <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
   </copy-wrap>
-  <div class="bg-theme-base5 pa4">
+  <div class="bg-theme-base5 dark-mode pa4">
     <copy-wrap>
       <h1>The spectacle before us was indeed sublime.</h1>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
@@ -171,7 +283,7 @@
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
     </copy-wrap>
   </div>
-  <div class="bg-theme-base0 theme-light pa4">
+  <div class="bg-theme-base0 light-mode pa4">
     <copy-wrap>
       <h1>The spectacle before us was indeed sublime.</h1>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
@@ -188,7 +300,7 @@
     </copy-wrap>
   </div>
 
-  <div class="bg-theme-base9 theme-dark pa4">
+  <div class="bg-theme-base9 plain-mode pa4">
     <copy-wrap>
       <h1>The spectacle before us was indeed sublime.</h1>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>

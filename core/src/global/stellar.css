@@ -219,27 +219,27 @@
   --font-subheading: var(--font-system);
   --font-body: var(--font-system);
 
-  --theme-base0: var(--red0);
-  --theme-base1: var(--red1);
-  --theme-base2: var(--red2);
-  --theme-base3: var(--red3);
-  --theme-base4: var(--red4);
-  --theme-base5: var(--red5);
-  --theme-base6: var(--red6);
-  --theme-base7: var(--red7);
-  --theme-base8: var(--red8);
-  --theme-base9: var(--red9);
+  --theme-base0: var(--gray0);
+  --theme-base1: var(--gray1);
+  --theme-base2: var(--gray2);
+  --theme-base3: var(--gray3);
+  --theme-base4: var(--gray4);
+  --theme-base5: var(--gray5);
+  --theme-base6: var(--gray6);
+  --theme-base7: var(--gray7);
+  --theme-base8: var(--gray8);
+  --theme-base9: var(--gray9);
 
-  --theme-complement0: var(--indigo0);
-  --theme-complement1: var(--indigo1);
-  --theme-complement2: var(--indigo2);
-  --theme-complement3: var(--indigo3);
-  --theme-complement4: var(--indigo4);
-  --theme-complement5: var(--indigo5);
-  --theme-complement6: var(--indigo6);
-  --theme-complement7: var(--indigo7);
-  --theme-complement8: var(--indigo8);
-  --theme-complement9: var(--indigo9);
+  --theme-complement0: var(--red0);
+  --theme-complement1: var(--red1);
+  --theme-complement2: var(--red2);
+  --theme-complement3: var(--red3);
+  --theme-complement4: var(--red4);
+  --theme-complement5: var(--red5);
+  --theme-complement6: var(--red6);
+  --theme-complement7: var(--red7);
+  --theme-complement8: var(--red8);
+  --theme-complement9: var(--red9);
 
   --theme-copy-base: var(--gray9);
   --theme-copy-supporting: var(--red9);

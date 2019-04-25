@@ -195,10 +195,10 @@
     transform: scale(1) translateY(100%) translateX(-100%) translateZ(0);
 }
 
-:host-context(.theme-dark):host .wrap {
+:host-context(.dark-mode):host .wrap {
     background: var(--theme-complement7);
 }
 
-:host-context(.theme-dark):host .wrap .after {
+:host-context(.dark-mode):host .wrap .after {
     background: var(--theme-complement7);
 }

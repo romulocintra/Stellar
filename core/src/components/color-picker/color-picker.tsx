@@ -1,4 +1,4 @@
-import { Component, Prop, Element, State, Event, EventEmitter, Listen, Watch } from '@stencil/core';
+import { Component, Prop, Element, State, Event, EventEmitter, Watch } from '@stencil/core';
 import { colors } from '../../global/colors';
 import properties from 'css-custom-properties'
 
@@ -9,7 +9,7 @@ import properties from 'css-custom-properties'
 })
 export class ColorPicker {
     @Element() element: HTMLElement;
-    @Prop({mutable: true}) value: string = "red";
+    @Prop({mutable: true, reflectToAttr: true}) val: string = "none";
     @State() options: Array<string>;
     @Event() change: EventEmitter;
 
@@ -20,39 +20,37 @@ export class ColorPicker {
         })
 
         properties.set({
-            "--selected-color": `var(--${this.value}5)`
+            "--selected-color": `var(--${this.val}5)`
         }, this.element);
     }
 
-    @Watch('value')
-    valueChangedHandler(value: string) {
-        this.change.emit(value);
+    @Watch('val')
+    valueChangedHandler(val: string) {
+        this.change.emit(val);
 
         properties.set({
-            "--selected-color": `var(--${this.value}5)`
+            "--selected-color": `var(--${this.val}5)`
         }, this.element);
     }
 
-    @Listen('inputValueChanged')
-    inputChangedHandler(event: CustomEvent) {
-        this.value = event.detail
-
-        properties.set({
-            "--selected-color": `var(--${this.value}5)`
-        }, this.element);
+    updateValue(color) {
+        this.val = color;
     }
 
     render() {
-        return (
-            <div class="wrap">
-                {this.options.map(option => <button
-                    value={option}
-                    class={option}
-                    style={{ "background": `var(--${option}5)` }}
-                    onClick={() => { this.value = option; }} />
-                )}
-                <div class="placeholder" />
-            </div>
-        );
+        return <div class="wrap">
+            {this.options.map(option => <button
+                value={option}
+                class={option}
+                style={{ "background": `var(--${option}5)` }}
+                onClick={() => { this.updateValue(option); }} />
+            )}
+            <button
+                value={"none"}
+                class={"none"}
+                style={{ "background": `var(--white)` }}
+                onClick={() => { this.updateValue("none"); }} />
+            <div class="placeholder" />
+        </div>
     }
 }

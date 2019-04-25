@@ -3,8 +3,8 @@ import properties from 'css-custom-properties';
 import isHexColor from 'validator/lib/isHexColor';
 import delay from 'async-delay';
 import ResizeObserver from 'resize-observer-polyfill';
-
 import Tween, { Easing } from 'tweenkle';
+import focusWithin from 'focus-within'
 
 export const blurringEase = (args: EaseParams): TweenInstance => {
   const tweenForward: TweenInstance = new Tween({
@@ -75,5 +75,6 @@ export {
   properties,
   isHexColor,
   delay,
-  ResizeObserver
+  ResizeObserver,
+  focusWithin
 }

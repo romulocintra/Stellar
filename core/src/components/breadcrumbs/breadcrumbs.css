@@ -53,6 +53,6 @@
 	height: inherit;
 }
 
-:host-context(.theme-dark) {
+:host-context(.dark-mode) {
 	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
 }

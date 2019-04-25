@@ -172,7 +172,7 @@
     margin-left: 0.75em;
 }
 
-:host-context(.theme-dark) {
+:host-context(.dark-mode) {
     --background: var(--theme-base7);
     --color: var(--white);
     --active-background: var(--theme-base9);
@@ -180,7 +180,7 @@
     --active-border: none;
 }
 
-:host-context(.theme-dark):host([outline]) {
+:host-context(.dark-mode):host([outline]) {
     --background: transparent;
     --color: var(--white);
     --border: 2px solid var(--theme-base5);
@@ -189,7 +189,7 @@
     --active-border: 2px solid var(--theme-base9);
 }
 
-:host-context(.theme-dark):host([ghost]) {
+:host-context(.dark-mode):host([ghost]) {
     --padding: 0.05em 0 0.125em;
     --background: none;
     --color: var(--theme-base5);

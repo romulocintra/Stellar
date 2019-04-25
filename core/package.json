@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
+    "@stencil/router": "^0.3.3",
     "async-delay": "^1.0.3",
     "await-delay": "^1.0.0",
     "css-custom-properties": "^0.1.0",
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.2.0",
-    "@stencil/core": "latest",
+    "@stencil/core": "^0.18.0",
     "@stencil/postcss": "latest",
     "@types/jest": "23.3.14",
     "@types/puppeteer": "1.12.1",
