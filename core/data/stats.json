@@ -6,34 +6,34 @@
       "language": "typescript",
       "header": "TypeScript",
       "code": "2339",
-      "messageText": "Property 'updateColor' does not exist on type 'Avatar'.",
-      "relFilePath": "src/components/avatar/avatar.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/avatar/avatar.tsx",
+      "messageText": "Property 'colorChanged' does not exist on type 'ColorPicker'.",
+      "relFilePath": "src/components/color-picker/color-picker.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/color-picker/color-picker.tsx",
       "lines": [
         {
-          "lineIndex": 62,
-          "lineNumber": 63,
-          "text": "",
+          "lineIndex": 27,
+          "lineNumber": 28,
+          "text": "    valueChangedHandler(value: string) {",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 63,
-          "lineNumber": 64,
-          "text": "    this.updateColor();",
-          "errorCharStart": 9,
-          "errorLength": 11
+          "lineIndex": 28,
+          "lineNumber": 29,
+          "text": "        this.colorChanged.emit(value);",
+          "errorCharStart": 13,
+          "errorLength": 12
         },
         {
-          "lineIndex": 64,
-          "lineNumber": 65,
-          "text": "  }",
+          "lineIndex": 29,
+          "lineNumber": 30,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 64,
-      "columnNumber": 9
+      "lineNumber": 29,
+      "columnNumber": 13
     }
   ]
 }

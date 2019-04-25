@@ -7,9 +7,85 @@
   <link rel="stylesheet" href="/build/stellar-core.css">
   <script src="/build/stellar-core.js"></script>
   <script src="/global/page2layers.js"></script>
+  <script>
+    var dark = false;
+    var theme = "green";
+
+    const darkMode = function () {
+      dark = !dark;
+      changeDarkMode()
+    }
+
+    const changeDarkMode = function() {
+      if (dark) {
+        document.querySelector('html').classList.add('theme-dark');
+        document.querySelector('body').classList.add('bg-black');
+      } else {
+        document.querySelector('html').classList.remove('theme-dark');
+        document.querySelector('body').classList.remove('bg-black');
+      }
+    }
+
+    const changeTheme = function(color) {
+      document.querySelector('html').classList = "";
+      document.querySelector('body').classList = "";
+      changeDarkMode();
+      document.querySelector('html').classList.add(`theme-${color}`);
+      document.querySelector('body').classList.add(`theme-${color}`);
+    }
+
+    changeTheme("green", true)
+  </script>
 </head>
-<body class="bg-black">
-  <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="document.querySelector('html').classList.toggle('theme-dark');document.querySelector('body').classList.toggle('bg-black');">Switch Modes</stellar-button>
+<body>
+  <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="darkMode()">Switch Modes</stellar-button>
+
+  <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.value)"></stellar-color-picker>
+
+  <stellar-accordion>
+    <h5 slot="label">Title <stellar-tag size='tiny'>New</stellar-tag></h5>
+    <h1>Content!</h1>
+    <h2>Hello!</h2>
+  </stellar-accordion>
+
+  <stellar-chart for="datatable" type="column"></stellar-chart>
+  <table id="datatable">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Jane</th>
+        <th>John</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Apples</th>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Pears</th>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>Plums</th>
+        <td>5</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <th>Bananas</th>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>Oranges</th>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+
 
   <stellar-breadcrumbs>
     <stellar-breadcrumb>Reports</stellar-breadcrumb>

@@ -1,0 +1,36 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+:host-context(.theme-dark):host .highcharts-background {
+  fill: var(--black) !important
+}
+
+:host-context(.theme-dark):host .highcharts-title,
+:host-context(.theme-dark):host .highcharts-subtitle,
+:host-context(.theme-dark):host .highcharts-legend-item text,
+:host-context(.theme-dark):host .highcharts-axis-labels text,
+:host-context(.theme-dark):host .highcharts-axis-title {
+  fill: var(--white) !important
+}
+
+:host-context(.theme-dark):host .highcharts-legend-box {
+  fill: transparent !important
+}
+
+:host-context(.theme-dark):host .highcharts-grid path,
+:host-context(.theme-dark):host .highcharts-axis path {
+  stroke: rgba(255, 255, 255, 0.2) !important
+}
+
+:host-context(.theme-dark):host .highcharts-tooltip text {
+  fill: var(--black) !important
+}
+
+:host-context(.theme-dark):host .highcharts-series rect {
+  stroke: var(--black) !important
+}

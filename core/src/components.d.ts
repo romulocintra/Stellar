@@ -8,6 +8,9 @@
 import '@stencil/core';
 
 import 'ionicons';
+import {
+  HighchartsModel,
+} from './components/chart/options';
 
 
 export namespace Components {
@@ -367,6 +370,22 @@ export namespace Components {
     'value'?: string;
   }
 
+  interface StellarChart {
+    'config': HighchartsModel;
+    'for': string;
+    'get_options': () => any;
+    'options': (newOptions: any) => void;
+    'refresh': () => void;
+    'remote': string;
+    'type': "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarChartAttributes extends StencilHTMLAttributes {
+    'config'?: HighchartsModel;
+    'for'?: string;
+    'remote'?: string;
+    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+
   interface StellarCode {
     'clipboard': () => Promise<void>;
     'codeString': string;
@@ -390,6 +409,14 @@ export namespace Components {
     'language'?: string;
     'preview'?: boolean;
     'simple'?: boolean;
+  }
+
+  interface StellarColorPicker {
+    'value': string;
+  }
+  interface StellarColorPickerAttributes extends StencilHTMLAttributes {
+    'onChange'?: (event: CustomEvent) => void;
+    'value'?: string;
   }
 
   interface CopyWrap {
@@ -471,7 +498,9 @@ declare global {
     'StellarButton': Components.StellarButton;
     'StellarCallout': Components.StellarCallout;
     'StellarCard': Components.StellarCard;
+    'StellarChart': Components.StellarChart;
     'StellarCode': Components.StellarCode;
+    'StellarColorPicker': Components.StellarColorPicker;
     'CopyWrap': Components.CopyWrap;
     'StellarGrid': Components.StellarGrid;
     'StellarImage': Components.StellarImage;
@@ -489,7 +518,9 @@ declare global {
     'stellar-button': Components.StellarButtonAttributes;
     'stellar-callout': Components.StellarCalloutAttributes;
     'stellar-card': Components.StellarCardAttributes;
+    'stellar-chart': Components.StellarChartAttributes;
     'stellar-code': Components.StellarCodeAttributes;
+    'stellar-color-picker': Components.StellarColorPickerAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-grid': Components.StellarGridAttributes;
     'stellar-image': Components.StellarImageAttributes;
@@ -552,10 +583,22 @@ declare global {
     new (): HTMLStellarCardElement;
   };
 
+  interface HTMLStellarChartElement extends Components.StellarChart, HTMLStencilElement {}
+  var HTMLStellarChartElement: {
+    prototype: HTMLStellarChartElement;
+    new (): HTMLStellarChartElement;
+  };
+
   interface HTMLStellarCodeElement extends Components.StellarCode, HTMLStencilElement {}
   var HTMLStellarCodeElement: {
     prototype: HTMLStellarCodeElement;
     new (): HTMLStellarCodeElement;
+  };
+
+  interface HTMLStellarColorPickerElement extends Components.StellarColorPicker, HTMLStencilElement {}
+  var HTMLStellarColorPickerElement: {
+    prototype: HTMLStellarColorPickerElement;
+    new (): HTMLStellarColorPickerElement;
   };
 
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
@@ -598,7 +641,9 @@ declare global {
     'stellar-button': HTMLStellarButtonElement
     'stellar-callout': HTMLStellarCalloutElement
     'stellar-card': HTMLStellarCardElement
+    'stellar-chart': HTMLStellarChartElement
     'stellar-code': HTMLStellarCodeElement
+    'stellar-color-picker': HTMLStellarColorPickerElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-image': HTMLStellarImageElement
@@ -616,7 +661,9 @@ declare global {
     'stellar-button': HTMLStellarButtonElement;
     'stellar-callout': HTMLStellarCalloutElement;
     'stellar-card': HTMLStellarCardElement;
+    'stellar-chart': HTMLStellarChartElement;
     'stellar-code': HTMLStellarCodeElement;
+    'stellar-color-picker': HTMLStellarColorPickerElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-image': HTMLStellarImageElement;
