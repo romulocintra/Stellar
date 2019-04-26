@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `count`  | `count`   |             | `number` |
-| `size`   | `size`    |             | `string` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `count`  | `count`   |             | `number` | `undefined` |
+| `size`   | `size`    |             | `string` | `"medium"`  |
 
 
 ----------------------------------------------

@@ -10,13 +10,6 @@ See the [Slides API Docs](../Slides) for more usage information.
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `motion` | `motion`  |             | `number` |
-
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

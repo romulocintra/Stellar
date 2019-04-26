@@ -7,16 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `value`  | `value`   |             | `string` |
+| Property | Attribute | Description | Type     | Default  |
+| -------- | --------- | ----------- | -------- | -------- |
+| `val`    | `val`     |             | `string` | `"none"` |
 
 
 ## Events
 
-| Event          | Description |
-| -------------- | ----------- |
-| `colorChanged` |             |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `change` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------

@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `for`    | `for`     |             | `string` |
+| Property     | Attribute    | Description | Type      | Default     |
+| ------------ | ------------ | ----------- | --------- | ----------- |
+| `for`        | `for`        |             | `string`  | `undefined` |
+| `size`       | `size`       |             | `string`  | `undefined` |
+| `underneath` | `underneath` |             | `boolean` | `undefined` |
 
 
 ----------------------------------------------

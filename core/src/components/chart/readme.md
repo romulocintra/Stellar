@@ -7,22 +7,51 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      |
-| -------- | --------- | ----------- | --------- |
-| `for`    | `for`     |             | `string`  |
-| `random` | `random`  |             | `boolean` |
-| `remote` | `remote`  |             | `string`  |
-| `type`   | `type`    |             | `string`  |
+| Property | Attribute | Description | Type                                                                                                                              | Default               |
+| -------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `config` | --        |             | `HighchartsModel`                                                                                                                 | `new HighchartsModel` |
+| `for`    | `for`     |             | `string`                                                                                                                          | `undefined`           |
+| `remote` | `remote`  |             | `string`                                                                                                                          | `undefined`           |
+| `type`   | `type`    |             | `"area" \| "areaspline" \| "bar" \| "bubble" \| "column" \| "line" \| "pie" \| "polygon" \| "scatter" \| "spline" \| "waterfall"` | `undefined`           |
 
 
 ## Methods
 
-| Method    | Description |
-| --------- | ----------- |
-| `data`    |             |
-| `options` |             |
-| `refresh` |             |
-| `series`  |             |
+### `get_options() => any`
+
+
+
+#### Returns
+
+Type: `any`
+
+
+
+### `options(newOptions: any) => void`
+
+
+
+#### Parameters
+
+| Name         | Type  | Description |
+| ------------ | ----- | ----------- |
+| `newOptions` | `any` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
+### `refresh() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
 
 
 ----------------------------------------------

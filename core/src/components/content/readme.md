@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      |
-| -------- | --------- | ----------- | --------- |
-| `for`    | `for`     |             | `string`  |
-| `name`   | `name`    |             | `string`  |
-| `open`   | `open`    |             | `boolean` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `behavior` | `behavior` |             | `string`  | `undefined` |
+| `for`      | `for`      |             | `string`  | `undefined` |
+| `open`     | `open`     |             | `boolean` | `false`     |
 
 
 ----------------------------------------------

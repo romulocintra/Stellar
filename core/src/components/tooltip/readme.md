@@ -110,9 +110,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                            | Default    |
-| -------- | --------- | ----------- | ------------------------------- | ---------- |
-| `align`  | `align`   |             | `"center" \| "left" \| "right"` | `"center"` |
+| Property | Attribute | Description | Type                                                                                                                                        | Default    |
+| -------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `align`  | `align`   |             | `"bottom-center" \| "bottom-left" \| "bottom-right" \| "center" \| "left" \| "middle-center" \| "middle-left" \| "middle-right" \| "right"` | `"center"` |
 
 
 ----------------------------------------------

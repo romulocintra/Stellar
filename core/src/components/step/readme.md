@@ -7,20 +7,20 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      |
-| ---------- | ----------- | ----------- | --------- |
-| `disabled` | `disabled`  |             | `boolean` |
-| `href`     | `href`      |             | `string`  |
-| `open`     | `open`      |             | `boolean` |
-| `order`    | `order`     |             | `number`  |
-| `tabCount` | `tab-count` |             | `number`  |
+| Property   | Attribute   | Description | Type      | Default     |
+| ---------- | ----------- | ----------- | --------- | ----------- |
+| `disabled` | `disabled`  |             | `boolean` | `false`     |
+| `href`     | `href`      |             | `string`  | `"#"`       |
+| `open`     | `open`      |             | `boolean` | `false`     |
+| `order`    | `order`     |             | `number`  | `undefined` |
+| `tabCount` | `tab-count` |             | `number`  | `undefined` |
 
 
 ## Events
 
-| Event           | Description |
-| --------------- | ----------- |
-| `contentChange` |             |
+| Event           | Description | Type                |
+| --------------- | ----------- | ------------------- |
+| `contentChange` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------

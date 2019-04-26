@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type      |
-| --------- | --------- | ----------- | --------- |
-| `chart`   | `chart`   |             | `boolean` |
-| `name`    | `name`    |             | `string`  |
-| `striped` | `striped` |             | `boolean` |
-| `upgrade` | `upgrade` |             | `boolean` |
+| Property  | Attribute | Description | Type      | Default     |
+| --------- | --------- | ----------- | --------- | ----------- |
+| `chart`   | `chart`   |             | `boolean` | `false`     |
+| `name`    | `name`    |             | `string`  | `undefined` |
+| `striped` | `striped` |             | `boolean` | `false`     |
+| `upgrade` | `upgrade` |             | `boolean` | `false`     |
 
 
 ----------------------------------------------
