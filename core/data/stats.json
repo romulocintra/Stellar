@@ -6,33 +6,33 @@
       "language": "typescript",
       "header": "TypeScript",
       "code": "2339",
-      "messageText": "Property 'handleImage' does not exist on type 'Scatter'.",
-      "relFilePath": "src/components/reveal/reveal.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/reveal/reveal.tsx",
+      "messageText": "Property 'selectable' does not exist on type 'Select'.",
+      "relFilePath": "src/components/select/select.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/select/select.tsx",
       "lines": [
         {
-          "lineIndex": 32,
-          "lineNumber": 33,
-          "text": "        if (data[0].isIntersecting) {",
+          "lineIndex": 145,
+          "lineNumber": 146,
+          "text": "        options.forEach((element: HTMLStellarItemElement) => {",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 33,
-          "lineNumber": 34,
-          "text": "          this.handleImage();",
+          "lineIndex": 146,
+          "lineNumber": 147,
+          "text": "          this.selectable = true;",
           "errorCharStart": 15,
-          "errorLength": 11
+          "errorLength": 10
         },
         {
-          "lineIndex": 34,
-          "lineNumber": 35,
-          "text": "          this.removeIntersectionObserver();",
+          "lineIndex": 147,
+          "lineNumber": 148,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 34,
+      "lineNumber": 147,
       "columnNumber": 15
     }
   ]

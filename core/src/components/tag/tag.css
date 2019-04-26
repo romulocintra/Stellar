@@ -26,7 +26,7 @@
 :host([color*="2"]),
 :host([color*="3"]),
 :host([color*="4"]) {
-  --color: black !important;
+  --color: var(--black) !important;
 }
 
 :host .tag {
@@ -49,3 +49,14 @@
 :host([pill]) .tag {
   border-radius: 5rem;
 }
+
+
+:host-context(.dark-mode):host([color*="5"]),
+:host-context(.dark-mode):host([color*="6"]),
+:host-context(.dark-mode):host([color*="7"]),
+:host-context(.dark-mode):host([color*="8"]),
+:host-context(.dark-mode):host([color*="9"]) {
+  --color: var(--black) !important;
+}
+
+:host-context(.dark-mode):host([color*=""])

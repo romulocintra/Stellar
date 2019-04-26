@@ -39,479 +39,748 @@
 </head>
 <body>
   <main class="z-1 relative">
-  <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="darkMode()">Switch Modes</stellar-button>
+    <stellar-button tag="button" class="sticky top-0 right-0 z-max" onClick="darkMode()">Switch Modes</stellar-button>
 
-  <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.val)"></stellar-color-picker>
+    <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.val)"></stellar-color-picker>
 
-  <stellar-tag color="theme-base5">Theming</stellar-tag>
-  <stellar-tag color="theme-complement5">Theming</stellar-tag>
+    <stellar-form class="pa5">
+      <stellar-grid style="--grid-width: 300px;">
+        <stellar-input type="tags" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="text" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="email" description="awesome" label="great!"></stellar-input>
+        <stellar-input name="pw" type="password" description="awesome" label="great!"></stellar-input>
+        <stellar-password-requirements for="pw"></stellar-password-requirements>
+        <stellar-input type="search" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="number" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="date" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="datetime-local" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="tel" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="time" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="url" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="week" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="tags" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="textarea" description="awesome" label="great!"></stellar-input>
+        <stellar-input type="file" description="awesome" label="great!"></stellar-input>
+        <stellar-switch><p>Nice!</p></stellar-switch>
+        <stellar-switch><p>Nice!</p></stellar-switch>
+        <stellar-toggle type="radio" name="option-three" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one">Nice</stellar-toggle-option>
+          <stellar-toggle-option name="one" value="two">Awesome</stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="checkbox" name="option-two" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one">Nice</stellar-toggle-option>
+          <stellar-toggle-option name="two" value="two">Awesome</stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="radio-block" name="option-nine" label="Do you want things?" stacked>
+          <stellar-toggle-option name="one" value="one" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="two" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="three" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="checkbox-block" name="option-eight" label="Do you want things?" stacked>
+          <stellar-toggle-option name="one" value="one" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="two" value="two" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="three" value="three" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="radio-block" name="option-five" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="two">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="three">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="radio-block" name="option-seven" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="two" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="one" value="three" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="checkbox-block" name="option-four" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="two" value="two">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="three" value="three">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
+        <stellar-toggle type="checkbox-block" name="option-six" label="Do you want things?">
+          <stellar-toggle-option name="one" value="one" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option one!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="two" value="two" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option two!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+          <stellar-toggle-option name="three" value="three" icon>
+            <img src="https://placehold.it/400x600" width="100">
+            <copy-wrap>
+              <h5>Option three!</h5>
+              <stellar-button ghost size="tiny">More Details!</stellar-button>
+            </copy-wrap>
+          </stellar-toggle-option>
+        </stellar-toggle>
 
-  <stellar-tag color="red5">Awesome</stellar-tag>
-  <stellar-tag color="orange5">Awesome</stellar-tag>
-  <stellar-tag color="yellow5">Awesome</stellar-tag>
-  <stellar-tag color="lime5">Awesome</stellar-tag>
-  <stellar-tag color="green5">Awesome</stellar-tag>
-  <stellar-tag color="cyan5">Awesome</stellar-tag>
-  <stellar-tag color="blue5">Awesome</stellar-tag>
-  <stellar-tag color="indigo5">Awesome</stellar-tag>
-  <stellar-tag color="violet5">Awesome</stellar-tag>
-  <stellar-tag color="fuchsia5">Awesome</stellar-tag>
-  <stellar-tag color="pink5">Awesome</stellar-tag>
-  <stellar-tag color="gray5">Awesome</stellar-tag>
+        <stellar-select>
+          <stellar-item value="nice">nice</stellar-item>
+          <stellar-item value="cool">cool</stellar-item>
+          <stellar-item value="awesome">Awesome</stellar-item>
+        </stellar-select>
+        <stellar-select overlay>
+          <stellar-item value="nice">nice</stellar-item>
+          <stellar-item value="cool">cool</stellar-item>
+          <stellar-item value="awesome">Awesome</stellar-item>
+        </stellar-select>
+        <stellar-select overlay multiple>
+          <stellar-item value="nice">nice</stellar-item>
+          <stellar-item value="cool">cool</stellar-item>
+          <stellar-item value="awesome">Awesome</stellar-item>
+        </stellar-select>
+      </stellar-grid>
+    </stellar-form>
 
-  <stellar-tag size="tiny" pill>Awesome</stellar-tag>
-<stellar-tag size="small" pill>Awesome</stellar-tag>
-<stellar-tag pill>Awesome</stellar-tag>
-<stellar-tag size="medium" pill>Awesome</stellar-tag>
-<stellar-tag size="large" pill>Awesome</stellar-tag>
-
-<stellar-tag size="tiny">Awesome</stellar-tag>
-<stellar-tag size="small">Awesome</stellar-tag>
-<stellar-tag>Awesome</stellar-tag>
-<stellar-tag size="medium">Awesome</stellar-tag>
-<stellar-tag size="large">Awesome</stellar-tag>
-
-
-  <br />
-  <br />
-  <br />
-  <br />
-  <stellar-tabs size="tiny" block>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="small" block>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs block>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="medium" block>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="large" block>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="tiny" vertical>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="small" vertical>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs vertical>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="medium" vertical>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-tabs size="large" vertical>
-    <stellar-tab>
-      <stellar-asset name="person"></stellar-asset>
-      Profile
-    </stellar-tab>
-    <stellar-tab open>Details</stellar-tab>
-    <stellar-tab>Payment</stellar-tab>
-    <stellar-tab>
-      <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
-      William M. Riley
-    </stellar-tab>
-  </stellar-tabs>
-
-  <stellar-scatter float colors sizes class="db top-0 left-0 right-0 bottom-0 relative hydrated" style="height: 600px; width: 600px;">
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-    <p>Nice</p>
-
-  </stellar-scatter>
-  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />  <br />
-  <br />
-  <br />
-  <br />
-  <stellar-reveal>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-    <h1>Awesome</h1>
-  </stellar-reveal>
-
-  <stellar-group>
-    <stellar-button>Nice</stellar-button>
-    <stellar-button>Awesome</stellar-button>
-  </stellar-group>
-
-  <stellar-group class="flex mb4">
-    <stellar-card>
-      <copy-wrap align="center" class="self-center">
-        <h1><sup>$</sup>10<sub>/month</sub></h1>
-        <ul class="mt4 db">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-    <stellar-card emphasis class="bg-theme-base0">
-      <copy-wrap align="center" class="self-center">
-        <h1 class="theme-base9"><sup>$</sup>20<sub>/month</sub></h1>
-        <ul class="mt4">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-    <stellar-card>
-      <copy-wrap align="center" class="self-center">
-        <h1><sup>$</sup>30<sub>/month</sub></h1>
-        <ul class="mt4">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-  </stellar-group>
-  <stellar-group fill>
-    <stellar-card>
-      <copy-wrap align="center" class="self-center">
-        <h1><sup>$</sup>10<sub>/month</sub></h1>
-        <ul class="mt4">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-    <stellar-card emphasis class="bg-theme-base0">
-      <copy-wrap align="center" class="self-center">
-        <h1 class="theme-base9"><sup>$</sup>20<sub>/month</sub></h1>
-        <ul class="mt4">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-    <stellar-card>
-      <copy-wrap align="center" class="self-center">
-        <h1><sup>$</sup>30<sub>/month</sub></h1>
-        <ul class="mt4">
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-          <li>unlimited whtachamacallits</li>
-        </ul>
-        <stellar-button block class="mt4">Buy it!</stellar-button>
-      </copy-wrap>
-    </stellar-card>
-  </stellar-group>
-
-  <stellar-group overflow>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-    <stellar-avatar name="nice" shape="circle"></stellar-avatar>
-  </stellar-group>
+    <stellar-slides id="example-slides" effect="slide">
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+      <stellar-slide>
+        <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+          <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+        </stellar-image>
+      </stellar-slide>
+    </stellar-slides>
 
 
-  <stellar-group fill>
-    <stellar-input></stellar-input>
-    <stellar-button>Cool!</stellar-button>
-  </stellar-group>
+    <stellar-tag color="theme-base5">Theming</stellar-tag>
+    <stellar-tag color="theme-complement5">Theming</stellar-tag>
 
-  <br />
+    <stellar-tag color="red5">Awesome</stellar-tag>
+    <stellar-tag color="orange5">Awesome</stellar-tag>
+    <stellar-tag color="yellow5">Awesome</stellar-tag>
+    <stellar-tag color="lime5">Awesome</stellar-tag>
+    <stellar-tag color="green5">Awesome</stellar-tag>
+    <stellar-tag color="cyan5">Awesome</stellar-tag>
+    <stellar-tag color="blue5">Awesome</stellar-tag>
+    <stellar-tag color="indigo5">Awesome</stellar-tag>
+    <stellar-tag color="violet5">Awesome</stellar-tag>
+    <stellar-tag color="fuschia5">Awesome</stellar-tag>
+    <stellar-tag color="pink5">Awesome</stellar-tag>
+    <stellar-tag color="gray5">Awesome</stellar-tag>
 
-  <stellar-group fill>
-    <stellar-button>Cool!</stellar-button>
-    <stellar-input></stellar-input>
-  </stellar-group>
+    <stellar-tag size="tiny" pill>Awesome</stellar-tag>
+    <stellar-tag size="small" pill>Awesome</stellar-tag>
+    <stellar-tag pill>Awesome</stellar-tag>
+    <stellar-tag size="medium" pill>Awesome</stellar-tag>
+    <stellar-tag size="large" pill>Awesome</stellar-tag>
 
-  <br />
+    <stellar-tag size="tiny">Awesome</stellar-tag>
+    <stellar-tag size="small">Awesome</stellar-tag>
+    <stellar-tag>Awesome</stellar-tag>
+    <stellar-tag size="medium">Awesome</stellar-tag>
+    <stellar-tag size="large">Awesome</stellar-tag>
 
-  <stellar-group fill>
-    <stellar-input size="tiny"></stellar-input>
-    <stellar-button size="tiny">Cool!</stellar-button>
-  </stellar-group>
+    <br />
+    <br />
+    <br />
+    <br />
+    <stellar-tabs name="example-tab" size="tiny">
+      <stellar-tab href="tab-1">
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab href="tab-2" open>Details</stellar-tab>
+      <stellar-tab href="tab-3">Payment</stellar-tab>
+      <stellar-tab href="tab-4">
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-tabs size="small">
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <stellar-group fill>
-    <stellar-button size="tiny">Cool!</stellar-button>
-    <stellar-input size="tiny"></stellar-input>
-  </stellar-group>
+    <stellar-tabs>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-tabs size="large">
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <stellar-group fill>
-    <stellar-input size="small"></stellar-input>
-    <stellar-button size="small">Cool!</stellar-button>
-  </stellar-group>
+    <stellar-tabs name="example-tab" size="tiny" block>
+      <stellar-tab href="tab-1">
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab href="tab-2" open>Details</stellar-tab>
+      <stellar-tab href="tab-3">Payment</stellar-tab>
+      <stellar-tab href="tab-4">
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
+    <stellar-content for="example-tab" id="tab-1">
+      <h1>Profile</h1>
+    </stellar-content>
+    <stellar-content for="example-tab" id="tab-2" open>
+      <h1>Details</h1>
 
-  <br />
+    </stellar-content>
+    <stellar-content for="example-tab" id="tab-3">
+      <h1>Payment</h1>
+    </stellar-content>
+    <stellar-content for="example-tab" id="tab-4">
+      <h1>William M. Riley</h1>
+    </stellar-content>
 
-  <stellar-group fill>
-    <stellar-button size="small">Cool!</stellar-button>
-    <stellar-input size="small"></stellar-input>
-  </stellar-group>
+    <stellar-tabs size="small" block>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-tabs block>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <stellar-group fill>
-    <stellar-input size="medium"></stellar-input>
-    <stellar-button size="medium">Cool!</stellar-button>
-  </stellar-group>
+    <stellar-tabs size="large" block>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-tabs size="tiny" vertical>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <stellar-group fill>
-    <stellar-button size="medium">Cool!</stellar-button>
-    <stellar-input size="medium"></stellar-input>
-  </stellar-group>
+    <stellar-tabs size="small" vertical>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-tabs vertical>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <stellar-group fill>
-    <stellar-input size="large"></stellar-input>
-    <stellar-button size="large">Cool!</stellar-button>
-  </stellar-group>
+    <stellar-tabs size="large" vertical>
+      <stellar-tab>
+        <stellar-asset name="person"></stellar-asset>
+        Profile
+      </stellar-tab>
+      <stellar-tab open>Details</stellar-tab>
+      <stellar-tab>Payment</stellar-tab>
+      <stellar-tab>
+        <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+        William M. Riley
+      </stellar-tab>
+    </stellar-tabs>
 
-  <br />
+    <stellar-scatter float colors sizes class="db top-0 left-0 right-0 bottom-0 relative hydrated" style="height: 600px; width: 600px;">
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
+      <p>Nice</p>
 
-  <stellar-group fill>
-    <stellar-button size="large">Cool!</stellar-button>
-    <stellar-input size="large"></stellar-input>
-  </stellar-group>
+    </stellar-scatter>
+    <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+    <br />
+    <br />
+    <stellar-reveal>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+      <h1>Awesome</h1>
+    </stellar-reveal>
 
-  <stellar-group>
-    <stellar-input type="text"></stellar-input>
-    <stellar-input type="text"></stellar-input>
-  </stellar-group>
+    <stellar-group>
+      <stellar-button block>Nice</stellar-button>
+      <stellar-button block>Awesome</stellar-button>
+    </stellar-group>
+
+    <stellar-group class="flex mb4">
+      <stellar-card>
+        <copy-wrap align="center" class="self-center">
+          <h1><sup>$</sup>10<sub>/month</sub></h1>
+          <ul class="mt4 db">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+      <stellar-card emphasis class="bg-theme-base0">
+        <copy-wrap align="center" class="self-center">
+          <h1 class="theme-base9"><sup>$</sup>20<sub>/month</sub></h1>
+          <ul class="mt4">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+      <stellar-card>
+        <copy-wrap align="center" class="self-center">
+          <h1><sup>$</sup>30<sub>/month</sub></h1>
+          <ul class="mt4">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+    </stellar-group>
+    <stellar-group fill>
+      <stellar-card>
+        <copy-wrap align="center" class="self-center">
+          <h1><sup>$</sup>10<sub>/month</sub></h1>
+          <ul class="mt4">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+      <stellar-card emphasis class="bg-theme-base0">
+        <copy-wrap align="center" class="self-center">
+          <h1 class="theme-base9"><sup>$</sup>20<sub>/month</sub></h1>
+          <ul class="mt4">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+      <stellar-card>
+        <copy-wrap align="center" class="self-center">
+          <h1><sup>$</sup>30<sub>/month</sub></h1>
+          <ul class="mt4">
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+            <li>unlimited whtachamacallits</li>
+          </ul>
+          <stellar-button block class="mt4">Buy it!</stellar-button>
+        </copy-wrap>
+      </stellar-card>
+    </stellar-group>
+
+    <stellar-group overflow>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+      <stellar-avatar name="nice" shape="circle"></stellar-avatar>
+    </stellar-group>
 
 
-  <stellar-label>nice</stellar-label>
-  <stellar-label size="small">nice</stellar-label>
-  <stellar-label size="tiny">nice</stellar-label>
-  <stellar-label underneath>nice</stellar-label>
-  <stellar-label underneath size="small">nice</stellar-label>
-  <stellar-label underneath size="tiny">Nice</stellar-label>
+    <stellar-group fill>
+      <stellar-input block></stellar-input>
+      <stellar-button block>Cool!</stellar-button>
+    </stellar-group>
 
-  <stellar-pagination current="3" pages="20"></stellar-pagination>
+    <br />
 
-  <stellar-pagination current="3" pages="20" type="compact"></stellar-pagination>
+    <stellar-group fill>
+      <stellar-button block>Cool!</stellar-button>
+      <stellar-input block></stellar-input>
+    </stellar-group>
 
-  <stellar-progress value="10" max="20" editable></stellar-progress>
+    <br />
 
-  <stellar-dropdown position="left">
-    <stellar-button ghost slot="handle">Account</stellar-button>
-    <stellar-item>
-      <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
-      Your Account
-    </stellar-item>
-    <stellar-item>Billing</stellar-item>
-    <stellar-item>Settings</stellar-item>
-    <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
-  </stellar-dropdown>
+    <stellar-group fill>
+      <stellar-input block size="tiny"></stellar-input>
+      <stellar-button block size="tiny">Cool!</stellar-button>
+    </stellar-group>
 
-  <br />
+    <br />
 
-  <stellar-dropdown position="right">
-    <stellar-button ghost slot="handle">Account</stellar-button>
-    <stellar-item>
-      <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
-      Your Account
-    </stellar-item>
-    <stellar-item>Billing</stellar-item>
-    <stellar-item>Settings</stellar-item>
-    <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
-  </stellar-dropdown>
+    <stellar-group fill>
+      <stellar-button block size="tiny">Cool!</stellar-button>
+      <stellar-input block size="tiny"></stellar-input>
+    </stellar-group>
 
-  <stellar-comments>
+    <br />
+
+    <stellar-group fill>
+      <stellar-input block size="small"></stellar-input>
+      <stellar-button block size="small">Cool!</stellar-button>
+    </stellar-group>
+
+    <br />
+
+    <stellar-group fill>
+      <stellar-button block size="small">Cool!</stellar-button>
+      <stellar-input block size="small"></stellar-input>
+    </stellar-group>
+
+    <br />
+
+    <stellar-group fill>
+      <stellar-input block size="medium"></stellar-input>
+      <stellar-button block size="medium">Cool!</stellar-button>
+    </stellar-group>
+
+    <br />
+
+    <stellar-group fill>
+      <stellar-button block size="medium">Cool!</stellar-button>
+      <stellar-input block size="medium"></stellar-input>
+    </stellar-group>
+
+    <br />
+
+    <stellar-group fill>
+      <stellar-input block size="large"></stellar-input>
+      <stellar-button block size="large">Cool!</stellar-button>
+    </stellar-group>
+
+    <br />
+
+    <stellar-group fill>
+      <stellar-button block size="large">Cool!</stellar-button>
+      <stellar-input block size="large"></stellar-input>
+    </stellar-group>
+
+    <stellar-group>
+      <stellar-input block type="text"></stellar-input>
+      <stellar-input block type="text"></stellar-input>
+    </stellar-group>
+
+
+    <stellar-label>nice</stellar-label>
+    <stellar-label size="small">nice</stellar-label>
+    <stellar-label size="tiny">nice</stellar-label>
+    <stellar-label underneath>nice</stellar-label>
+    <stellar-label underneath size="small">nice</stellar-label>
+    <stellar-label underneath size="tiny">Nice</stellar-label>
+
+    <stellar-pagination current="3" pages="20"></stellar-pagination>
+
+    <stellar-pagination current="3" pages="20" type="compact"></stellar-pagination>
+
+    <stellar-progress value="10" max="20" editable></stellar-progress>
+
+    <stellar-dropdown position="left">
+      <stellar-button ghost slot="handle">Account</stellar-button>
+      <stellar-item>
+        <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
+        Your Account
+      </stellar-item>
+      <stellar-item>Billing</stellar-item>
+      <stellar-item>Settings</stellar-item>
+      <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
+    </stellar-dropdown>
+
+    <br />
+
+    <stellar-dropdown position="right">
+      <stellar-button ghost slot="handle">Account</stellar-button>
+      <stellar-item>
+        <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
+        Your Account
+      </stellar-item>
+      <stellar-item>Billing</stellar-item>
+      <stellar-item>Settings</stellar-item>
+      <stellar-button slot="footer" pill outline size="tiny" padding="small" class="ma2">Sign out</stellar-button>
+    </stellar-dropdown>
+
+    <stellar-comments>
       <stellar-comment>
         <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
         <copy-wrap slot="content">
@@ -599,121 +868,106 @@
     </stellar-comments>
 
 
-  <stellar-accordion>
-    <h5 slot="label">Title <stellar-tag size='tiny'>New</stellar-tag></h5>
-    <h1>Content!</h1>
-    <h2>Hello!</h2>
-  </stellar-accordion>
+    <stellar-accordion>
+      <h5 slot="label">Title <stellar-tag size='tiny'>New</stellar-tag></h5>
+      <h1>Content!</h1>
+      <h2>Hello!</h2>
+    </stellar-accordion>
 
-  <stellar-chart for="datatable" type="column"></stellar-chart>
-  <table id="datatable">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Jane</th>
-        <th>John</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Apples</th>
-        <td>3</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <th>Pears</th>
-        <td>2</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <th>Plums</th>
-        <td>5</td>
-        <td>11</td>
-      </tr>
-      <tr>
-        <th>Bananas</th>
-        <td>1</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <th>Oranges</th>
-        <td>2</td>
-        <td>4</td>
-      </tr>
-    </tbody>
-  </table>
+    <stellar-chart for="datatable" type="column"></stellar-chart>
+    <table id="datatable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Jane</th>
+          <th>John</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Apples</th>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th>Pears</th>
+          <td>2</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>Plums</th>
+          <td>5</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <th>Bananas</th>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>Oranges</th>
+          <td>2</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
 
 
-  <stellar-breadcrumbs>
-    <stellar-breadcrumb>Reports</stellar-breadcrumb>
-    <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
-    <stellar-breadcrumb>Chart</stellar-breadcrumb>
-    <stellar-breadcrumb>New</stellar-breadcrumb>
-  </stellar-breadcrumbs>
+    <stellar-breadcrumbs>
+      <stellar-breadcrumb>Reports</stellar-breadcrumb>
+      <stellar-breadcrumb>Single: awesome</stellar-breadcrumb>
+      <stellar-breadcrumb>Chart</stellar-breadcrumb>
+      <stellar-breadcrumb>New</stellar-breadcrumb>
+    </stellar-breadcrumbs>
 
-  <stellar-callout>
-    <p><b>Hello!</b>Suuuup!!!</p>
-  </stellar-callout>
-  <stellar-callout type="success">
-    <p><b>Hello!</b>Suuuup!!!</p>
-  </stellar-callout>
-  <stellar-callout type="info">
-    <p><b>Hello!</b>Suuuup!!!</p>
-  </stellar-callout>
-  <stellar-callout type="error">
-    <p><b>Hello!</b>Suuuup!!!</p>
-  </stellar-callout>
-  <stellar-callout type="alert">
-    <p><b>Hello!</b>Suuuup!!!</p>
-  </stellar-callout>
+    <stellar-callout>
+      <p><b>Hello!</b>Suuuup!!!</p>
+    </stellar-callout>
+    <stellar-callout type="success">
+      <p><b>Hello!</b>Suuuup!!!</p>
+    </stellar-callout>
+    <stellar-callout type="info">
+      <p><b>Hello!</b>Suuuup!!!</p>
+    </stellar-callout>
+    <stellar-callout type="error">
+      <p><b>Hello!</b>Suuuup!!!</p>
+    </stellar-callout>
+    <stellar-callout type="alert">
+      <p><b>Hello!</b>Suuuup!!!</p>
+    </stellar-callout>
 
-  <stellar-card class="ma4" flippable>
-    <header>
-      <p>nice</p>
-    </header>
-    <section>
-      <p>nice</p>
-      <stellar-button size="large">uh oh</stellar-button>
-      <stellar-button>uh oh</stellar-button>
-      <stellar-button size="small">uh oh</stellar-button>
-      <stellar-button size="tiny">uh oh</stellar-button>
-      <stellar-button size="large" outline>uh oh</stellar-button>
-      <stellar-button outline>uh oh</stellar-button>
-      <stellar-button size="small" outline>uh oh</stellar-button>
-      <stellar-button size="tiny" outline>uh oh</stellar-button>
-      <stellar-button size="large" pill>uh oh</stellar-button>
-      <stellar-button pill>uh oh</stellar-button>
-      <stellar-button size="small" pill>uh oh</stellar-button>
-      <stellar-button size="tiny" pill>uh oh</stellar-button>
-      <stellar-button size="large" pill outline>uh oh</stellar-button>
-      <stellar-button pill outline>uh oh</stellar-button>
-      <stellar-button size="small" pill outline>uh oh</stellar-button>
-      <stellar-button size="tiny" pill outline>uh oh</stellar-button>
-      <stellar-button size="large" ghost>uh oh</stellar-button>
-      <stellar-button ghost>uh oh</stellar-button>
-      <stellar-button size="small" ghost>uh oh</stellar-button>
-      <stellar-button size="tiny" ghost>uh oh</stellar-button>
-    </section>
-    <footer>
-      <p>nice</p>
-    </footer>
-  </stellar-card>
-  <copy-wrap class="pa4">
-    <h1>The spectacle before us was indeed sublime.</h1>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    <h2>The spectacle before us was indeed sublime.</h2>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    <h3>The spectacle before us was indeed sublime.</h3>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    <h4>The spectacle before us was indeed sublime.</h4>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    <h5>The spectacle before us was indeed sublime.</h5>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    <h6>The spectacle before us was indeed sublime.</h6>
-    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-  </copy-wrap>
-  <div class="bg-theme-base5 dark-mode pa4">
-    <copy-wrap>
+    <stellar-card class="ma4" flippable>
+      <header>
+        <p>nice</p>
+      </header>
+      <section>
+        <p>nice</p>
+        <stellar-button size="large">uh oh</stellar-button>
+        <stellar-button>uh oh</stellar-button>
+        <stellar-button size="small">uh oh</stellar-button>
+        <stellar-button size="tiny">uh oh</stellar-button>
+        <stellar-button size="large" outline>uh oh</stellar-button>
+        <stellar-button outline>uh oh</stellar-button>
+        <stellar-button size="small" outline>uh oh</stellar-button>
+        <stellar-button size="tiny" outline>uh oh</stellar-button>
+        <stellar-button size="large" pill>uh oh</stellar-button>
+        <stellar-button pill>uh oh</stellar-button>
+        <stellar-button size="small" pill>uh oh</stellar-button>
+        <stellar-button size="tiny" pill>uh oh</stellar-button>
+        <stellar-button size="large" pill outline>uh oh</stellar-button>
+        <stellar-button pill outline>uh oh</stellar-button>
+        <stellar-button size="small" pill outline>uh oh</stellar-button>
+        <stellar-button size="tiny" pill outline>uh oh</stellar-button>
+        <stellar-button size="large" ghost>uh oh</stellar-button>
+        <stellar-button ghost>uh oh</stellar-button>
+        <stellar-button size="small" ghost>uh oh</stellar-button>
+        <stellar-button size="tiny" ghost>uh oh</stellar-button>
+      </section>
+      <footer>
+        <p>nice</p>
+      </footer>
+    </stellar-card>
+    <copy-wrap class="pa4">
       <h1>The spectacle before us was indeed sublime.</h1>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
       <h2>The spectacle before us was indeed sublime.</h2>
@@ -727,41 +981,56 @@
       <h6>The spectacle before us was indeed sublime.</h6>
       <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
     </copy-wrap>
-  </div>
-  <div class="bg-theme-base0 light-mode pa4">
-    <copy-wrap>
-      <h1>The spectacle before us was indeed sublime.</h1>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h2>The spectacle before us was indeed sublime.</h2>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h3>The spectacle before us was indeed sublime.</h3>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h4>The spectacle before us was indeed sublime.</h4>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h5>The spectacle before us was indeed sublime.</h5>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h6>The spectacle before us was indeed sublime.</h6>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    </copy-wrap>
-  </div>
+    <div class="bg-theme-base5 dark-mode pa4">
+      <copy-wrap>
+        <h1>The spectacle before us was indeed sublime.</h1>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h2>The spectacle before us was indeed sublime.</h2>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h3>The spectacle before us was indeed sublime.</h3>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h4>The spectacle before us was indeed sublime.</h4>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h5>The spectacle before us was indeed sublime.</h5>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h6>The spectacle before us was indeed sublime.</h6>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      </copy-wrap>
+    </div>
+    <div class="bg-theme-base0 light-mode pa4">
+      <copy-wrap>
+        <h1>The spectacle before us was indeed sublime.</h1>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h2>The spectacle before us was indeed sublime.</h2>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h3>The spectacle before us was indeed sublime.</h3>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h4>The spectacle before us was indeed sublime.</h4>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h5>The spectacle before us was indeed sublime.</h5>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h6>The spectacle before us was indeed sublime.</h6>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      </copy-wrap>
+    </div>
 
-  <div class="bg-theme-base9 plain-mode pa4">
-    <copy-wrap>
-      <h1>The spectacle before us was indeed sublime.</h1>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h2>The spectacle before us was indeed sublime.</h2>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h3>The spectacle before us was indeed sublime.</h3>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h4>The spectacle before us was indeed sublime.</h4>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h5>The spectacle before us was indeed sublime.</h5>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-      <h6>The spectacle before us was indeed sublime.</h6>
-      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-    </copy-wrap>
-  </div>
-  <stellar-grid class="ma4">
+    <div class="bg-theme-base9 plain-mode pa4">
+      <copy-wrap>
+        <h1>The spectacle before us was indeed sublime.</h1>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h2>The spectacle before us was indeed sublime.</h2>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h3>The spectacle before us was indeed sublime.</h3>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h4>The spectacle before us was indeed sublime.</h4>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h5>The spectacle before us was indeed sublime.</h5>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+        <h6>The spectacle before us was indeed sublime.</h6>
+        <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
+      </copy-wrap>
+    </div>
+    <stellar-grid class="ma4">
       <stellar-avatar name="William M. Riley" color="red"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="orange"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="yellow"></stellar-avatar>
@@ -772,7 +1041,7 @@
       <stellar-avatar name="William M. Riley" color="blue"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="indigo"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="violet"></stellar-avatar>
-      <stellar-avatar name="William M. Riley" color="fuchsia"></stellar-avatar>
+      <stellar-avatar name="William M. Riley" color="fuschia"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="pink"></stellar-avatar>
       <stellar-avatar name="William M. Riley" color="gray"></stellar-avatar>
 
@@ -965,25 +1234,25 @@
     </stellar-code>
     <stellar-code language="ts" simple>
       <template>
-          export class Code {
-            // Comment
-            @Element() element: HTMLElement;
-            @Prop({reflectToAttr: true, mutable: true}) language: string = "html";
-            @Prop() simple: boolean = false;
-            @Prop() codeString: string;
-            @Prop() copy: boolean = true;
-            @State() copied: boolean = false;
-            @Prop({mutable: true}) expanded: boolean = false;
-            @Prop() expandable: boolean = false;
-            @State() randomName: number = Math.round((Math.random() * 10000));
-            @State() observer: MutationObserver;
+        export class Code {
+          // Comment
+          @Element() element: HTMLElement;
+          @Prop({reflectToAttr: true, mutable: true}) language: string = "html";
+          @Prop() simple: boolean = false;
+          @Prop() codeString: string;
+          @Prop() copy: boolean = true;
+          @State() copied: boolean = false;
+          @Prop({mutable: true}) expanded: boolean = false;
+          @Prop() expandable: boolean = false;
+          @State() randomName: number = Math.round((Math.random() * 10000));
+          @State() observer: MutationObserver;
 
-            @Prop() preview: boolean = true;
-            @Prop() feature: boolean = false;
+          @Prop() preview: boolean = true;
+          @Prop() feature: boolean = false;
 
-            @State() code: string;
-            @State() raw: string;
-          }
+          @State() code: string;
+          @State() raw: string;
+        }
       </template>
     </stellar-code>
     <stellar-code language="html" simple>
@@ -1035,7 +1304,7 @@
               </stellar-image>
             </section>
             <footer slot="back">
-                <h4>Nice!</h4>
+              <h4>Nice!</h4>
             </footer>
           </stellar-card>
         </aside>
@@ -1045,16 +1314,16 @@
       </template>
     </stellar-layout>
   </stellar-code>
-    <stellar-layout type="">
-      <section>
-      </section>
-    </stellar-layout>
-    <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
-      <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-      <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-    </stellar-image>
-    </main>
+  <stellar-layout type="">
+    <section>
+    </section>
+  </stellar-layout>
+  <stellar-image width="2792" height="1574" preload="./global/images/_images/google_cardboard_will@2x-76x43.jpg">
+    <source srcset="./global/images/_images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+    <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
+    <source srcset="./global/images/_images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+    <source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
+  </stellar-image>
+</main>
 </body>
 </html>

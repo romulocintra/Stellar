@@ -10,6 +10,6 @@
 <stellar-tag color="blue5">Awesome</stellar-tag>
 <stellar-tag color="indigo5">Awesome</stellar-tag>
 <stellar-tag color="violet5">Awesome</stellar-tag>
-<stellar-tag color="fuchsia5">Awesome</stellar-tag>
+<stellar-tag color="fuschia5">Awesome</stellar-tag>
 <stellar-tag color="pink5">Awesome</stellar-tag>
 <stellar-tag color="gray5">Awesome</stellar-tag>

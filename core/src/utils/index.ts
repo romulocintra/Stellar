@@ -5,13 +5,58 @@ import delay from 'async-delay';
 import ResizeObserver from 'resize-observer-polyfill';
 import Tween, { Easing } from 'tweenkle';
 import focusWithin from 'focus-within'
+import parentNodeSelector from 'parent-node-selector'
+import deepmerge from 'deepmerge'
+import zxcvbn from "zxcvbn";
+import TinyDatePicker from 'tiny-date-picker';
+import moment from 'moment';
+
+export function rIC(callback: () => void) {
+  if ('requestIdleCallback' in window) {
+    (window as any).requestIdleCallback(callback);
+  } else {
+    setTimeout(callback, 32);
+  }
+}
 
 export const blurringEase = (args: EaseParams): TweenInstance => {
+
+  const ease = {
+    "Linear": Easing.Linear,
+    "Back.In": Easing.Back.In,
+    "Back.Out": Easing.Back.Out,
+    "Back.InOut": Easing.Back.InOut,
+    "Bounce.In": Easing.Bounce.In,
+    "Bounce.Out": Easing.Bounce.Out,
+    "Bounce.InOut": Easing.Bounce.InOut,
+    "Circ.In": Easing.Circ.In,
+    "Circ.Out": Easing.Circ.Out,
+    "Circ.InOut": Easing.Circ.InOut,
+    "Cubic.In": Easing.Cubic.In,
+    "Cubic.Out": Easing.Cubic.Out,
+    "Cubic.InOut": Easing.Cubic.InOut,
+    "Elastic.In": Easing.Elastic.In,
+    "Elastic.Out": Easing.Elastic.Out,
+    "Elastic.InOut": Easing.Elastic.InOut,
+    "Quad.In": Easing.Quad.In,
+    "Quad.Out": Easing.Quad.Out,
+    "Quad.InOut": Easing.Quad.InOut,
+    "Quart.In": Easing.Quart.In,
+    "Quart.Out": Easing.Quart.Out,
+    "Quart.InOut": Easing.Quart.InOut,
+    "Quint.In": Easing.Quint.In,
+    "Quint.Out": Easing.Quint.Out,
+    "Quint.InOut": Easing.Quint.InOut,
+    "Sine.In": Easing.Sine.In,
+    "Sine.Out": Easing.Sine.Out,
+    "Sine.InOut": Easing.Sine.InOut,
+  }
+
   const tweenForward: TweenInstance = new Tween({
     start: args.start || 0,
     end: args.end || 10,
     duration: (args.duration || 350) / 2,
-    ease: Easing.Quad.InOut,
+    ease: ease[args.ease || "Circ.InOut"],
     delay: args.delay || 0
   });
 
@@ -19,7 +64,7 @@ export const blurringEase = (args: EaseParams): TweenInstance => {
     start: args.end || 10,
     end: args.start || 0,
     duration: (args.duration || 350) / 2,
-    ease: Easing.Quad.InOut,
+    ease: ease[args.ease || "Circ.InOut"],
     delay: args.delay || 0
   });
 
@@ -53,31 +98,72 @@ export function titleCase(str) {
 }
 
 export var shuffle = function (array) {
-	var currentIndex = array.length;
-	var temporaryValue, randomIndex;
+  var currentIndex = array.length;
+  var temporaryValue, randomIndex;
 
-	// While there remain elements to shuffle...
-	while (0 !== currentIndex) {
-		// Pick a remaining element...
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
 
-		// And swap it with the current element.
-		temporaryValue = array[currentIndex];
-		array[currentIndex] = array[randomIndex];
-		array[randomIndex] = temporaryValue;
-	}
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
 
-	return array;
+  return array;
 };
 
 String.prototype['format'] = function() {
   var formatted = this;
   for( var arg in arguments ) {
-      formatted = formatted.replace("{" + arg + "}", arguments[arg]);
+    formatted = formatted.replace("{" + arg + "}", arguments[arg]);
   }
   return formatted;
 };
+
+
+export const asyncForEach = async function (array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+}
+
+
+export function convert(s, val) {
+  var names = s.replace(/^\w+/, "$&]").replace(/]$/, "").split("][");
+  var result = {};
+  var obj = result;
+  var last;
+
+  for (var i = 0; i < names.length; i++) {
+    var name = names[i];
+    if (typeof last !== "undefined") {
+      obj[last] = name === "" ? [] : {};
+      obj = obj[last];
+    }
+    last = name === "" ? 0 : name;
+  }
+
+  obj[last] = val;
+
+  return result;
+}
+
+export function form2js(data) {
+  let object = {};
+
+  data.forEach(item => {
+    if (item.name && item.value && item.value !== "") {
+      let result = convert(item.name, item.value)
+      object = deepmerge.all([object, result])
+    }
+  })
+
+  return object;
+}
 
 
 export {
@@ -85,5 +171,9 @@ export {
   isHexColor,
   delay,
   ResizeObserver,
-  focusWithin
+  focusWithin,
+  parentNodeSelector,
+  zxcvbn,
+  TinyDatePicker,
+  moment
 }

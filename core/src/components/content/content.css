@@ -6,7 +6,7 @@
   display: none;
   animation-name: fadeInUp;
   animation-timing-function: var(--ease);
-  animation-duration: 0.225s;
+  animation-duration: 350ms;
   animation-fill-mode: both;
   transform: translate3d(0, 15px, 0);
   opacity: 0;

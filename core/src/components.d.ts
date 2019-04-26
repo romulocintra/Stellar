@@ -439,13 +439,11 @@ export namespace Components {
   interface StellarContent {
     'behavior': string;
     'for': string;
-    'name': string;
     'open': boolean;
   }
   interface StellarContentAttributes extends StencilHTMLAttributes {
     'behavior'?: string;
     'for'?: string;
-    'name'?: string;
     'open'?: boolean;
   }
 
@@ -469,6 +467,34 @@ export namespace Components {
     'label'?: string;
     'open'?: boolean;
     'position'?: "left"|"center"|"right";
+  }
+
+  interface StellarForm {
+    'acceptCharset': string;
+    'action': string;
+    'ajax': boolean;
+    'autocomplete': string;
+    'enctype': string;
+    'method': string;
+    'name': string;
+    'novalidate': boolean;
+    'refresh': () => Promise<void>;
+    'register': (selectors: string[]) => Promise<void>;
+    'state': () => Promise<{ els: any; json: any; results: FormResult[]; formData: any; valid: boolean; }>;
+    'submit_form': () => Promise<void>;
+    'target': string;
+  }
+  interface StellarFormAttributes extends StencilHTMLAttributes {
+    'acceptCharset'?: string;
+    'action'?: string;
+    'ajax'?: boolean;
+    'autocomplete'?: string;
+    'enctype'?: string;
+    'method'?: string;
+    'name'?: string;
+    'novalidate'?: boolean;
+    'onSubmit'?: (event: CustomEvent) => void;
+    'target'?: string;
   }
 
   interface StellarGrid {
@@ -528,10 +554,138 @@ export namespace Components {
     'width'?: number;
   }
 
+  interface StellarInput {
+    'accept': string;
+    'autocomplete': string;
+    'autofocus': boolean;
+    'color': string;
+    'cols': number;
+    'dateType': "month"|"year"|"day";
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'default': any;
+    'description': string;
+    'disabled': boolean;
+    'droppable': boolean;
+    'files': Array<any>;
+    'focused': boolean;
+    'getDatePicker': () => Promise<any>;
+    'getId': () => Promise<string>;
+    'getStrength': () => Promise<object>;
+    'icon': boolean;
+    'invalid': (message: string | boolean, valid?: boolean, level?: number) => Promise<void>;
+    'label': string;
+    'match': string;
+    'max': number;
+    'maxlength': number;
+    'min': number;
+    'multiple': boolean;
+    'multipleFileCaption': string;
+    /**
+    * The name of the input element
+    */
+    'name': string;
+    'novalidate': boolean;
+    'placeholder': string;
+    'readonly': boolean;
+    'replace_placeholder': string;
+    'required': boolean;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'requirements': boolean;
+    'rows': number;
+    'setStrength': (value: number) => Promise<void>;
+    'size': string;
+    'spellcheck': boolean;
+    'step': number;
+    'tokenField': any;
+    'tooltip': string;
+    /**
+    * The kind of element that the Input should be rendered as
+    */
+    'type': string;
+    'val': () => Promise<any>;
+    'validate': () => Promise<FormResult>;
+    'validates': string;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'value': any;
+    'wrap': string;
+  }
+  interface StellarInputAttributes extends StencilHTMLAttributes {
+    'accept'?: string;
+    'autocomplete'?: string;
+    'autofocus'?: boolean;
+    'color'?: string;
+    'cols'?: number;
+    'dateType'?: "month"|"year"|"day";
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'default'?: any;
+    'description'?: string;
+    'disabled'?: boolean;
+    'droppable'?: boolean;
+    'files'?: Array<any>;
+    'focused'?: boolean;
+    'icon'?: boolean;
+    'label'?: string;
+    'match'?: string;
+    'max'?: number;
+    'maxlength'?: number;
+    'min'?: number;
+    'multiple'?: boolean;
+    'multipleFileCaption'?: string;
+    /**
+    * The name of the input element
+    */
+    'name'?: string;
+    'novalidate'?: boolean;
+    /**
+    * Public: Blur event
+    */
+    'onBluring'?: (event: CustomEvent) => void;
+    /**
+    * Public: Changed event
+    */
+    'onChange'?: (event: CustomEvent) => void;
+    /**
+    * Public: Focus event
+    */
+    'onFocusing'?: (event: CustomEvent) => void;
+    'placeholder'?: string;
+    'readonly'?: boolean;
+    'replace_placeholder'?: string;
+    'required'?: boolean;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'requirements'?: boolean;
+    'rows'?: number;
+    'size'?: string;
+    'spellcheck'?: boolean;
+    'step'?: number;
+    'tokenField'?: any;
+    'tooltip'?: string;
+    /**
+    * The kind of element that the Input should be rendered as
+    */
+    'type'?: string;
+    'validates'?: string;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'value'?: any;
+    'wrap'?: string;
+  }
+
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -600,6 +754,25 @@ export namespace Components {
     'type'?: string;
   }
 
+  interface StellarMessage {
+    'closable': boolean;
+    'name': string;
+    'remember': boolean;
+    'size': "full"|"default";
+    'striped': boolean;
+    'type': "alert"|"error"|"info"|"success";
+    'visible': boolean;
+  }
+  interface StellarMessageAttributes extends StencilHTMLAttributes {
+    'closable'?: boolean;
+    'name'?: string;
+    'remember'?: boolean;
+    'size'?: "full"|"default";
+    'striped'?: boolean;
+    'type'?: "alert"|"error"|"info"|"success";
+    'visible'?: boolean;
+  }
+
   interface StellarPagination {
     'color': string;
     'current': number;
@@ -622,6 +795,15 @@ export namespace Components {
     'pages'?: number;
     'type'?: "full"|"compact";
     'url'?: any;
+  }
+
+  interface StellarPasswordRequirements {
+    'for': string;
+    'size': "tiny"|"small"|"large";
+  }
+  interface StellarPasswordRequirementsAttributes extends StencilHTMLAttributes {
+    'for'?: string;
+    'size'?: "tiny"|"small"|"large";
   }
 
   interface StellarProgress {
@@ -712,6 +894,251 @@ export namespace Components {
     'sizes'?: boolean;
   }
 
+  interface StellarSelect {
+    'default': any;
+    'description': string;
+    'focused': boolean;
+    'footer': boolean;
+    'inline': boolean;
+    'label': string;
+    'multiple': boolean;
+    'name': string|boolean;
+    'novalidate': boolean;
+    'open': boolean;
+    'option_elements': () => Promise<NodeListOf<any>>;
+    'options': () => Promise<string[]>;
+    'other': boolean;
+    'overlay': boolean;
+    'placeholder': string;
+    'placeholderInverted': boolean;
+    'processing': boolean;
+    'required': boolean;
+    'size': string;
+    'tooltip': string;
+    'validate': () => Promise<FormResult>;
+    'value': Array<string>|string;
+    'valueLabel': string;
+    'verbiage': string;
+    'verbiageAn': boolean;
+  }
+  interface StellarSelectAttributes extends StencilHTMLAttributes {
+    'default'?: any;
+    'description'?: string;
+    'focused'?: boolean;
+    'footer'?: boolean;
+    'inline'?: boolean;
+    'label'?: string;
+    'multiple'?: boolean;
+    'name'?: string|boolean;
+    'novalidate'?: boolean;
+    'onChange'?: (event: CustomEvent) => void;
+    'open'?: boolean;
+    'other'?: boolean;
+    'overlay'?: boolean;
+    'placeholder'?: string;
+    'placeholderInverted'?: boolean;
+    'processing'?: boolean;
+    'required'?: boolean;
+    'size'?: string;
+    'tooltip'?: string;
+    'value'?: Array<string>|string;
+    'valueLabel'?: string;
+    'verbiage'?: string;
+    'verbiageAn'?: boolean;
+  }
+
+  interface StellarSlide {}
+  interface StellarSlideAttributes extends StencilHTMLAttributes {}
+
+  interface StellarSlides {
+    'autoHeight': boolean;
+    'centeredSlides': boolean;
+    'direction': "horizontal"|"vertical";
+    'effect': "slide"|"fade"|"cube"|"coverflow"|"flip";
+    /**
+    * Get the index of the active slide.
+    */
+    'getActiveIndex': () => Promise<number>;
+    /**
+    * Get the index of the previous slide.
+    */
+    'getPreviousIndex': () => Promise<number>;
+    /**
+    * Get whether or not the current slide is the first slide.
+    */
+    'isBeginning': () => Promise<boolean>;
+    /**
+    * Get whether or not the current slide is the last slide.
+    */
+    'isEnd': () => Promise<boolean>;
+    /**
+    * Get the total number of slides.
+    */
+    'length': () => Promise<number>;
+    /**
+    * Lock or unlock the ability to slide to the next slides.
+    */
+    'lockSwipeToNext': (shouldLockSwipeToNext: boolean) => Promise<any>;
+    /**
+    * Lock or unlock the ability to slide to the previous slides.
+    */
+    'lockSwipeToPrev': (shouldLockSwipeToPrev: boolean) => Promise<any>;
+    /**
+    * Lock or unlock the ability to slide to change slides.
+    */
+    'lockSwipes': (shouldLockSwipes: boolean) => Promise<any>;
+    'loop': boolean;
+    'nested': boolean;
+    /**
+    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
+    */
+    'options': any;
+    /**
+    * Show or hide the pager
+    */
+    'pager': boolean;
+    'pagination': boolean;
+    /**
+    * Transition to the next slide.
+    */
+    'slideNext': (speed?: number, runCallbacks?: boolean) => Promise<void>;
+    /**
+    * Transition to the previous slide.
+    */
+    'slidePrev': (speed?: number, runCallbacks?: boolean) => Promise<void>;
+    /**
+    * Transition to the specified slide.
+    */
+    'slideTo': (index: number, speed?: number, runCallbacks?: boolean) => Promise<void>;
+    'slidesPerView': number;
+    'spaceBetween': number;
+    'speed': number;
+    /**
+    * Start auto play.
+    */
+    'startAutoplay': () => void;
+    /**
+    * Stop auto play.
+    */
+    'stopAutoplay': () => void;
+    /**
+    * Update the underlying slider implementation. Call this if you've added or removed child slides.
+    */
+    'update': () => Promise<void>;
+    'watchSlidesProgress': boolean;
+    'watchSlidesVisibility': boolean;
+  }
+  interface StellarSlidesAttributes extends StencilHTMLAttributes {
+    'autoHeight'?: boolean;
+    'centeredSlides'?: boolean;
+    'direction'?: "horizontal"|"vertical";
+    'effect'?: "slide"|"fade"|"cube"|"coverflow"|"flip";
+    'loop'?: boolean;
+    'nested'?: boolean;
+    /**
+    * Emitted after the active slide has changed.
+    */
+    'onIonSlideDidChange'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the slider is actively being moved.
+    */
+    'onIonSlideDrag'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the next slide has ended.
+    */
+    'onIonSlideNextEnd'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the next slide has started.
+    */
+    'onIonSlideNextStart'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the previous slide has ended.
+    */
+    'onIonSlidePrevEnd'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the previous slide has started.
+    */
+    'onIonSlidePrevStart'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the slider is at the last slide.
+    */
+    'onIonSlideReachEnd'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the slider is at its initial position.
+    */
+    'onIonSlideReachStart'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the user releases the touch.
+    */
+    'onIonSlideTouchEnd'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the user first touches the slider.
+    */
+    'onIonSlideTouchStart'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the slide transition has ended.
+    */
+    'onIonSlideTransitionEnd'?: (event: CustomEvent) => void;
+    /**
+    * Emitted when the slide transition has started.
+    */
+    'onIonSlideTransitionStart'?: (event: CustomEvent) => void;
+    /**
+    * Emitted before the active slide has changed.
+    */
+    'onIonSlideWillChange'?: (event: CustomEvent) => void;
+    /**
+    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
+    */
+    'options'?: any;
+    /**
+    * Show or hide the pager
+    */
+    'pager'?: boolean;
+    'pagination'?: boolean;
+    'slidesPerView'?: number;
+    'spaceBetween'?: number;
+    'speed'?: number;
+    'watchSlidesProgress'?: boolean;
+    'watchSlidesVisibility'?: boolean;
+  }
+
+  interface StellarStep {
+    'disabled': boolean;
+    'href': string;
+    'open': boolean;
+    'order': number;
+    'tabCount': number;
+  }
+  interface StellarStepAttributes extends StencilHTMLAttributes {
+    'disabled'?: boolean;
+    'href'?: string;
+    'onContentChange'?: (event: CustomEvent) => void;
+    'open'?: boolean;
+    'order'?: number;
+    'tabCount'?: number;
+  }
+
+  interface StellarSteps {
+    'contents': () => any[];
+    'name': string;
+    'steps': () => any[];
+  }
+  interface StellarStepsAttributes extends StencilHTMLAttributes {
+    'name'?: string;
+  }
+
+  interface StellarSwitch {
+    'activate': () => Promise<void>;
+    'checked': boolean;
+    'checkedDefault': boolean;
+  }
+  interface StellarSwitchAttributes extends StencilHTMLAttributes {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'onChange'?: (event: CustomEvent) => void;
+  }
+
   interface StellarTab {
     'disabled': boolean;
     'href': string;
@@ -730,6 +1157,19 @@ export namespace Components {
     'order'?: number;
     'tabCount'?: number;
     'tag'?: string;
+  }
+
+  interface StellarTable {
+    'chart': boolean;
+    'name': string;
+    'striped': boolean;
+    'upgrade': boolean;
+  }
+  interface StellarTableAttributes extends StencilHTMLAttributes {
+    'chart'?: boolean;
+    'name'?: string;
+    'striped'?: boolean;
+    'upgrade'?: boolean;
   }
 
   interface StellarTabs {
@@ -769,11 +1209,80 @@ export namespace Components {
     'textColor'?: string;
   }
 
+  interface StellarToggleOption {
+    'checked': boolean;
+    'checkedDefault': boolean;
+    'confirm': () => Promise<void>;
+    'default': string;
+    'disabled': boolean;
+    'for': string;
+    'icon': boolean;
+    'inline': boolean;
+    'name': string;
+    'required': boolean;
+    'selectedCopy': string;
+    'single': boolean;
+    'size': boolean;
+    'tooltip': string;
+    'type': string;
+    'updateSelected': (value: boolean) => void;
+    'value': string;
+  }
+  interface StellarToggleOptionAttributes extends StencilHTMLAttributes {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'default'?: string;
+    'disabled'?: boolean;
+    'for'?: string;
+    'icon'?: boolean;
+    'inline'?: boolean;
+    'name'?: string;
+    'onChange'?: (event: CustomEvent) => void;
+    'required'?: boolean;
+    'selectedCopy'?: string;
+    'single'?: boolean;
+    'size'?: boolean;
+    'tooltip'?: string;
+    'type'?: string;
+    'value'?: string;
+  }
+
+  interface StellarToggle {
+    'card': any;
+    'description': string;
+    'flip': boolean;
+    'label': string;
+    'name': string;
+    'novalidate': boolean;
+    'required': boolean;
+    'single': boolean;
+    'size': string;
+    'stacked': boolean;
+    'type': string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'validate': () => Promise<FormResult>;
+    'value': string|string[];
+  }
+  interface StellarToggleAttributes extends StencilHTMLAttributes {
+    'card'?: any;
+    'description'?: string;
+    'flip'?: boolean;
+    'label'?: string;
+    'name'?: string;
+    'novalidate'?: boolean;
+    'onChange'?: (event: CustomEvent) => void;
+    'required'?: boolean;
+    'single'?: boolean;
+    'size'?: string;
+    'stacked'?: boolean;
+    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'value'?: string|string[];
+  }
+
   interface StellarTooltip {
-    'align': "left"|"center"|"right";
+    'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
   }
   interface StellarTooltipAttributes extends StencilHTMLAttributes {
-    'align'?: "left"|"center"|"right";
+    'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
   }
 }
 
@@ -796,20 +1305,33 @@ declare global {
     'StellarContent': Components.StellarContent;
     'CopyWrap': Components.CopyWrap;
     'StellarDropdown': Components.StellarDropdown;
+    'StellarForm': Components.StellarForm;
     'StellarGrid': Components.StellarGrid;
     'StellarGroupOverflow': Components.StellarGroupOverflow;
     'StellarGroup': Components.StellarGroup;
     'StellarImage': Components.StellarImage;
+    'StellarInput': Components.StellarInput;
     'StellarItem': Components.StellarItem;
     'StellarLabel': Components.StellarLabel;
     'StellarLayout': Components.StellarLayout;
+    'StellarMessage': Components.StellarMessage;
     'StellarPagination': Components.StellarPagination;
+    'StellarPasswordRequirements': Components.StellarPasswordRequirements;
     'StellarProgress': Components.StellarProgress;
     'StellarReveal': Components.StellarReveal;
     'StellarScatter': Components.StellarScatter;
+    'StellarSelect': Components.StellarSelect;
+    'StellarSlide': Components.StellarSlide;
+    'StellarSlides': Components.StellarSlides;
+    'StellarStep': Components.StellarStep;
+    'StellarSteps': Components.StellarSteps;
+    'StellarSwitch': Components.StellarSwitch;
     'StellarTab': Components.StellarTab;
+    'StellarTable': Components.StellarTable;
     'StellarTabs': Components.StellarTabs;
     'StellarTag': Components.StellarTag;
+    'StellarToggleOption': Components.StellarToggleOption;
+    'StellarToggle': Components.StellarToggle;
     'StellarTooltip': Components.StellarTooltip;
   }
 
@@ -831,20 +1353,33 @@ declare global {
     'stellar-content': Components.StellarContentAttributes;
     'copy-wrap': Components.CopyWrapAttributes;
     'stellar-dropdown': Components.StellarDropdownAttributes;
+    'stellar-form': Components.StellarFormAttributes;
     'stellar-grid': Components.StellarGridAttributes;
     'stellar-group-overflow': Components.StellarGroupOverflowAttributes;
     'stellar-group': Components.StellarGroupAttributes;
     'stellar-image': Components.StellarImageAttributes;
+    'stellar-input': Components.StellarInputAttributes;
     'stellar-item': Components.StellarItemAttributes;
     'stellar-label': Components.StellarLabelAttributes;
     'stellar-layout': Components.StellarLayoutAttributes;
+    'stellar-message': Components.StellarMessageAttributes;
     'stellar-pagination': Components.StellarPaginationAttributes;
+    'stellar-password-requirements': Components.StellarPasswordRequirementsAttributes;
     'stellar-progress': Components.StellarProgressAttributes;
     'stellar-reveal': Components.StellarRevealAttributes;
     'stellar-scatter': Components.StellarScatterAttributes;
+    'stellar-select': Components.StellarSelectAttributes;
+    'stellar-slide': Components.StellarSlideAttributes;
+    'stellar-slides': Components.StellarSlidesAttributes;
+    'stellar-step': Components.StellarStepAttributes;
+    'stellar-steps': Components.StellarStepsAttributes;
+    'stellar-switch': Components.StellarSwitchAttributes;
     'stellar-tab': Components.StellarTabAttributes;
+    'stellar-table': Components.StellarTableAttributes;
     'stellar-tabs': Components.StellarTabsAttributes;
     'stellar-tag': Components.StellarTagAttributes;
+    'stellar-toggle-option': Components.StellarToggleOptionAttributes;
+    'stellar-toggle': Components.StellarToggleAttributes;
     'stellar-tooltip': Components.StellarTooltipAttributes;
   }
 
@@ -951,6 +1486,12 @@ declare global {
     new (): HTMLStellarDropdownElement;
   };
 
+  interface HTMLStellarFormElement extends Components.StellarForm, HTMLStencilElement {}
+  var HTMLStellarFormElement: {
+    prototype: HTMLStellarFormElement;
+    new (): HTMLStellarFormElement;
+  };
+
   interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
   var HTMLStellarGridElement: {
     prototype: HTMLStellarGridElement;
@@ -975,6 +1516,12 @@ declare global {
     new (): HTMLStellarImageElement;
   };
 
+  interface HTMLStellarInputElement extends Components.StellarInput, HTMLStencilElement {}
+  var HTMLStellarInputElement: {
+    prototype: HTMLStellarInputElement;
+    new (): HTMLStellarInputElement;
+  };
+
   interface HTMLStellarItemElement extends Components.StellarItem, HTMLStencilElement {}
   var HTMLStellarItemElement: {
     prototype: HTMLStellarItemElement;
@@ -993,10 +1540,22 @@ declare global {
     new (): HTMLStellarLayoutElement;
   };
 
+  interface HTMLStellarMessageElement extends Components.StellarMessage, HTMLStencilElement {}
+  var HTMLStellarMessageElement: {
+    prototype: HTMLStellarMessageElement;
+    new (): HTMLStellarMessageElement;
+  };
+
   interface HTMLStellarPaginationElement extends Components.StellarPagination, HTMLStencilElement {}
   var HTMLStellarPaginationElement: {
     prototype: HTMLStellarPaginationElement;
     new (): HTMLStellarPaginationElement;
+  };
+
+  interface HTMLStellarPasswordRequirementsElement extends Components.StellarPasswordRequirements, HTMLStencilElement {}
+  var HTMLStellarPasswordRequirementsElement: {
+    prototype: HTMLStellarPasswordRequirementsElement;
+    new (): HTMLStellarPasswordRequirementsElement;
   };
 
   interface HTMLStellarProgressElement extends Components.StellarProgress, HTMLStencilElement {}
@@ -1017,10 +1576,52 @@ declare global {
     new (): HTMLStellarScatterElement;
   };
 
+  interface HTMLStellarSelectElement extends Components.StellarSelect, HTMLStencilElement {}
+  var HTMLStellarSelectElement: {
+    prototype: HTMLStellarSelectElement;
+    new (): HTMLStellarSelectElement;
+  };
+
+  interface HTMLStellarSlideElement extends Components.StellarSlide, HTMLStencilElement {}
+  var HTMLStellarSlideElement: {
+    prototype: HTMLStellarSlideElement;
+    new (): HTMLStellarSlideElement;
+  };
+
+  interface HTMLStellarSlidesElement extends Components.StellarSlides, HTMLStencilElement {}
+  var HTMLStellarSlidesElement: {
+    prototype: HTMLStellarSlidesElement;
+    new (): HTMLStellarSlidesElement;
+  };
+
+  interface HTMLStellarStepElement extends Components.StellarStep, HTMLStencilElement {}
+  var HTMLStellarStepElement: {
+    prototype: HTMLStellarStepElement;
+    new (): HTMLStellarStepElement;
+  };
+
+  interface HTMLStellarStepsElement extends Components.StellarSteps, HTMLStencilElement {}
+  var HTMLStellarStepsElement: {
+    prototype: HTMLStellarStepsElement;
+    new (): HTMLStellarStepsElement;
+  };
+
+  interface HTMLStellarSwitchElement extends Components.StellarSwitch, HTMLStencilElement {}
+  var HTMLStellarSwitchElement: {
+    prototype: HTMLStellarSwitchElement;
+    new (): HTMLStellarSwitchElement;
+  };
+
   interface HTMLStellarTabElement extends Components.StellarTab, HTMLStencilElement {}
   var HTMLStellarTabElement: {
     prototype: HTMLStellarTabElement;
     new (): HTMLStellarTabElement;
+  };
+
+  interface HTMLStellarTableElement extends Components.StellarTable, HTMLStencilElement {}
+  var HTMLStellarTableElement: {
+    prototype: HTMLStellarTableElement;
+    new (): HTMLStellarTableElement;
   };
 
   interface HTMLStellarTabsElement extends Components.StellarTabs, HTMLStencilElement {}
@@ -1033,6 +1634,18 @@ declare global {
   var HTMLStellarTagElement: {
     prototype: HTMLStellarTagElement;
     new (): HTMLStellarTagElement;
+  };
+
+  interface HTMLStellarToggleOptionElement extends Components.StellarToggleOption, HTMLStencilElement {}
+  var HTMLStellarToggleOptionElement: {
+    prototype: HTMLStellarToggleOptionElement;
+    new (): HTMLStellarToggleOptionElement;
+  };
+
+  interface HTMLStellarToggleElement extends Components.StellarToggle, HTMLStencilElement {}
+  var HTMLStellarToggleElement: {
+    prototype: HTMLStellarToggleElement;
+    new (): HTMLStellarToggleElement;
   };
 
   interface HTMLStellarTooltipElement extends Components.StellarTooltip, HTMLStencilElement {}
@@ -1059,20 +1672,33 @@ declare global {
     'stellar-content': HTMLStellarContentElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-dropdown': HTMLStellarDropdownElement
+    'stellar-form': HTMLStellarFormElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-group-overflow': HTMLStellarGroupOverflowElement
     'stellar-group': HTMLStellarGroupElement
     'stellar-image': HTMLStellarImageElement
+    'stellar-input': HTMLStellarInputElement
     'stellar-item': HTMLStellarItemElement
     'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
+    'stellar-message': HTMLStellarMessageElement
     'stellar-pagination': HTMLStellarPaginationElement
+    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement
     'stellar-progress': HTMLStellarProgressElement
     'stellar-reveal': HTMLStellarRevealElement
     'stellar-scatter': HTMLStellarScatterElement
+    'stellar-select': HTMLStellarSelectElement
+    'stellar-slide': HTMLStellarSlideElement
+    'stellar-slides': HTMLStellarSlidesElement
+    'stellar-step': HTMLStellarStepElement
+    'stellar-steps': HTMLStellarStepsElement
+    'stellar-switch': HTMLStellarSwitchElement
     'stellar-tab': HTMLStellarTabElement
+    'stellar-table': HTMLStellarTableElement
     'stellar-tabs': HTMLStellarTabsElement
     'stellar-tag': HTMLStellarTagElement
+    'stellar-toggle-option': HTMLStellarToggleOptionElement
+    'stellar-toggle': HTMLStellarToggleElement
     'stellar-tooltip': HTMLStellarTooltipElement
   }
 
@@ -1094,20 +1720,33 @@ declare global {
     'stellar-content': HTMLStellarContentElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
+    'stellar-form': HTMLStellarFormElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
     'stellar-group': HTMLStellarGroupElement;
     'stellar-image': HTMLStellarImageElement;
+    'stellar-input': HTMLStellarInputElement;
     'stellar-item': HTMLStellarItemElement;
     'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
+    'stellar-message': HTMLStellarMessageElement;
     'stellar-pagination': HTMLStellarPaginationElement;
+    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement;
     'stellar-progress': HTMLStellarProgressElement;
     'stellar-reveal': HTMLStellarRevealElement;
     'stellar-scatter': HTMLStellarScatterElement;
+    'stellar-select': HTMLStellarSelectElement;
+    'stellar-slide': HTMLStellarSlideElement;
+    'stellar-slides': HTMLStellarSlidesElement;
+    'stellar-step': HTMLStellarStepElement;
+    'stellar-steps': HTMLStellarStepsElement;
+    'stellar-switch': HTMLStellarSwitchElement;
     'stellar-tab': HTMLStellarTabElement;
+    'stellar-table': HTMLStellarTableElement;
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
+    'stellar-toggle-option': HTMLStellarToggleOptionElement;
+    'stellar-toggle': HTMLStellarToggleElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
   }
 

@@ -11,3 +11,10 @@ stellar-blur {
 stellar-blur .blur-svg {
 	display: none;
 }
+
+
+@media (prefers-reduced-motion: reduce) {
+	stellar-blur {
+		filter: none !important;
+	}
+}

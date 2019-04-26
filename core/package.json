@@ -30,9 +30,13 @@
     "highcharts": "^7.1.1",
     "ionicons": "^4.5.5",
     "medium-zoom": "^1.0.3",
+    "moment": "^2.24.0",
+    "parent-node-selector": "^0.1.1",
     "prismjs": "^1.16.0",
     "resize-observer-polyfill": "^1.5.1",
     "round-to": "^3.0.0",
+    "swiper": "^4.5.0",
+    "tiny-date-picker": "^3.2.8",
     "tweenkle": "^0.1.6",
     "validator": "^10.11.0",
     "zxcvbn": "^4.4.2"

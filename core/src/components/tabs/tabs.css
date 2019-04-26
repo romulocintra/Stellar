@@ -153,12 +153,12 @@
 }
 
 
-:host-context(.dark-mode):host {
+:host-context(.dark-mode) {
   border-bottom: 1px solid var(--theme-base9);
   background: var(--black);
 }
 
-:host-context(.dark-mode):host .indicator {
+:host-context(.dark-mode) .indicator {
   background: var(--theme-base5);
 }
 

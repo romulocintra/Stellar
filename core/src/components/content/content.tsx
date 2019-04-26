@@ -1,4 +1,5 @@
 import { Component, Prop, State, Element, Listen } from '@stencil/core';
+import { blurringEase } from '../../utils';
 
 @Component({
   tag: 'stellar-content',
@@ -8,11 +9,24 @@ import { Component, Prop, State, Element, Listen } from '@stencil/core';
 
 export class Content {
   @Element() element: HTMLElement;
-  @State() parent: any;
   @Prop({mutable: true, reflectToAttr: true}) open: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) for: string;
-  @Prop({mutable: true, reflectToAttr: true}) name: string;
   @Prop({mutable: true, reflectToAttr: true}) behavior: string;
+  @State() ease: TweenInstance = blurringEase({
+    end: 6,
+    start: -1,
+    duration: 200,
+    tick: (args) => {
+      this.blur = args.value;
+    },
+    complete: () => {
+      this.blur = 0;
+      this.ease.stop();
+    },
+  });
+
+  @State() blur: number = 0;
+  @State() parent: any;
 
   @Listen('document:contentChange')
   async handleActive (event: CustomEvent) {
@@ -20,16 +34,22 @@ export class Content {
 
     const contents = await this.parent.contents()
 
-    contents.forEach((element) => {
-      element.open = element.name === event.detail.name;
-    });
+    if (event.detail.name !== this.element.id) {
+      contents.forEach((element) => {
+        element.open = element.id === event.detail.name;
+
+        if (element.open) {
+          this.ease.start()
+        }
+      });
+    }
   }
 
   render() {
     return (
-      <div class="wrap" role="tabpanel" aria-hidden={!this.open ? "true" : "false"}>
+      <stellar-blur class="wrap" role="tabpanel" vertical={this.blur} aria-hidden={!this.open ? "true" : "false"}>
         <slot></slot>
-      </div>
+      </stellar-blur>
     );
   }
 }

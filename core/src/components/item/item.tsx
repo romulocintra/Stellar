@@ -69,7 +69,7 @@ export class Item {
     this.type = data.type;
     this.label = data.label;
 
-    const button = this.element.querySelector('.button');
+    const button = this.element.shadowRoot.querySelector('.button');
     button.innerHTML = data.slotted;
   }
 
@@ -118,14 +118,16 @@ export class Item {
 
   @Method()
   select_item(state?: {selected: boolean}) {
-    if (state) {
-      if (this.selected !== state.selected) {
+    if (this.selectable) {
+      if (state) {
+        if (this.selected !== state.selected) {
+          var event = new CustomEvent('click');
+          this.element.querySelector('.button').dispatchEvent(event);
+        }
+      } else {
         var event = new CustomEvent('click');
         this.element.querySelector('.button').dispatchEvent(event);
       }
-    } else {
-      var event = new CustomEvent('click');
-      this.element.querySelector('.button').dispatchEvent(event);
     }
   }
 

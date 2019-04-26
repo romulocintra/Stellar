@@ -118,43 +118,48 @@
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
-alue if the card is a button.                                     | `string`                                           | `"#"`       |
+      |
+| `watchSlidesProgress`   | `watch-slides-progress`   |                                                                                              | `boolean`                                  |
+| `watchSlidesVisibility` | `watch-slides-visibility` |                                                                                              | `boolean`                                  |
 
 
 ## Events
 
-| Event  | Description | Type                |
-| ------ | ----------- | ------------------- |
-| `flip` |             | `CustomEvent<void>` |
+| Event                     | Description                                         |
+| ------------------------- | --------------------------------------------------- |
+| `ionSlideDidChange`       | Emitted after the active slide has changed.         |
+| `ionSlideDrag`            | Emitted when the slider is actively being moved.    |
+| `ionSlideNextEnd`         | Emitted when the next slide has ended.              |
+| `ionSlideNextStart`       | Emitted when the next slide has started.            |
+| `ionSlidePrevEnd`         | Emitted when the previous slide has ended.          |
+| `ionSlidePrevStart`       | Emitted when the previous slide has started.        |
+| `ionSlideReachEnd`        | Emitted when the slider is at the last slide.       |
+| `ionSlideReachStart`      | Emitted when the slider is at its initial position. |
+| `ionSlideTouchEnd`        | Emitted when the user releases the touch.           |
+| `ionSlideTouchStart`      | Emitted when the user first touches the slider.     |
+| `ionSlideTransitionEnd`   | Emitted when the slide transition has ended.        |
+| `ionSlideTransitionStart` | Emitted when the slide transition has started.      |
+| `ionSlideWillChange`      | Emitted before the active slide has changed.        |
 
 
 ## Methods
 
-### `flip_card(e?: UIEvent) => Promise<void>`
-
-
-
-#### Parameters
-
-| Name | Type      | Description |
-| ---- | --------- | ----------- |
-| `e`  | `UIEvent` |             |
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
-essing when clicked.                                                   | `boolean`                                                  | `false`     |
-| `size`        | `size`        | Sets the size of the button. Can be tiny, small, medium, or large.                                    | `string`                                                   | `"medium"`  |
-| `tag`         | `tag`         | Allows the button to render for different tags.                                                       | `"button" \| "link" \| "route-link" \| "span" \| "submit"` | `"link"`    |
-| `target`      | `target`      | Sets the target on the anchor tag if the button is a link.                                            | `string`                                                   | `'_self'`   |
-| `value`       | `value`       | Sets the value on the button if the button is an input.                                               | `string`                                                   | `''`        |
+| Method             | Description                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| `getActiveIndex`   | Get the index of the active slide.                                                              |
+| `getPreviousIndex` | Get the index of the previous slide.                                                            |
+| `isBeginning`      | Get whether or not the current slide is the first slide.                                        |
+| `isEnd`            | Get whether or not the current slide is the last slide.                                         |
+| `length`           | Get the total number of slides.                                                                 |
+| `lockSwipeToNext`  | Lock or unlock the ability to slide to the next slides.                                         |
+| `lockSwipeToPrev`  | Lock or unlock the ability to slide to the previous slides.                                     |
+| `lockSwipes`       | Lock or unlock the ability to slide to change slides.                                           |
+| `slideNext`        | Transition to the next slide.                                                                   |
+| `slidePrev`        | Transition to the previous slide.                                                               |
+| `slideTo`          | Transition to the specified slide.                                                              |
+| `startAutoplay`    | Start auto play.                                                                                |
+| `stopAutoplay`     | Stop auto play.                                                                                 |
+| `update`           | Update the underlying slider implementation. Call this if you've added or removed child slides. |
 
 
 ----------------------------------------------

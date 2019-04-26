@@ -106,5 +106,10 @@
 }
 
 :host-context(.dark-mode):host([open]) .tab-wrap > .tab-button {
+  color: var(--white);
+}
+
+
+:host-context(.dark-mode):host-context(stellar-tabs[block]):host([open]) .tab-wrap > .tab-button {
   color: var(--theme-base9);
 }

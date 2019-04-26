@@ -17,38 +17,54 @@ liam M. Riley"></stellar-avatar>
 
 
 
-on onClick="document.querySelector('#awesome').slender = !document.querySelector('#awesome').slender">Toggle slender</stellar-button>
-<source srcset="./global/images/_images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-</stellar-image>
-r-comment>
-        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
-        <copy-wrap slot="content">
-          <p>Nice! good work.</p>
-        </copy-wrap>
-      </stellar-comment>
-      <stellar-comment>
-        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
-        <copy-wrap slot="content">
-          <p>Nice! good work.</p>
-        </copy-wrap>
-      </stellar-comment>
-      <stellar-comment>
-        <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
-        <copy-wrap slot="content">
-          <p>Nice! good work.</p>
-        </copy-wrap>
-        <stellar-comment>
-          <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
-          <copy-wrap slot="content">
-            <p>Nice! good work.</p>
-          </copy-wrap>
-        </stellar-comment>
-        <stellar-comment>
-          <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>
-          <copy-wrap slot="content">
-            <p>Nice! good work.</p>
-          </copy-wrap>
-        </stellar-comment>
+!</h3>
+			</copy-wrap>
+		</stellar-content>
+		<stellar-content for="awesome" name="two">
+			<copy-wrap>
+				<h1>Step Two!</h1>
+				<h3>Very good!</h3>
+			</copy-wrap>
+		</stellar-content>
+		<stellar-content for="awesome" name="three">
+			<copy-wrap>
+				<h1>Step Three!</h1>
+				<h3>Very good!</h3>
+			</copy-wrap>
+		</stellar-content>
+	</section>
+</stellar-card>
+et name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+      </copy-wrap>
+    <stellar-starscape></stellar-starscape>
+    </stellar-card>
+  </stellar-slide>
+  <stellar-slide>
+    <stellar-card>
+      <copy-wrap>
+        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+      </copy-wrap>
+    <stellar-starscape></stellar-starscape>
+    </stellar-card>
+  </stellar-slide>
+  <stellar-slide>
+    <stellar-card>
+      <copy-wrap>
+        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+      </copy-wrap>
+    <stellar-starscape></stellar-starscape>
+    </stellar-card>
+  </stellar-slide>
+  <stellar-slide>
+    <stellar-card>
+      <copy-wrap>
+        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+      </copy-wrap>
+    <stellar-starscape></stellar-starscape>
+    </stellar-card>
+  </stellar-slide>
+</stellar-slides>
+ </stellar-comment>
       </stellar-comment>
       <stellar-comment>
         <stellar-avatar slot="avatar" name="William M. Riley" size="tiny"></stellar-avatar>

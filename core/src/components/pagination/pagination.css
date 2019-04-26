@@ -140,7 +140,7 @@
 }
 
 :host .compact-pagination-container stellar-input {
-  width: 4rem;
+  width: 5rem;
   --padding: 0 1rem;
   margin: 0 1rem;
 }

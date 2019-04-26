@@ -53,7 +53,7 @@ export class Tabs {
 
   @Method()
   blurring() {
-    // this.ease.start();
+    this.ease.start();
   }
 
   async componentWillLoad () {
