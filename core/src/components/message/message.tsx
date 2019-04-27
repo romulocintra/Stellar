@@ -2,16 +2,17 @@ import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'stellar-message',
-  styleUrl: 'message.css'
+  styleUrl: 'message.css',
+  shadow: true
 })
 export class Message {
   @Element() element: HTMLElement;
   @Prop() type: "alert"|"error"|"info"|"success";
   @Prop({reflectToAttr: true}) size: "full"|"default";
   @Prop() closable: boolean = true;
-  @Prop() remember: boolean = false;
+  @Prop() remember: boolean = true;
   @Prop({mutable: true, reflectToAttr: true}) name: string = "stellar";
-  @Prop({mutable: true, reflectToAttr: true}) visible: boolean = (localStorage.getItem(this.name) !== "false");
+  @Prop({mutable: true, reflectToAttr: true}) shown: boolean = true;
   @Prop({reflectToAttr: true}) striped: boolean = false;
   @State() theme: string = "gray";
 
@@ -21,7 +22,8 @@ export class Message {
       this.name = this.name + "_" + btoa(unescape(encodeURIComponent(string)));
 
       if (localStorage.getItem(this.name)) {
-        this.visible = (localStorage.getItem(this.name) !== "false")
+        this.shown = !(localStorage.getItem(this.name) === "hidden");
+        console.log(this.shown);
       }
     }
 
@@ -43,15 +45,15 @@ export class Message {
 
   hostData() {
     return {
-      class: `theme-${this.theme}`
+      class: `theme-${this.theme} ${this.shown ? "db" : "dn"}`
     }
   }
 
   handleClose() {
-    this.visible = false;
+    this.shown = false;
 
     if (this.remember) {
-      localStorage.setItem(this.name, "false")
+      localStorage.setItem(this.name, "hidden")
     }
   }
 
@@ -59,9 +61,9 @@ export class Message {
     return (
       <div class="wrap">
         <slot></slot>
-        <stellar-button icon label="Close" onClick={() => { this.handleClose() }}>
+        <button aria-label="Close" onClick={() => { this.handleClose() }}>
           <stellar-asset name="close" />
-        </stellar-button>
+        </button>
       </div>
     )
   }

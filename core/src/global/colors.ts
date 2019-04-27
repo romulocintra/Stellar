@@ -3,6 +3,7 @@ export const colors = {
   "base": "#26B0C7",
   "white": "#ffffff",
   "black": "#2d2d2d",
+  "black-alt": "#242424",
   "gray": [
     "#faf9f9",
     "#f0ecec",

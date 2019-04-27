@@ -6,34 +6,34 @@
       "language": "typescript",
       "header": "TypeScript",
       "code": "2339",
-      "messageText": "Property 'selectable' does not exist on type 'Select'.",
-      "relFilePath": "src/components/select/select.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/select/select.tsx",
+      "messageText": "Property 'visible' does not exist on type 'Message'.",
+      "relFilePath": "src/components/message/message.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/message/message.tsx",
       "lines": [
         {
-          "lineIndex": 145,
-          "lineNumber": 146,
-          "text": "        options.forEach((element: HTMLStellarItemElement) => {",
+          "lineIndex": 23,
+          "lineNumber": 24,
+          "text": "      if (localStorage.getItem(this.name)) {",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 146,
-          "lineNumber": 147,
-          "text": "          this.selectable = true;",
-          "errorCharStart": 15,
-          "errorLength": 10
+          "lineIndex": 24,
+          "lineNumber": 25,
+          "text": "        this.visible = (localStorage.getItem(this.name) === \"true\");",
+          "errorCharStart": 13,
+          "errorLength": 7
         },
         {
-          "lineIndex": 147,
-          "lineNumber": 148,
-          "text": "",
+          "lineIndex": 25,
+          "lineNumber": 26,
+          "text": "        console.log(this.visible);",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 147,
-      "columnNumber": 15
+      "lineNumber": 25,
+      "columnNumber": 13
     }
   ]
 }

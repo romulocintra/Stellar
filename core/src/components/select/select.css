@@ -1,10 +1,14 @@
 :host {
+  --color: var(--black);
+  --border-radius: 0.3rem;
+  --item-size: 4.25rem;
+  --background: var(--white);
+  --border-color: var(--gray1);
+
   box-sizing: border-box;
   display: block;
   width: 100%;
   font-family: inherit;
-  --border-radius: 0.3rem;
-  --item-size: 4.25rem;
   position: relative;
 }
 
@@ -46,16 +50,16 @@
   align-items: center;
   justify-content: space-between;
   outline: none;
-  border: 1px solid var(--gray1);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 0;
   width: 100%;
   height: var(--item-size);
   overflow: hidden;
   line-height: 1.4;
-  color: var(--gray9);
+  color: var(--color);
   font-weight: 500;
-  background: white;
+  background: var(--background);
 }
 
 :host([focused]) .select-title,
@@ -65,9 +69,9 @@
   box-shadow: 0 0 0 1px var(--theme-base5);
 }
 
-:host .select-title stellar-item button {
-  background: white !important;
-  color: var(--gray9) !important;
+:host .select-title stellar-item {
+  background: var(--background) !important;
+  color: var(--color) !important;
 }
 
 :host .select-title input {
@@ -79,7 +83,7 @@
   right: 2rem;
   transition: transform 100ms var(--ease) 0s;
   font-size: 1.6rem;
-  color: var(--gray5);
+  color: var(--theme-base5);
   background: transparent;
   border: 0;
 }
@@ -102,20 +106,21 @@
   transition: transform 200ms var(--ease) 350ms, opacity 250ms var(--ease) 350ms, max-height 200ms var(--ease) 350ms;
   opacity: 0;
   z-index: 3;
-  background: white;
+  background: var(--background);
   width: 100%;
   max-height: 0rem;
   overflow-x: hidden;
   overflow-y: hidden;
   color: var(--theme-base5);
-  border: 1px solid var(--gray1);
+  border: 1px solid var(--border-color);
   pointer-events: none;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   border-radius: 0.3rem;
 }
 
 :host .select-list ::slotted(stellar-item) {
-  border-bottom: 1px solid var(--gray0)
+  color: var(--color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 :host .select-list ::slotted(stellar-item:last-child) {
@@ -155,7 +160,7 @@ stellar-input .validation span {
 }
 
 stellar-input .validation span + span {
-  border-top: 1px solid var(--theme-base1);
+  border-top: 1px solid var(--border-color);
 }
 
 :host([open]) .select-list,
@@ -184,7 +189,7 @@ stellar-input .validation span + span {
   --item-size: 3.5rem;
 }
 
-:host([size="small"])[open] .select-list,
+:host([size="small"][open]) .select-list,
 :host([size="small"]) .select-list:focus-within {
   max-height: 11rem;
 }
@@ -200,4 +205,16 @@ stellar-input .validation span + span {
 
 :host stellar-item stellar-tooltip {
   display: none;
+}
+
+
+:host-context(.dark-mode) {
+  --background: var(--black-alt);
+  --color: var(--white);
+  --border-color: var(--gray9);
+}
+
+:host ::selection,
+:host *::selection {
+  background: var(--theme-base0) !important;
 }

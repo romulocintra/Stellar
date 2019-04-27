@@ -68,6 +68,7 @@
 
   --base: color(base);
   --black: color(black);
+  --black-alt: color(black-alt);
   --white: color(white);
 
   --gray0: color(gray, 0);

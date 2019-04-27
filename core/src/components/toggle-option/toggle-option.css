@@ -318,8 +318,8 @@ stellar-toggle-option copy-wrap * {
 }
 
 .dark-mode stellar-toggle-option {
-  --background: rgba(0,0,0,.2);
-  --hover-background: var(--black);
+  --background: var(--black-alt);
+  --hover-background: var(--black-alt);
   --border: var(--gray9)
 }
 

@@ -145,16 +145,33 @@
   background: white !important;
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(50%, 0, 0);
-  }
+:host(.current) stellar-asset {
+  display: none;
+}
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+:host stellar-asset.multiple {
+  border: 1px solid var(--border-color);
+  background: var(--background);
+  border-radius: 4px;
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0 0 auto;
+  left: -1rem;
+  position: relative;
+  color: transparent;
+}
+
+:host stellar-asset.multiple.selected {
+  color: var(--theme-base5);
+}
+
+
+:host(.current) .button:focus,
+:host(.current) .button:hover,
+:host(.current:hover),
+:host(.current:focus-within) {
+  background: transparent;
 }
 
 :host-context(.dark-mode):host .button:focus,
@@ -162,4 +179,11 @@
 :host-context(.dark-mode):host(:hover),
 :host-context(.dark-mode):host(:focus-within) {
   background: var(--theme-base8);
+}
+
+:host-context(.dark-mode):host(.current) .button:focus,
+:host-context(.dark-mode):host(.current) .button:hover,
+:host-context(.dark-mode):host(.current:hover),
+:host-context(.dark-mode):host(.current:focus-within) {
+  background: transparent;
 }

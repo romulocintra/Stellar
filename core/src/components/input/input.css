@@ -579,8 +579,8 @@
 }
 
 :host-context(.dark-mode):host {
-  --border-color: var(--gray7);
-  --background: var(--black);
+  --border-color: var(--gray9);
+  --background: var(--black-alt);
   --color: var(--white);
 }
 

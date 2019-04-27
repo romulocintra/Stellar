@@ -9,8 +9,17 @@
 }
 
 .dp {
+    --background: var(--white);
+    --background-alt: var(--gray0);
+    --hover-background: var(--theme-base5);
+    --border-color: var(--gray9);
+    --color: var(--gray9);
+    --inactive-color: var(--gray9);
+    --hover-color: var(--theme-base5);
+    --header-color: var(--theme-base9);
+
     position: relative;
-    background: #FFF;
+    background: var(--background);
     box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.25);
     line-height: 1.4;
     border-radius: 4px;
@@ -19,6 +28,20 @@
     padding-top: 6px;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
+}
+
+.dp button {
+    cursor: pointer;
+}
+
+.dark-mode .dp {
+    --background: var(--black-alt);
+    --background-alt: var(--black);
+    --hover-background: var(--theme-base9);
+    --border-color: var(--gray9);
+    --color: var(--white);
+    --inactive-color: var(--gray9);
+    --header-color: var(--theme-base5);
 }
 
 .dp:before {
@@ -34,7 +57,7 @@
 
 .dp-permanent .dp {
     padding-top: 0;
-    border: 1px solid #EEE;
+    border: 1px solid var(--border-color);
     box-shadow: none;
 }
 
@@ -75,7 +98,7 @@
 }
 
 .dp-months {
-    padding: 2rem;
+    padding: 0;
 }
 
 .dp-years {
@@ -94,7 +117,7 @@
     text-align: center;
     text-decoration: none;
     position: relative;
-    color: var(--gray9);
+    color: var(--color);
     border-radius: 4px;
     border: 0;
     background: transparent;
@@ -103,14 +126,14 @@
 .dp-day,
 .dp-month,
 .dp-year {
-    box-shadow: inset 0 0 0 1px white;
+    box-shadow: inset 0 0 0 1px var(--background);
 }
 
 .dp-next,
 .dp-prev {
     width: 2rem;
     height: 2rem;
-    color: var(--gray9);
+    color: var(--color);
     border-radius: 2px;
     border: 0;
     background: transparent;
@@ -120,7 +143,7 @@
 .dp-cal-header {
     position: relative;
     padding: 1rem;
-    background: var(--gray0);
+    background: var(--background-alt);
     display: grid;
     align-items: center;
     grid-template-columns: 3fr 1fr 1fr 3fr;
@@ -174,14 +197,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    background: var(--gray0)
+    background: var(--background-alt)
 }
 
 .dp-day-today:after {
     content: '';
     height: 0;
     width: 0;
-    border: 0.5rem solid var(--theme-base9);
+    border: 0.5rem solid var(--theme-complement7);
     border-bottom-color: transparent;
     border-left-color: transparent;
     position: absolute;
@@ -199,7 +222,7 @@
     text-decoration: none;
     border: 0;
     background: transparent;
-    color: var(--gray9);
+    color: var(--color);
 }
 
 .dp-permanent .dp-close,
@@ -215,7 +238,7 @@
 .dp-cal-month:active,
 .dp-cal-year:active {
     background: var(--theme-base7);
-    color: white
+    color: var(--hover-color)
 }
 
 @media screen and (min-device-width: 1200px) {
@@ -233,8 +256,8 @@
     .dp-cal-month:hover,
     .dp-cal-year:hover,
     .dp-cal-year:focus {
-        background: var(--theme-base7);
-        color: white;
+        background: var(--background-alt);
+        color: var(--hover-color);
     }
 }
 
@@ -253,7 +276,7 @@
 }
 
 .dp-col-header {
-    color: var(--theme-base9);
+    color: var(--header-color);
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1rem;
@@ -276,7 +299,7 @@
 
 
 .dp-edge-day {
-    color: var(--gray2);
+    color: var(--inactive-color);
 }
 
 .dp-day:hover,
@@ -288,14 +311,14 @@
 .dp-month:focus,
 .dp-year:focus {
     outline: 0;
-    background: var(--theme-base5);
+    background: var(--hover-background);
     color: white
 }
 
 .dp-selected:hover,
 .dp-selected:focus,
 .dp-selected {
-    background: var(--theme-base7);
+    background: var(--hover-background);
     color: #FFF
 }
 

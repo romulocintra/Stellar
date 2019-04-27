@@ -1,4 +1,4 @@
-stellar-message {
+:host {
   display: block;
   position: relative;
   padding: 0 20px;
@@ -9,7 +9,7 @@ stellar-message {
   background-color: var(--theme-base4, var(--gray5));
 }
 
-stellar-message[striped]::after {
+:host([striped])::after {
   content: "";
   position: absolute;
   width: 120%;
@@ -18,21 +18,21 @@ stellar-message[striped]::after {
   right: 0;
   bottom: 0;
   z-index: 0;
-  background: repeating-linear-gradient(45deg, var(--theme-base1), var(--theme-base1) 2rem, var(--theme-base2) 0, var(--theme-base2) 4rem);
+  background: repeating-linear-gradient(45deg, var(--theme-base0), var(--theme-base0) 2rem, var(--theme-base1) 0, var(--theme-base1) 4rem);
   mix-blend-mode: multiply;
   animation: moveStripes 10s linear both infinite;
 }
 
-stellar-message[visible="false"] {
+:host([visible="false"]) {
   height: 0;
   overflow: hidden;
 }
 
-stellar-message[visible="false"] * {
+:host([visible="false"]) * {
   opacity: 0;
 }
 
-stellar-message > .wrap {
+:host .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,64 +45,62 @@ stellar-message > .wrap {
   overflow: auto;
 }
 
-stellar-message[size="full"] > .wrap {
+:host([size="full"]) .wrap {
   min-width: 30rem;
   max-width: 100%;
 }
 
-stellar-message a {
+:host a {
   color: white;
 }
 
-stellar-message a:hover,
-stellar-message a:active {
+:host a:hover,
+:host a:active {
   color: var(--theme-base1);
 }
 
-stellar-message p {
+:host p {
   color: var(--theme-base9);
 }
 
-stellar-message > .wrap > stellar-asset {
+:host .wrap stellar-asset {
   font-size: 2rem;
   color: var(--theme-base9);
 }
 
-stellar-message stellar-asset + p {
-  margin-left: 1rem;
-}
-
-stellar-message stellar-button {
+:host button {
   margin-right: 0;
   margin-left: auto;
-  --padding: .65rem 1.25rem;
-  --color: white;
-  --active-color: white;
-  --background: var(--theme-base6);
-  --active-background: var(--theme-base7);
-  --border: 2px solid var(--theme-base7);
-  --active-border: 2px solid var(--theme-base7);
+  appearance: none;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
 }
 
-stellar-message stellar-button[icon] {
+:host button[icon] stellar-asset {
   margin-right: 0;
   margin-left: 1rem;
-  --font-size: 2.5rem;
-  --color: white;
-  --active-color: var(--theme-base9);
-  --background: transparent;
-  --active-background: transparent;
-  --padding: 0;
-  --border: none;
-  --active-border: none;
+  color: black;
+  background: transparent;
+  border: none;
 }
 
-@keyframes moveStripes {
-  from {
-    background-position-x: 0;
-  }
+:host-context(.dark-mode):host {
+  background-color: var(--theme-base7, var(--gray7));
+}
 
-  to {
-    background-position-x: 5.5rem;
-  }
+:host-context(.dark-mode):host([striped])::after {
+  background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
+}
+
+
+:host-context(.dark-mode):host .wrap stellar-asset {
+  color: var(--theme-base1);
 }

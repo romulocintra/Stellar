@@ -9,7 +9,6 @@ import '@stencil/core';
 
 import 'ionicons';
 import '@stencil/router';
-import '@stencil/state-tunnel';
 import {
   HighchartsModel,
 } from './components/chart/options';
@@ -759,19 +758,19 @@ export namespace Components {
     'closable': boolean;
     'name': string;
     'remember': boolean;
+    'shown': boolean;
     'size': "full"|"default";
     'striped': boolean;
     'type': "alert"|"error"|"info"|"success";
-    'visible': boolean;
   }
   interface StellarMessageAttributes extends StencilHTMLAttributes {
     'closable'?: boolean;
     'name'?: string;
     'remember'?: boolean;
+    'shown'?: boolean;
     'size'?: "full"|"default";
     'striped'?: boolean;
     'type'?: "alert"|"error"|"info"|"success";
-    'visible'?: boolean;
   }
 
   interface StellarPagination {
