@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type      |
-| ------------ | ------------ | ----------- | --------- |
-| `complement` | `complement` |             | `boolean` |
-| `in`         | `in`         |             | `number`  |
-| `out`        | `out`        |             | `number`  |
+| Property     | Attribute    | Description | Type      | Default |
+| ------------ | ------------ | ----------- | --------- | ------- |
+| `complement` | `complement` |             | `boolean` | `false` |
+| `in`         | `in`         |             | `number`  | `6000`  |
+| `out`        | `out`        |             | `number`  | `8300`  |
 
 
 ----------------------------------------------

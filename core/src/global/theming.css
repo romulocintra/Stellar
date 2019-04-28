@@ -337,22 +337,26 @@
   --theme-complement9: var(--pink9);
 }
 
-*[class*="theme-"] {
+html.dark-mode:not(.no-host-context) {
+  background: var(--black);
+}
+
+html:not(.no-host-context) *[class*="theme-"] {
   --theme-copy-header: var(--theme-base5);
   --theme-copy-base: var(--theme-base9);
   --theme-copy-supporting: var(--theme-base5);
   color: var(--theme-copy-base);
 }
 
-*[class*="dark-mode"],
-*[class*="dark-mode"] * {
+html:not(.no-host-context) *[class*="dark-mode"],
+html:not(.no-host-context) *[class*="dark-mode"] * {
   --theme-copy-header: var(--theme-base7) !important;
   --theme-copy-base: var(--theme-base0) !important;
   --theme-copy-supporting: var(--theme-base3) !important;
 }
 
-*[class*="dark-mode"][class*="bg-theme-base"],
-*[class*="dark-mode"][class*="bg-theme-base"] * {
+html:not(.no-host-context) *[class*="dark-mode"][class*="bg-theme-base"],
+html:not(.no-host-context) *[class*="dark-mode"][class*="bg-theme-base"] * {
   --theme-copy-header: var(--theme-base9) !important;
 }
 

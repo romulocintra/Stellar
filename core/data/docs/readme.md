@@ -1,4 +1,4 @@
-# stellar-accordian
+# stellar-content
 
 
 
@@ -7,179 +7,225 @@
 
 ## Usage
 
-### Align
+### Block
 
-<stellar-grid style="--grid-width: 270px">
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="top-left">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="top-center">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="top-right">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="middle-left">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="middle-right">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="bottom-left">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="bottom-center">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-	<stellar-button block>
-		Hover over me...
-		<stellar-tooltip align="bottom-right">
-			<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-			<span>
-				William M. Riley
-				<small class="db o-70">Joined Feb. 2nd</small>
-			</span>
-		</stellar-tooltip>
-	</stellar-button>
-</stellar-grid>
+<stellar-tabs block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+
+### Block-sizes
+
+<stellar-tabs size="tiny" block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="small" block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="medium" block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="large" block>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
 
 
 ### Default
 
-<stellar-button block>
-	Hover over me...
-	<stellar-tooltip>
-		<stellar-avatar name="William M. Riley" size="tiny" class="mr2"></stellar-avatar>
-		<span>
-			William M. Riley
-			<small class="db o-70">Joined Feb. 2nd</small>
-		</span>
-	</stellar-tooltip>
-</stellar-button>
+<stellar-tabs>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+
+### Sizes
+
+<stellar-tabs size="tiny">
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="small">
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs>
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="medium">
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
+
+<stellar-tabs size="large">
+  <stellar-tab>
+    <stellar-asset name="person"></stellar-asset>
+    Profile
+  </stellar-tab>
+  <stellar-tab open>Details</stellar-tab>
+  <stellar-tab>Payment</stellar-tab>
+  <stellar-tab>
+    <stellar-avatar size="tiny" shape="circle" notooltip name="William M. Riley"></stellar-avatar>
+    William M. Riley
+  </stellar-tab>
+</stellar-tabs>
 
 
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                                                                                                        | Default    |
-| -------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `align`  | `align`   |             | `"bottom-center" \| "bottom-left" \| "bottom-right" \| "center" \| "left" \| "middle-center" \| "middle-left" \| "middle-right" \| "right"` | `"center"` |
+| Property      | Attribute     | Description | Type      | Default     |
+| ------------- | ------------- | ----------- | --------- | ----------- |
+| `behavior`    | `behavior`    |             | `string`  | `undefined` |
+| `block`       | `block`       |             | `boolean` | `false`     |
+| `height`      | `height`      |             | `string`  | `undefined` |
+| `name`        | `name`        |             | `string`  | `undefined` |
+| `noanimation` | `noanimation` |             | `boolean` | `false`     |
+| `size`        | `size`        |             | `string`  | `"medium"`  |
+| `vertical`    | `vertical`    |             | `boolean` | `false`     |
+
+
+## Methods
+
+### `blurring() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `contents() => Promise<any[]>`
+
+
+
+#### Returns
+
+Type: `Promise<any[]>`
+
+
+
+### `tabs() => Promise<any[]>`
+
+
+
+#### Returns
+
+Type: `Promise<any[]>`
+
+
 
 
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
-e Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-	<stellar-toggle-option name="two" value="two" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option two!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-	<stellar-toggle-option name="three" value="three" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option three!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-</stellar-toggle>
-
-
-### Stacked-checkbox-block
-
-<stellar-toggle type="checkbox-block" name="option-eight" label="Do you want things?" stacked>
-	<stellar-toggle-option name="one" value="one" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option one!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-	<stellar-toggle-option name="two" value="two" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option two!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-	<stellar-toggle-option name="three" value="three" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option three!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-</stellar-toggle>
-
-
-### Stacked-radio-block
-
-<stellar-toggle type="radio-block" name="option-nine" label="Do you want things?" stacked>
-	<stellar-toggle-option name="one" value="one" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option one!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
-		</copy-wrap>
-	</stellar-toggle-option>
-	<stellar-toggle-option name="two" value="two" icon>
-		<img src="https://placehold.it/400x600" width="100">
-		<copy-wrap>
-			<h5>Option two!</h5>
-			<stellar-button ghost size="tiny">More Details!</stellar-button>
+ar-button ghost size="tiny">More Details!</stellar-button>
 		</copy-wrap>
 	</stellar-toggle-option>
 	<stellar-toggle-option name="three" value="three" icon>

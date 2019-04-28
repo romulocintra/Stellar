@@ -6,34 +6,69 @@
       "language": "typescript",
       "header": "TypeScript",
       "code": "2339",
-      "messageText": "Property 'detectColorScheme' does not exist on type 'Window'.",
+      "messageText": "Property 'insertRule' does not exist on type 'StyleSheet'.",
       "relFilePath": "src/utils/index.ts",
       "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/utils/index.ts",
       "lines": [
         {
-          "lineIndex": 199,
-          "lineNumber": 200,
-          "text": "",
+          "lineIndex": 223,
+          "lineNumber": 224,
+          "text": "\t\t\t}",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 200,
-          "lineNumber": 201,
-          "text": "window.detectColorScheme = detectColorScheme;",
-          "errorCharStart": 7,
-          "errorLength": 17
+          "lineIndex": 224,
+          "lineNumber": 225,
+          "text": "\t\t\tss.insertRule('html' + pseudoClass + '{}', 0);",
+          "errorCharStart": 6,
+          "errorLength": 10
         },
         {
-          "lineIndex": 201,
-          "lineNumber": 202,
-          "text": "",
+          "lineIndex": 225,
+          "lineNumber": 226,
+          "text": "\t\t\tss.deleteRule(0);",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 201,
-      "columnNumber": 7
+      "lineNumber": 225,
+      "columnNumber": 6
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2339",
+      "messageText": "Property 'deleteRule' does not exist on type 'StyleSheet'.",
+      "relFilePath": "src/utils/index.ts",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/utils/index.ts",
+      "lines": [
+        {
+          "lineIndex": 224,
+          "lineNumber": 225,
+          "text": "\t\t\tss.insertRule('html' + pseudoClass + '{}', 0);",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 225,
+          "lineNumber": 226,
+          "text": "\t\t\tss.deleteRule(0);",
+          "errorCharStart": 6,
+          "errorLength": 10
+        },
+        {
+          "lineIndex": 226,
+          "lineNumber": 227,
+          "text": "\t\t\treturn true;",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 226,
+      "columnNumber": 6
     }
   ]
 }

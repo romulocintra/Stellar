@@ -56,13 +56,13 @@ Type: `Promise<void>`
 
 
 
-### `data() => Promise<{ size: string; value: string; type: "button" | "stencil-route-link" | "a"; label: string; danger: boolean; slotted: any; }>`
+### `data() => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ size: string; value: string; type: "button" | "stencil-route-link" | "a"; label: string; danger: boolean; slotted: any; }>`
+Type: `Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>`
 
 
 

@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `height` | `height`  |             | `number` |
-| `poster` | `poster`  |             | `string` |
-| `src`    | `src`     |             | `string` |
-| `width`  | `width`   |             | `number` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `height` | `height`  |             | `number` | `720`       |
+| `poster` | `poster`  |             | `string` | `undefined` |
+| `src`    | `src`     |             | `string` | `undefined` |
+| `width`  | `width`   |             | `number` | `1280`      |
 
 
 ----------------------------------------------

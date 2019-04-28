@@ -7,17 +7,17 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type      |
-| ------------- | ------------- | ----------- | --------- |
-| `autoplay`    | `autoplay`    |             | `boolean` |
-| `controls`    | `controls`    |             | `boolean` |
-| `height`      | `height`      |             | `number`  |
-| `muted`       | `muted`       |             | `boolean` |
-| `overlay`     | `overlay`     |             | `boolean` |
-| `playsinline` | `playsinline` |             | `boolean` |
-| `poster`      | `poster`      |             | `string`  |
-| `preload`     | `preload`     |             | `string`  |
-| `width`       | `width`       |             | `number`  |
+| Property      | Attribute     | Description | Type      | Default     |
+| ------------- | ------------- | ----------- | --------- | ----------- |
+| `autoplay`    | `autoplay`    |             | `boolean` | `false`     |
+| `controls`    | `controls`    |             | `boolean` | `true`      |
+| `height`      | `height`      |             | `number`  | `undefined` |
+| `muted`       | `muted`       |             | `boolean` | `false`     |
+| `overlay`     | `overlay`     |             | `boolean` | `undefined` |
+| `playsinline` | `playsinline` |             | `boolean` | `false`     |
+| `poster`      | `poster`      |             | `string`  | `undefined` |
+| `preload`     | `preload`     |             | `string`  | `"auto"`    |
+| `width`       | `width`       |             | `number`  | `undefined` |
 
 
 ----------------------------------------------

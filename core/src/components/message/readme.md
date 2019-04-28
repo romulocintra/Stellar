@@ -73,15 +73,15 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                                        | Default                                         |
-| ---------- | ---------- | ----------- | ------------------------------------------- | ----------------------------------------------- |
-| `closable` | `closable` |             | `boolean`                                   | `true`                                          |
-| `name`     | `name`     |             | `string`                                    | `"stellar"`                                     |
-| `remember` | `remember` |             | `boolean`                                   | `false`                                         |
-| `size`     | `size`     |             | `"default" \| "full"`                       | `undefined`                                     |
-| `striped`  | `striped`  |             | `boolean`                                   | `false`                                         |
-| `type`     | `type`     |             | `"alert" \| "error" \| "info" \| "success"` | `undefined`                                     |
-| `visible`  | `visible`  |             | `boolean`                                   | `(localStorage.getItem(this.name) !== "false")` |
+| Property   | Attribute  | Description | Type                                        | Default     |
+| ---------- | ---------- | ----------- | ------------------------------------------- | ----------- |
+| `closable` | `closable` |             | `boolean`                                   | `true`      |
+| `name`     | `name`     |             | `string`                                    | `"stellar"` |
+| `remember` | `remember` |             | `boolean`                                   | `true`      |
+| `shown`    | `shown`    |             | `boolean`                                   | `true`      |
+| `size`     | `size`     |             | `"default" \| "full"`                       | `undefined` |
+| `striped`  | `striped`  |             | `boolean`                                   | `false`     |
+| `type`     | `type`     |             | `"alert" \| "error" \| "info" \| "success"` | `undefined` |
 
 
 ----------------------------------------------
