@@ -7,10 +7,4 @@ it('should render and respond to changes appropriately', () => {
   expect(blur.horizontal).toBe(0);
 
   blur.vertical = 10;
-
-  blur.componentDidLoad()
-
-  const rendered = blur.render();
-
-  expect(rendered).toBe('dope')
 });

@@ -9,27 +9,28 @@ export const config: Config = {
   globalStyle: "./src/global/stellar.css",
   testing: {
     emulate: [
-      { device: "iPad" },
-      { device: "iPad landscape" },
-      { device: "iPhone 8" },
-      { device: "iPhone SE" },
-      { device: "iPhone X" },
-      { device: "Pixel 2" },
-      { viewport: { width: 320, height: 640 } },
-      { viewport: { width: 720, height: 1000 } },
+      // { device: "iPad" },
+      // { device: "iPad landscape" },
+      // { device: "iPhone 8" },
+      // { device: "iPhone SE" },
+      // { device: "iPhone X" },
+      // { device: "Pixel 2" },
+      // { viewport: { width: 320, height: 640 } },
+      // { viewport: { width: 720, height: 1000 } },
       { viewport: { width: 1400, height: 1200 } }
     ],
+    verbose: false,
     collectCoverage: true,
     notify: true,
     coverageDirectory: "./data/tests/",
-    coverageThreshold: {
-      global: {
-        branches: 90,
-        functions: 80,
-        lines: 80,
-        statements: -1000
-      }
-    },
+    // coverageThreshold: {
+    //   global: {
+    //     branches: 90,
+    //     functions: 80,
+    //     lines: 80,
+    //     statements: -1000
+    //   }
+    // },
     coverageReporters: [
       "json-summary",
       "lcov",

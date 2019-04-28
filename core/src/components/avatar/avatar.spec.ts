@@ -10,17 +10,16 @@ it('should render and respond to changes appropriately', () => {
 
   avatar.componentWillLoad()
 
-  expect(avatar.colors.length).toEqual(13);
+  expect(avatar.colors.length).toEqual(14);
 
   avatar.name = "William M. Riley";
   avatar.formatName();
 
   expect(avatar.name).toBe("William M. Riley");
   expect(avatar.initials).toBe("WM");
-  expect(avatar.color).toBe("yellow");
+  expect(avatar.color).toBe("red");
 
   avatar.color = "#333333";
-  avatar.updateColor()
 
   expect(avatar.color).toBe("#333333");
 

@@ -1,13 +1,12 @@
 import { Component, Prop, State, Element, Method, Watch } from '@stencil/core';
-import {delay} from '../../utils'
-import properties from 'css-custom-properties'
-import mediumZoom from 'medium-zoom'
-import { ColorThief } from './vendor/colorThief.js'
+import {delay} from '../../utils';
+import properties from 'css-custom-properties';
+import mediumZoom from 'medium-zoom';
+import { ColorThief } from './vendor/colorThief.js';
 
 @Component({
   tag: 'stellar-image',
   styleUrl: 'image.css',
-  assetsDir: 'vendor',
   shadow: true
 })
 

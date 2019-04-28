@@ -141,4 +141,6 @@ export class Item {
   }
 }
 
-injectHistory(Item);
+if (injectHistory) {
+  injectHistory(Item);
+}

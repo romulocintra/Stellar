@@ -237,7 +237,7 @@ var supportsPseudo = function (pseudoClass) {
 
 };
 
-if (!supportsPseudo(':host-context(.dark-mode)')) {
+if (document && document.styleSheets && !supportsPseudo(':host-context(.dark-mode)')) {
   document.querySelector('html').classList.add('no-host-context')
 }
 

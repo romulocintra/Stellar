@@ -2,7 +2,7 @@ import { colors } from './';
 
 describe('colors', () => {
   it('returns empty string for no names defined', () => {
-    expect(Object.keys(colors).length).toEqual(16);
+    expect(Object.keys(colors).length).toEqual(17);
     expect(Object.keys(colors)).toContain('base');
     expect(Object.keys(colors)).toContain('black');
     expect(Object.keys(colors)).toContain('white');
