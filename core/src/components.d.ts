@@ -9,6 +9,7 @@ import '@stencil/core';
 
 import 'ionicons';
 import '@stencil/router';
+import '@stencil/state-tunnel';
 import {
   HighchartsModel,
 } from './components/chart/options';
@@ -805,7 +806,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "stencil-route-link" | "a"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;

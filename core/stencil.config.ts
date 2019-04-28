@@ -43,7 +43,6 @@ export const config: Config = {
     { src: "global/vector" },
     { src: "global/audio" },
     { src: "global/page2layers.js" },
-    { src: "**/*.md", dest: "../data/docs" },
     { src: "*.html" },
   ],
   outputTargets:[
