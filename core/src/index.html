@@ -43,6 +43,57 @@
 
     <stellar-color-picker class="absolute top-2 right-2 z-max" onChange="changeTheme(this.val)"></stellar-color-picker>
 
+    <stellar-layout type="sidebar-right" size="full" align="baseline">
+      <stellar-interview class="mt5" src="./global/audio/_audio/carmelo_07.mp3">
+        <copy-wrap align="center" slot="transcript">
+          <!-- In are the milliseconds when copy should be displayed, out is the  -->
+
+          <stellar-interview-line in="1496" out="5010">
+            <h4 class="white fw7 lh-solid">Interviewer: Has anyone ever tried to come and buy your property?</h4>
+          </stellar-interview-line>
+
+
+          <stellar-interview-line in="8374" out="13290">
+            <h4 class="white fw7 lh-solid">Carmelo: Me han dado un cheque en blanco [para] comprar mi propiedad.</h4>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="13484" out="17811">
+            <h4 class="white fw7 lh-solid">Translator: They have given me a blank check in order to buy my property.</h4>
+          </stellar-interview-line>
+
+        </copy-wrap>
+        <stellar-360-image nozoom width="5472" height="3648">
+          <source srcset="./global/images/_images/Carmelo.jpg">
+        </stellar-360-image>
+      </stellar-interview>
+      <stellar-code simple>
+        <template>
+          <stellar-interview class="mt5" src="./global/audio/_audio/carmelo_07.mp3">
+            <copy-wrap align="center" slot="transcript">
+              <!-- In are the milliseconds when copy should be displayed, out is the  -->
+
+              <stellar-interview-line in="1496" out="5010">
+                <h4 class="white fw7 lh-solid">Interviewer: Has anyone ever tried to come and buy your property?</h4>
+              </stellar-interview-line>
+
+
+              <stellar-interview-line in="8374" out="13290">
+                <h4 class="white fw7 lh-solid">Carmelo: Me han dado un cheque en blanco [para] comprar mi propiedad.</h4>
+              </stellar-interview-line>
+
+              <stellar-interview-line in="13484" out="17811">
+                <h4 class="white fw7 lh-solid">Translator: They have given me a blank check in order to buy my property.</h4>
+              </stellar-interview-line>
+
+            </copy-wrap>
+            <stellar-image nozoom width="5472" height="3648">
+              <source srcset="./global/images/_images/Carmelo_Flat.jpg">
+            </stellar-image>
+          </stellar-interview>
+        </template>
+      </stellar-code>
+    </stellar-layout>
+
     <stellar-message><p>Awesome! Great work!</p></stellar-message>
     <stellar-message type="alert"><p>Awesome! Great work! 1</p></stellar-message>
     <stellar-message type="error"><p>Awesome! Great work! 2</p></stellar-message>

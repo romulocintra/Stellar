@@ -6,34 +6,34 @@
       "language": "typescript",
       "header": "TypeScript",
       "code": "2339",
-      "messageText": "Property 'visible' does not exist on type 'Message'.",
-      "relFilePath": "src/components/message/message.tsx",
-      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/components/message/message.tsx",
+      "messageText": "Property 'detectColorScheme' does not exist on type 'Window'.",
+      "relFilePath": "src/utils/index.ts",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/core/src/utils/index.ts",
       "lines": [
         {
-          "lineIndex": 23,
-          "lineNumber": 24,
-          "text": "      if (localStorage.getItem(this.name)) {",
+          "lineIndex": 199,
+          "lineNumber": 200,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 24,
-          "lineNumber": 25,
-          "text": "        this.visible = (localStorage.getItem(this.name) === \"true\");",
-          "errorCharStart": 13,
-          "errorLength": 7
+          "lineIndex": 200,
+          "lineNumber": 201,
+          "text": "window.detectColorScheme = detectColorScheme;",
+          "errorCharStart": 7,
+          "errorLength": 17
         },
         {
-          "lineIndex": 25,
-          "lineNumber": 26,
-          "text": "        console.log(this.visible);",
+          "lineIndex": 201,
+          "lineNumber": 202,
+          "text": "",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 25,
-      "columnNumber": 13
+      "lineNumber": 201,
+      "columnNumber": 7
     }
   ]
 }

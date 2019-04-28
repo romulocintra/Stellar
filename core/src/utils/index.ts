@@ -165,6 +165,38 @@ export function form2js(data) {
   return object;
 }
 
+const DARK = '(prefers-color-scheme: dark)'
+const LIGHT = '(prefers-color-scheme: light)'
+
+function changeWebsiteTheme(scheme) {
+  if (scheme === "dark") {
+    document.querySelector('html').classList.add('dark-mode');
+  } else {
+    document.querySelector('html').classList.remove('dark-mode');
+  }
+}
+
+function detectColorScheme() {
+    if(!window.matchMedia) {
+        return
+    }
+    function listener({matches, media}) {
+        if(!matches) { // Not matching anymore = not interesting
+            return
+        }
+        if (media === DARK) {
+            changeWebsiteTheme('dark')
+        } else if (media === LIGHT) {
+            changeWebsiteTheme('light')
+        }
+    }
+    const mqDark = window.matchMedia('(prefers-color-scheme: dark)')
+    mqDark.addListener(listener)
+    const mqLight = window.matchMedia(LIGHT)
+    mqLight.addListener(listener)
+}
+
+window['detectColorScheme'] = detectColorScheme;
 
 export {
   properties,
@@ -175,5 +207,6 @@ export {
   parentNodeSelector,
   zxcvbn,
   TinyDatePicker,
-  moment
+  moment,
+  detectColorScheme
 }

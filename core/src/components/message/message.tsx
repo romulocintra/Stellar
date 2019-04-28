@@ -23,7 +23,6 @@ export class Message {
 
       if (localStorage.getItem(this.name)) {
         this.shown = !(localStorage.getItem(this.name) === "hidden");
-        console.log(this.shown);
       }
     }
 

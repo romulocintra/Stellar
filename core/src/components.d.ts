@@ -51,6 +51,126 @@ export namespace Components {
     'src'?: string;
   }
 
+  interface WebAudioDebugger {
+    'addHistory': (string: History) => void;
+    'count': number;
+  }
+  interface WebAudioDebuggerAttributes extends StencilHTMLAttributes {
+    'count'?: number;
+  }
+
+  interface WebAudioEffect {
+    'attachEffect': (context: any, source: any) => string;
+    'axis': string;
+    'method': string;
+    'midicontroller': number;
+    'responds': string;
+    'type': string;
+    'use': string;
+    'value': number;
+  }
+  interface WebAudioEffectAttributes extends StencilHTMLAttributes {
+    'axis'?: string;
+    'method'?: string;
+    'midicontroller'?: number;
+    'responds'?: string;
+    'type'?: string;
+    'use'?: string;
+    'value'?: number;
+  }
+
+  interface WebAudioSequencer {
+    'autoplay': boolean;
+    'custom': Function;
+    'name': string;
+    'play': () => void;
+    'stop': () => void;
+    'taps': number;
+    'tempo': number;
+  }
+  interface WebAudioSequencerAttributes extends StencilHTMLAttributes {
+    'autoplay'?: boolean;
+    'custom'?: Function;
+    'name'?: string;
+    'taps'?: number;
+    'tempo'?: number;
+  }
+
+  interface WebAudioSource {
+    'assignBuffer': (webAudio: any, buffer: any) => void;
+    'effectsvolume': number;
+    'gain': (place?: string) => GainNode;
+    'getBuffer': () => AudioBuffer;
+    'getDuration': () => number;
+    'inert': boolean;
+    'midichannel': number;
+    'midikey': number;
+    'name': string;
+    'pause': () => void;
+    'play': () => void;
+    'playing': boolean;
+    'prepare': () => void;
+    'skipTo': (time: any) => void;
+    'src': string;
+    'stop': () => void;
+    'toggle': () => void;
+    'webAudio': () => HTMLElement;
+  }
+  interface WebAudioSourceAttributes extends StencilHTMLAttributes {
+    'effectsvolume'?: number;
+    'inert'?: boolean;
+    'midichannel'?: number;
+    'midikey'?: number;
+    'name'?: string;
+    'onTimeupdate'?: (event: CustomEvent) => void;
+    'playing'?: boolean;
+    'src'?: string;
+  }
+
+  interface WebAudioVisualizerShader {
+    'type': string;
+  }
+  interface WebAudioVisualizerShaderAttributes extends StencilHTMLAttributes {
+    'type'?: string;
+  }
+
+  interface WebAudioVisualizer {
+    'color': string;
+    'connect': (context: AudioContext, destination: any) => this;
+    'for': string;
+    'height': number;
+    'renderer': AnalyserNode;
+    'size': number;
+    'smoothing': number;
+    'type': string|"wave"|"bars"|"webgl";
+    'width': number;
+  }
+  interface WebAudioVisualizerAttributes extends StencilHTMLAttributes {
+    'color'?: string;
+    'for'?: string;
+    'height'?: number;
+    'renderer'?: AnalyserNode;
+    'size'?: number;
+    'smoothing'?: number;
+    'type'?: string|"wave"|"bars"|"webgl";
+    'width'?: number;
+  }
+
+  interface WebAudio {
+    'autoplay': Boolean;
+    'connect_the_world': () => Promise<boolean>;
+    'get_context': () => AudioContext;
+    'is_prepared': () => Boolean;
+    'midi': Boolean;
+    'name': string;
+    'source': (name: any) => any;
+  }
+  interface WebAudioAttributes extends StencilHTMLAttributes {
+    'autoplay'?: Boolean;
+    'midi'?: Boolean;
+    'name'?: string;
+  }
+
   interface StellarAvatar {
     'color': string;
     'initials': string;
@@ -685,7 +805,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "stencil-route-link" | "a"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -752,6 +872,113 @@ export namespace Components {
     'padding'?: "none"|"tiny"|"small"|"medium"|"large";
     'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
     'type'?: string;
+  }
+
+  interface Stellar360Image {
+    'height': number;
+    'poster': string;
+    'src': string;
+    'width': number;
+  }
+  interface Stellar360ImageAttributes extends StencilHTMLAttributes {
+    'height'?: number;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+
+  interface Stellar360Video {
+    'height': number;
+    'poster': string;
+    'src': string;
+    'width': number;
+  }
+  interface Stellar360VideoAttributes extends StencilHTMLAttributes {
+    'height'?: number;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+
+  interface StellarInterviewLine {
+    'complement': boolean;
+    'in': number;
+    'out': number;
+  }
+  interface StellarInterviewLineAttributes extends StencilHTMLAttributes {
+    'complement'?: boolean;
+    'in'?: number;
+    'out'?: number;
+  }
+
+  interface StellarInterview {
+    'aspectRatio': number;
+    'debug': boolean;
+    'height': number;
+    'label': string;
+    'pause': () => void;
+    'play': () => void;
+    'playing': boolean;
+    'skipTo': (time: number) => void;
+    'src': string;
+    'toggle': () => void;
+    'width': number;
+  }
+  interface StellarInterviewAttributes extends StencilHTMLAttributes {
+    'aspectRatio'?: number;
+    'debug'?: boolean;
+    'height'?: number;
+    'label'?: string;
+    'playing'?: boolean;
+    'src'?: string;
+    'width'?: number;
+  }
+
+  interface SkeletonImg {
+    'height': number;
+    'icon': boolean;
+    'loading': boolean;
+    'width': number;
+  }
+  interface SkeletonImgAttributes extends StencilHTMLAttributes {
+    'height'?: number;
+    'icon'?: boolean;
+    'loading'?: boolean;
+    'width'?: number;
+  }
+
+  interface SkeletonText {
+    'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'loading': boolean;
+    'width': number;
+  }
+  interface SkeletonTextAttributes extends StencilHTMLAttributes {
+    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'loading'?: boolean;
+    'width'?: number;
+  }
+
+  interface StellarVideo {
+    'autoplay': boolean;
+    'controls': boolean;
+    'height': number;
+    'muted': boolean;
+    'overlay': boolean;
+    'playsinline': boolean;
+    'poster': string;
+    'preload': string;
+    'width': number;
+  }
+  interface StellarVideoAttributes extends StencilHTMLAttributes {
+    'autoplay'?: boolean;
+    'controls'?: boolean;
+    'height'?: number;
+    'muted'?: boolean;
+    'overlay'?: boolean;
+    'playsinline'?: boolean;
+    'poster'?: string;
+    'preload'?: string;
+    'width'?: number;
   }
 
   interface StellarMessage {
@@ -1290,6 +1517,13 @@ declare global {
   interface StencilElementInterfaces {
     'StellarAccordion': Components.StellarAccordion;
     'StellarAsset': Components.StellarAsset;
+    'WebAudioDebugger': Components.WebAudioDebugger;
+    'WebAudioEffect': Components.WebAudioEffect;
+    'WebAudioSequencer': Components.WebAudioSequencer;
+    'WebAudioSource': Components.WebAudioSource;
+    'WebAudioVisualizerShader': Components.WebAudioVisualizerShader;
+    'WebAudioVisualizer': Components.WebAudioVisualizer;
+    'WebAudio': Components.WebAudio;
     'StellarAvatar': Components.StellarAvatar;
     'StellarBlur': Components.StellarBlur;
     'StellarBreadcrumb': Components.StellarBreadcrumb;
@@ -1314,6 +1548,13 @@ declare global {
     'StellarItem': Components.StellarItem;
     'StellarLabel': Components.StellarLabel;
     'StellarLayout': Components.StellarLayout;
+    'Stellar360Image': Components.Stellar360Image;
+    'Stellar360Video': Components.Stellar360Video;
+    'StellarInterviewLine': Components.StellarInterviewLine;
+    'StellarInterview': Components.StellarInterview;
+    'SkeletonImg': Components.SkeletonImg;
+    'SkeletonText': Components.SkeletonText;
+    'StellarVideo': Components.StellarVideo;
     'StellarMessage': Components.StellarMessage;
     'StellarPagination': Components.StellarPagination;
     'StellarPasswordRequirements': Components.StellarPasswordRequirements;
@@ -1338,6 +1579,13 @@ declare global {
   interface StencilIntrinsicElements {
     'stellar-accordion': Components.StellarAccordionAttributes;
     'stellar-asset': Components.StellarAssetAttributes;
+    'web-audio-debugger': Components.WebAudioDebuggerAttributes;
+    'web-audio-effect': Components.WebAudioEffectAttributes;
+    'web-audio-sequencer': Components.WebAudioSequencerAttributes;
+    'web-audio-source': Components.WebAudioSourceAttributes;
+    'web-audio-visualizer-shader': Components.WebAudioVisualizerShaderAttributes;
+    'web-audio-visualizer': Components.WebAudioVisualizerAttributes;
+    'web-audio': Components.WebAudioAttributes;
     'stellar-avatar': Components.StellarAvatarAttributes;
     'stellar-blur': Components.StellarBlurAttributes;
     'stellar-breadcrumb': Components.StellarBreadcrumbAttributes;
@@ -1362,6 +1610,13 @@ declare global {
     'stellar-item': Components.StellarItemAttributes;
     'stellar-label': Components.StellarLabelAttributes;
     'stellar-layout': Components.StellarLayoutAttributes;
+    'stellar-360-image': Components.Stellar360ImageAttributes;
+    'stellar-360-video': Components.Stellar360VideoAttributes;
+    'stellar-interview-line': Components.StellarInterviewLineAttributes;
+    'stellar-interview': Components.StellarInterviewAttributes;
+    'skeleton-img': Components.SkeletonImgAttributes;
+    'skeleton-text': Components.SkeletonTextAttributes;
+    'stellar-video': Components.StellarVideoAttributes;
     'stellar-message': Components.StellarMessageAttributes;
     'stellar-pagination': Components.StellarPaginationAttributes;
     'stellar-password-requirements': Components.StellarPasswordRequirementsAttributes;
@@ -1394,6 +1649,48 @@ declare global {
   var HTMLStellarAssetElement: {
     prototype: HTMLStellarAssetElement;
     new (): HTMLStellarAssetElement;
+  };
+
+  interface HTMLWebAudioDebuggerElement extends Components.WebAudioDebugger, HTMLStencilElement {}
+  var HTMLWebAudioDebuggerElement: {
+    prototype: HTMLWebAudioDebuggerElement;
+    new (): HTMLWebAudioDebuggerElement;
+  };
+
+  interface HTMLWebAudioEffectElement extends Components.WebAudioEffect, HTMLStencilElement {}
+  var HTMLWebAudioEffectElement: {
+    prototype: HTMLWebAudioEffectElement;
+    new (): HTMLWebAudioEffectElement;
+  };
+
+  interface HTMLWebAudioSequencerElement extends Components.WebAudioSequencer, HTMLStencilElement {}
+  var HTMLWebAudioSequencerElement: {
+    prototype: HTMLWebAudioSequencerElement;
+    new (): HTMLWebAudioSequencerElement;
+  };
+
+  interface HTMLWebAudioSourceElement extends Components.WebAudioSource, HTMLStencilElement {}
+  var HTMLWebAudioSourceElement: {
+    prototype: HTMLWebAudioSourceElement;
+    new (): HTMLWebAudioSourceElement;
+  };
+
+  interface HTMLWebAudioVisualizerShaderElement extends Components.WebAudioVisualizerShader, HTMLStencilElement {}
+  var HTMLWebAudioVisualizerShaderElement: {
+    prototype: HTMLWebAudioVisualizerShaderElement;
+    new (): HTMLWebAudioVisualizerShaderElement;
+  };
+
+  interface HTMLWebAudioVisualizerElement extends Components.WebAudioVisualizer, HTMLStencilElement {}
+  var HTMLWebAudioVisualizerElement: {
+    prototype: HTMLWebAudioVisualizerElement;
+    new (): HTMLWebAudioVisualizerElement;
+  };
+
+  interface HTMLWebAudioElement extends Components.WebAudio, HTMLStencilElement {}
+  var HTMLWebAudioElement: {
+    prototype: HTMLWebAudioElement;
+    new (): HTMLWebAudioElement;
   };
 
   interface HTMLStellarAvatarElement extends Components.StellarAvatar, HTMLStencilElement {}
@@ -1540,6 +1837,48 @@ declare global {
     new (): HTMLStellarLayoutElement;
   };
 
+  interface HTMLStellar360ImageElement extends Components.Stellar360Image, HTMLStencilElement {}
+  var HTMLStellar360ImageElement: {
+    prototype: HTMLStellar360ImageElement;
+    new (): HTMLStellar360ImageElement;
+  };
+
+  interface HTMLStellar360VideoElement extends Components.Stellar360Video, HTMLStencilElement {}
+  var HTMLStellar360VideoElement: {
+    prototype: HTMLStellar360VideoElement;
+    new (): HTMLStellar360VideoElement;
+  };
+
+  interface HTMLStellarInterviewLineElement extends Components.StellarInterviewLine, HTMLStencilElement {}
+  var HTMLStellarInterviewLineElement: {
+    prototype: HTMLStellarInterviewLineElement;
+    new (): HTMLStellarInterviewLineElement;
+  };
+
+  interface HTMLStellarInterviewElement extends Components.StellarInterview, HTMLStencilElement {}
+  var HTMLStellarInterviewElement: {
+    prototype: HTMLStellarInterviewElement;
+    new (): HTMLStellarInterviewElement;
+  };
+
+  interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
+  var HTMLSkeletonImgElement: {
+    prototype: HTMLSkeletonImgElement;
+    new (): HTMLSkeletonImgElement;
+  };
+
+  interface HTMLSkeletonTextElement extends Components.SkeletonText, HTMLStencilElement {}
+  var HTMLSkeletonTextElement: {
+    prototype: HTMLSkeletonTextElement;
+    new (): HTMLSkeletonTextElement;
+  };
+
+  interface HTMLStellarVideoElement extends Components.StellarVideo, HTMLStencilElement {}
+  var HTMLStellarVideoElement: {
+    prototype: HTMLStellarVideoElement;
+    new (): HTMLStellarVideoElement;
+  };
+
   interface HTMLStellarMessageElement extends Components.StellarMessage, HTMLStencilElement {}
   var HTMLStellarMessageElement: {
     prototype: HTMLStellarMessageElement;
@@ -1657,6 +1996,13 @@ declare global {
   interface HTMLElementTagNameMap {
     'stellar-accordion': HTMLStellarAccordionElement
     'stellar-asset': HTMLStellarAssetElement
+    'web-audio-debugger': HTMLWebAudioDebuggerElement
+    'web-audio-effect': HTMLWebAudioEffectElement
+    'web-audio-sequencer': HTMLWebAudioSequencerElement
+    'web-audio-source': HTMLWebAudioSourceElement
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement
+    'web-audio': HTMLWebAudioElement
     'stellar-avatar': HTMLStellarAvatarElement
     'stellar-blur': HTMLStellarBlurElement
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement
@@ -1681,6 +2027,13 @@ declare global {
     'stellar-item': HTMLStellarItemElement
     'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
+    'stellar-360-image': HTMLStellar360ImageElement
+    'stellar-360-video': HTMLStellar360VideoElement
+    'stellar-interview-line': HTMLStellarInterviewLineElement
+    'stellar-interview': HTMLStellarInterviewElement
+    'skeleton-img': HTMLSkeletonImgElement
+    'skeleton-text': HTMLSkeletonTextElement
+    'stellar-video': HTMLStellarVideoElement
     'stellar-message': HTMLStellarMessageElement
     'stellar-pagination': HTMLStellarPaginationElement
     'stellar-password-requirements': HTMLStellarPasswordRequirementsElement
@@ -1705,6 +2058,13 @@ declare global {
   interface ElementTagNameMap {
     'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-asset': HTMLStellarAssetElement;
+    'web-audio-debugger': HTMLWebAudioDebuggerElement;
+    'web-audio-effect': HTMLWebAudioEffectElement;
+    'web-audio-sequencer': HTMLWebAudioSequencerElement;
+    'web-audio-source': HTMLWebAudioSourceElement;
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
+    'web-audio': HTMLWebAudioElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
@@ -1729,6 +2089,13 @@ declare global {
     'stellar-item': HTMLStellarItemElement;
     'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
+    'stellar-360-image': HTMLStellar360ImageElement;
+    'stellar-360-video': HTMLStellar360VideoElement;
+    'stellar-interview-line': HTMLStellarInterviewLineElement;
+    'stellar-interview': HTMLStellarInterviewElement;
+    'skeleton-img': HTMLSkeletonImgElement;
+    'skeleton-text': HTMLSkeletonTextElement;
+    'stellar-video': HTMLStellarVideoElement;
     'stellar-message': HTMLStellarMessageElement;
     'stellar-pagination': HTMLStellarPaginationElement;
     'stellar-password-requirements': HTMLStellarPasswordRequirementsElement;
